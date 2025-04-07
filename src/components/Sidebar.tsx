@@ -35,10 +35,11 @@ const Sidebar = () => {
         {menuItems.map((item) => (
           <li 
             key={item.path} 
-            className={`py-2 px-4 ${location.pathname === item.path ? 'bg-gray-100 font-medium' : 'hover:bg-gray-50'}`}
+            className={`py-2 px-4 ${location.pathname === item.path ? 'bg-gray-100 font-medium text-iare-blue' : 'hover:bg-gray-50'}`}
           >
             <Link to={item.path} className="flex items-center">
-              <span className="text-iare-teal mr-2">•</span> {item.label}
+              <span className={`mr-2 ${location.pathname === item.path ? 'text-iare-teal' : 'text-gray-400'}`}>•</span> 
+              {item.label}
             </Link>
           </li>
         ))}

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
+import { ArrowRight } from 'lucide-react';
 
 const StudentServices = () => {
   const serviceCards = [
@@ -36,6 +37,61 @@ const StudentServices = () => {
       title: "Makers Space",
       description: "Creative environments where you can design, experiment, and build projects.",
       link: "/student-services/makers-space"
+    },
+    {
+      title: "Student Development Program",
+      description: "Programs to enhance technical and soft skills beyond the regular curriculum.",
+      link: "/student-services/development-program"
+    },
+    {
+      title: "Certifications",
+      description: "Industry-recognized certification programs to boost your career prospects.",
+      link: "/student-services/certifications"
+    },
+    {
+      title: "Co-Curricular Activities",
+      description: "Activities that complement academic learning and enhance student experience.",
+      link: "/student-services/co-curricular"
+    },
+    {
+      title: "Innovation Creativity Entrepreneurship",
+      description: "Fostering an ecosystem for innovation and entrepreneurial skills development.",
+      link: "/student-services/innovation"
+    },
+    {
+      title: "Projects | Mockups | Competitions",
+      description: "Opportunities to apply knowledge through projects and competitions.",
+      link: "/student-services/projects"
+    },
+    {
+      title: "International Exposure",
+      description: "Programs for global learning experiences and international collaborations.",
+      link: "/student-services/international"
+    },
+    {
+      title: "Scholarships",
+      description: "Financial support to help students achieve their academic goals.",
+      link: "/student-services/scholarships"
+    },
+    {
+      title: "Medical Centre",
+      description: "Healthcare services to support student physical and mental well-being.",
+      link: "/student-services/medical-centre"
+    },
+    {
+      title: "Career and Employability Skills",
+      description: "Training to enhance job readiness and employment prospects.",
+      link: "/student-services/employability"
+    },
+    {
+      title: "Competency Building and Consultancy",
+      description: "Programs to develop core competencies and professional consulting skills.",
+      link: "/student-services/competency"
+    },
+    {
+      title: "Student Learning Support Hub",
+      description: "Centralized support system for academic assistance and resources.",
+      link: "/student-services/support-hub"
     }
   ];
 
@@ -94,9 +150,9 @@ const StudentServices = () => {
                     <p className="text-gray-600 text-sm mb-4">{card.description}</p>
                     <Link 
                       to={card.link} 
-                      className="text-iare-teal hover:text-iare-blue transition-colors text-sm font-medium"
+                      className="text-iare-teal hover:text-iare-blue transition-colors text-sm font-medium flex items-center"
                     >
-                      Learn More →
+                      Learn More <ArrowRight size={16} className="ml-1" />
                     </Link>
                   </div>
                 </div>

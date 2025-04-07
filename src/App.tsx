@@ -10,6 +10,12 @@ import StudentServices from "./pages/StudentServices";
 import LearningTechnologies from "./pages/student-services/LearningTechnologies";
 import ExperientialLearning from "./pages/student-services/ExperientialLearning";
 import SelfLearning from "./pages/student-services/SelfLearning";
+import CareerGuidance from "./pages/student-services/CareerGuidance";
+import CounsellingSystem from "./pages/student-services/CounsellingSystem";
+import MakersSpace from "./pages/student-services/MakersSpace";
+import StudentDevelopment from "./pages/student-services/StudentDevelopment";
+import Certifications from "./pages/student-services/Certifications";
+import Placements from "./pages/Placements";
 
 const queryClient = new QueryClient();
 
@@ -25,22 +31,22 @@ const App = () => (
           <Route path="/student-services/learning-technologies" element={<LearningTechnologies />} />
           <Route path="/student-services/experiential-learning" element={<ExperientialLearning />} />
           <Route path="/student-services/self-learning" element={<SelfLearning />} />
+          <Route path="/student-services/career-guidance" element={<CareerGuidance />} />
+          <Route path="/student-services/counselling-system" element={<CounsellingSystem />} />
+          <Route path="/student-services/makers-space" element={<MakersSpace />} />
+          <Route path="/student-services/development-program" element={<StudentDevelopment />} />
+          <Route path="/student-services/certifications" element={<Certifications />} />
+          <Route path="/placements" element={<Placements />} />
           
           {/* Placeholder routes - these would be implemented in a full project */}
           <Route path="/about-us" element={<NotFound />} />
           <Route path="/study-with-us" element={<NotFound />} />
           <Route path="/approvals" element={<NotFound />} />
           <Route path="/departments" element={<NotFound />} />
-          <Route path="/placements" element={<NotFound />} />
           <Route path="/research" element={<NotFound />} />
           <Route path="/campus-life" element={<NotFound />} />
           <Route path="/iqac" element={<NotFound />} />
           <Route path="/naac" element={<NotFound />} />
-          <Route path="/student-services/career-guidance" element={<NotFound />} />
-          <Route path="/student-services/counselling-system" element={<NotFound />} />
-          <Route path="/student-services/makers-space" element={<NotFound />} />
-          <Route path="/student-services/development-program" element={<NotFound />} />
-          <Route path="/student-services/certifications" element={<NotFound />} />
           <Route path="/student-services/co-curricular" element={<NotFound />} />
           <Route path="/student-services/innovation" element={<NotFound />} />
           <Route path="/student-services/projects" element={<NotFound />} />

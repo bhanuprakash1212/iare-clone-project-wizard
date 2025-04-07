@@ -1,13 +1,19 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  // Function to check if a path is active (starts with the given path)
+  const isActive = (path) => {
+    return location.pathname.startsWith(path);
   };
 
   return (
@@ -47,37 +53,37 @@ const Header = () => {
         <div className="container mx-auto">
           <ul className="flex flex-col md:flex-row md:flex-wrap">
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Home</Link>
+              <Link to="/" className={`block py-3 px-4 ${location.pathname === '/' ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Home</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/about-us" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">About Us</Link>
+              <Link to="/about-us" className={`block py-3 px-4 ${isActive('/about-us') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>About Us</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/study-with-us" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Study with Us</Link>
+              <Link to="/study-with-us" className={`block py-3 px-4 ${isActive('/study-with-us') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Study with Us</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/approvals" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Approvals</Link>
+              <Link to="/approvals" className={`block py-3 px-4 ${isActive('/approvals') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Approvals</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/departments" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Departments</Link>
+              <Link to="/departments" className={`block py-3 px-4 ${isActive('/departments') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Departments</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/placements" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Placements</Link>
+              <Link to="/placements" className={`block py-3 px-4 ${isActive('/placements') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Placements</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/research" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Research</Link>
+              <Link to="/research" className={`block py-3 px-4 ${isActive('/research') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Research</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/campus-life" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">Campus Life</Link>
+              <Link to="/campus-life" className={`block py-3 px-4 ${isActive('/campus-life') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Campus Life</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/student-services" className="block py-3 px-4 bg-gray-700 text-white">Student Services</Link>
+              <Link to="/student-services" className={`block py-3 px-4 ${isActive('/student-services') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>Student Services</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/iqac" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">IQAC</Link>
+              <Link to="/iqac" className={`block py-3 px-4 ${isActive('/iqac') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>IQAC</Link>
             </li>
             <li>
-              <Link to="/naac" className="block py-3 px-4 hover:bg-gray-100 transition duration-300">NAAC</Link>
+              <Link to="/naac" className={`block py-3 px-4 ${isActive('/naac') ? 'bg-gray-700 text-white' : 'hover:bg-gray-100'} transition duration-300`}>NAAC</Link>
             </li>
           </ul>
         </div>
