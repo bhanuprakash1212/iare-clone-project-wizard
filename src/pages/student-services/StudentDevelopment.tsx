@@ -52,12 +52,12 @@ const StudentDevelopment = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -74,27 +74,23 @@ const StudentDevelopment = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Student Development Program</h1>
-            
+
             <div className="bg-white p-6 shadow-md rounded mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Overview</h2>
-              
+
               <p className="mb-4">
-                The Student Development Program (SDP) at IARE is designed to enhance students' technical and soft skills 
-                beyond their regular academic curriculum. These programs help students develop a well-rounded personality 
-                and prepare them for successful careers in their chosen fields.
+                The Student Development Program (SDP) at Sri Venkateswara University College of Engineering aims to enhance students' technical expertise and soft skills beyond the regular curriculum. These programs are designed to help students build a well-rounded personality and prepare for successful careers in their chosen fields.
               </p>
-              
+
               <p className="mb-4">
-                Our development programs are conducted by industry experts, faculty members, and professional trainers 
-                to ensure high-quality learning experiences. Students can participate in various workshops, seminars, 
-                and training sessions throughout the academic year.
+                The sessions are conducted by industry professionals, faculty members, and expert trainers, offering high-quality learning experiences through workshops, seminars, and training programs held throughout the academic year.
               </p>
-              
+
               <h2 className="text-xl font-semibold text-iare-maroon mb-4 mt-6">Program Categories</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {programCategories.map((category, index) => (
                   <div key={index} className="bg-iare-gray rounded-lg overflow-hidden shadow-sm">
@@ -111,9 +107,9 @@ const StudentDevelopment = () => {
                   </div>
                 ))}
               </div>
-              
+
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Benefits</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div className="flex items-start p-3">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1 mr-3">
@@ -126,7 +122,7 @@ const StudentDevelopment = () => {
                     <p className="text-sm">Develop skills that are highly valued by employers across industries.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start p-3">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1 mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
@@ -138,7 +134,7 @@ const StudentDevelopment = () => {
                     <p className="text-sm">Gain hands-on experience and practical knowledge beyond textbooks.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start p-3">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1 mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
@@ -150,7 +146,7 @@ const StudentDevelopment = () => {
                     <p className="text-sm">Build confidence, communication skills, and a professional attitude.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start p-3">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1 mr-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
@@ -163,9 +159,9 @@ const StudentDevelopment = () => {
                   </div>
                 </div>
               </div>
-              
+
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Upcoming Programs</h2>
-              
+
               <div className="overflow-x-auto mb-6">
                 <table className="min-w-full border rounded">
                   <thead>
@@ -188,47 +184,11 @@ const StudentDevelopment = () => {
                   </tbody>
                 </table>
               </div>
-              
-              <h2 className="text-xl font-semibold text-iare-maroon mb-4">Registration Process</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-                <div className="bg-iare-gray p-4 rounded text-center relative">
-                  <div className="absolute top-2 right-2 bg-iare-blue text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">1</div>
-                  <h3 className="font-semibold mb-2">Access Portal</h3>
-                  <p className="text-xs">Log in to the student portal with your credentials</p>
-                </div>
-                
-                <div className="bg-iare-gray p-4 rounded text-center relative">
-                  <div className="absolute top-2 right-2 bg-iare-blue text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">2</div>
-                  <h3 className="font-semibold mb-2">Browse Programs</h3>
-                  <p className="text-xs">View available development programs</p>
-                </div>
-                
-                <div className="bg-iare-gray p-4 rounded text-center relative">
-                  <div className="absolute top-2 right-2 bg-iare-blue text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</div>
-                  <h3 className="font-semibold mb-2">Select & Register</h3>
-                  <p className="text-xs">Choose programs and complete registration</p>
-                </div>
-                
-                <div className="bg-iare-gray p-4 rounded text-center relative">
-                  <div className="absolute top-2 right-2 bg-iare-blue text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">4</div>
-                  <h3 className="font-semibold mb-2">Attend Program</h3>
-                  <p className="text-xs">Participate and receive certification</p>
-                </div>
-              </div>
-              
-              <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Contact Student Development Cell</h3>
-                <p className="mb-1"><strong>Dr. Vamsi Krishna</strong></p>
-                <p className="mb-1">Coordinator, Student Development Program</p>
-                <p className="mb-1">Email: sdp@iare.ac.in</p>
-                <p>Phone: +91-9876543240</p>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

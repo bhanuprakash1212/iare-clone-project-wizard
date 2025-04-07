@@ -26,9 +26,6 @@ const Index = () => {
 
   const cseCourses = [
     { name: "B.Tech in Computer Science & Engineering", duration: "4 Years", intake: 300 },
-    { name: "B.Tech in CSE (Artificial Intelligence & Machine Learning)", duration: "4 Years", intake: 180 },
-    { name: "B.Tech in CSE (Data Science)", duration: "4 Years", intake: 120 },
-    { name: "B.Tech in CSE (IoT & Cyber Security with Blockchain Technology)", duration: "4 Years", intake: 60 },
     { name: "M.Tech in Computer Science & Engineering", duration: "2 Years", intake: 30 },
     { name: "Ph.D in Computer Science & Engineering", duration: "3-5 Years", intake: 10 }
   ];
@@ -117,10 +114,10 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <main className="flex-grow">
         {/* Hero Banner - CSE Specific */}
-        <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white py-20">
+        <div className="bg-gradient-to-r h-[60vh] flex items-center justify-center from-iare-blue to-iare-teal text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Department of Computer Science & Engineering</h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">Shaping the future through innovation, research, and excellence in computing education since 2000</p>
@@ -128,18 +125,15 @@ const Index = () => {
               <Link to="/programs" className="bg-iare-yellow text-iare-blue font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 transition duration-300 flex items-center">
                 Explore Programs <ArrowRight size={18} className="ml-2" />
               </Link>
-              <Link to="/admissions" className="bg-white text-iare-blue font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300 flex items-center">
-                Apply Now <ArrowRight size={18} className="ml-2" />
-              </Link>
             </div>
           </div>
         </div>
-        
+
         {/* CSE Department Achievements */}
         <div className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-10 text-iare-blue">Department Highlights</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               {cseAchievements.map((achievement, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-xl transition duration-300 flex flex-col items-center">
@@ -151,12 +145,12 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* CSE Programs */}
         <div className="py-12 bg-iare-gray">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-10 text-iare-blue">Academic Programs</h2>
-            
+
             <div className="overflow-x-auto bg-white rounded-lg shadow-md">
               <table className="min-w-full">
                 <thead>
@@ -177,21 +171,15 @@ const Index = () => {
                 </tbody>
               </table>
             </div>
-            
-            <div className="text-center mt-8">
-              <Link to="/programs" className="inline-block bg-iare-teal text-white font-semibold px-6 py-3 rounded-lg hover:bg-teal-600 transition duration-300 flex items-center mx-auto w-fit">
-                View All Programs <ArrowRight size={18} className="ml-2" />
-              </Link>
-            </div>
           </div>
         </div>
-        
+
         {/* CSE Specializations */}
         <div className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-iare-blue">Areas of Specialization</h2>
             <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto">The CSE department offers specialized training and research opportunities in several cutting-edge domains</p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {cseSpecializations.map((specialization, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition duration-300 border border-gray-100">
@@ -205,12 +193,12 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Faculty Profiles */}
         <div className="py-12 bg-iare-lightblue">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-10 text-iare-blue">Distinguished Faculty</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {cseFaculty.map((faculty, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -224,7 +212,7 @@ const Index = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="text-center mt-8">
               <Link to="/departments" className="inline-block bg-iare-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition duration-300 flex items-center mx-auto w-fit">
                 View All Faculty <ArrowRight size={18} className="ml-2" />
@@ -232,7 +220,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Research and Placement */}
         <div className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -273,7 +261,7 @@ const Index = () => {
                   </Link>
                 </div>
               </div>
-              
+
               <div className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
                 <h2 className="text-2xl font-bold mb-6 text-iare-blue flex items-center">
                   <Briefcase className="mr-2" size={24} /> Placement Highlights
@@ -306,7 +294,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Events and News Section */}
         <div className="py-12 bg-iare-gray">
           <div className="container mx-auto px-4">
@@ -315,7 +303,7 @@ const Index = () => {
                 <h2 className="text-2xl font-bold mb-6 text-iare-blue border-b-2 border-iare-teal pb-2 flex items-center">
                   <Award className="mr-2" size={24} /> Upcoming Events
                 </h2>
-                
+
                 {upcomingEvents.map((event, index) => (
                   <div key={index} className="mb-5 border-b border-gray-200 pb-5 last:border-b-0 last:pb-0">
                     <div className="text-sm text-gray-500 mb-1">{event.date}</div>
@@ -323,17 +311,17 @@ const Index = () => {
                     <p className="text-gray-600 text-sm">{event.description}</p>
                   </div>
                 ))}
-                
+
                 <Link to="/events" className="inline-block text-iare-teal hover:text-iare-blue font-medium mt-4 flex items-center">
                   View All Events <ArrowRight size={16} className="ml-1" />
                 </Link>
               </div>
-              
+
               <div>
                 <h2 className="text-2xl font-bold mb-6 text-iare-blue border-b-2 border-iare-yellow pb-2 flex items-center">
                   <Users className="mr-2" size={24} /> Latest News
                 </h2>
-                
+
                 {news.map((item, index) => (
                   <div key={index} className="mb-5 border-b border-gray-200 pb-5 last:border-b-0 last:pb-0">
                     <div className="text-sm text-gray-500 mb-1">{item.date}</div>
@@ -341,7 +329,7 @@ const Index = () => {
                     <p className="text-gray-600 text-sm">{item.content}</p>
                   </div>
                 ))}
-                
+
                 <Link to="/news" className="inline-block text-iare-teal hover:text-iare-blue font-medium mt-4 flex items-center">
                   View All News <ArrowRight size={16} className="ml-1" />
                 </Link>
@@ -349,16 +337,13 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Join Our CSE Department</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">Be part of a thriving community of innovators, researchers, and technology enthusiasts.</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/admissions" className="bg-white text-iare-blue font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition duration-300 flex items-center">
-                Apply for Admission <ArrowRight size={18} className="ml-2" />
-              </Link>
               <Link to="/student-services" className="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-iare-blue transition duration-300 flex items-center">
                 Student Services <ArrowRight size={18} className="ml-2" />
               </Link>
@@ -366,7 +351,7 @@ const Index = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

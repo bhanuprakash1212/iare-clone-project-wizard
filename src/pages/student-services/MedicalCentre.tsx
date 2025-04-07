@@ -9,12 +9,12 @@ const MedicalCentre = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -31,26 +31,25 @@ const MedicalCentre = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Medical Centre</h1>
-            
+
             <div className="bg-white p-6 border rounded shadow-sm">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Healthcare Services for Students</h2>
-              
+
               <div className="mb-6">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="IARE Medical Centre" 
-                  className="w-full h-64 object-cover rounded-lg mb-4" 
+                <img
+                  src="https://santoshhospitalvns.com/wp-content/uploads/2023/06/Ambulance-Santosh-Hospital-scaled.jpg"
+                  alt="IARE Medical Centre"
+                  className="w-full h-64 object-cover rounded-lg mb-4"
                 />
-                
+
                 <p className="mb-4">
-                  The IARE Medical Centre provides comprehensive healthcare services to students, faculty, and staff. Our 
-                  well-equipped facility offers preventive, curative, and emergency medical services.
+                  The Medical Centre at Sri Venkateswara University College of Engineering provides essential healthcare services to students, faculty, and staff. The facility is equipped to offer preventive care, basic treatment, and emergency medical assistance, ensuring the well-being of the campus community.
                 </p>
               </div>
-              
+
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-iare-blue mb-2">Medical Services</h3>
                 <ul className="list-disc pl-6 mb-4">
@@ -62,7 +61,7 @@ const MedicalCentre = () => {
                   <li className="mb-2">Referral services to specialty care</li>
                 </ul>
               </div>
-              
+
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-iare-blue mb-2">Facilities Available</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -84,64 +83,7 @@ const MedicalCentre = () => {
                   </div>
                 </div>
               </div>
-              
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Medical Staff</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                  <div className="flex items-start">
-                    <div className="h-20 w-20 bg-gray-200 rounded-full overflow-hidden mr-4">
-                      <img src="/placeholder.svg" alt="Dr. Suresh Kumar" className="h-full w-full object-cover" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-iare-blue">Dr. Suresh Kumar</h4>
-                      <p className="text-sm text-gray-600 mb-1">Chief Medical Officer</p>
-                      <p className="text-sm">MBBS, MD (General Medicine)</p>
-                      <p className="text-sm">Available: Mon-Fri (9:00 AM - 4:00 PM)</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="h-20 w-20 bg-gray-200 rounded-full overflow-hidden mr-4">
-                      <img src="/placeholder.svg" alt="Dr. Priya Sharma" className="h-full w-full object-cover" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-iare-blue">Dr. Priya Sharma</h4>
-                      <p className="text-sm text-gray-600 mb-1">Medical Officer</p>
-                      <p className="text-sm">MBBS</p>
-                      <p className="text-sm">Available: Mon-Sat (10:00 AM - 6:00 PM)</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="h-20 w-20 bg-gray-200 rounded-full overflow-hidden mr-4">
-                    <img src="/placeholder.svg" alt="Nurse Lakshmi" className="h-full w-full object-cover" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-iare-blue">Ms. Lakshmi</h4>
-                    <p className="text-sm text-gray-600 mb-1">Staff Nurse</p>
-                    <p className="text-sm">B.Sc Nursing</p>
-                    <p className="text-sm">Available: 24/7 (Shift basis)</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Health Insurance</h3>
-                <p className="mb-4">
-                  All students enrolled at IARE are covered under the Student Health Insurance Program. This comprehensive 
-                  insurance plan covers hospitalization, accident-related expenses, and outpatient care up to the specified limits.
-                </p>
-                <div className="bg-iare-lightblue p-4 rounded">
-                  <h4 className="font-medium mb-2">Insurance Coverage Highlights:</h4>
-                  <ul className="list-disc pl-6">
-                    <li>Hospitalization coverage up to Rs. 1,00,000</li>
-                    <li>Accident coverage up to Rs. 50,000</li>
-                    <li>Cashless treatment at network hospitals</li>
-                    <li>Coverage for pre-existing diseases after waiting period</li>
-                    <li>Ambulance charges covered</li>
-                  </ul>
-                </div>
-              </div>
-              
+
               <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
                 <h3 className="text-lg font-semibold text-iare-blue mb-2">Contact Medical Centre</h3>
                 <p className="mb-1"><strong>Location:</strong> Ground Floor, Main Building</p>
@@ -153,7 +95,7 @@ const MedicalCentre = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

@@ -17,12 +17,12 @@ const CounsellingSystem = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -39,26 +39,23 @@ const CounsellingSystem = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Student Counselling System</h1>
-            
+
             <div className="bg-white p-6 shadow-md rounded mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">About the Counselling System</h2>
-              
+
               <p className="mb-4">
-                The Student Counselling System at IARE is a comprehensive support structure designed to address the academic, 
-                personal, and emotional needs of students. Each student is assigned a faculty counsellor who serves as a mentor 
-                and guide throughout their academic journey.
+                The Student Counselling System at Sri Venkateswara University College of Engineering is a structured support system aimed at addressing the academic, personal, and emotional needs of students. Each student is assigned a dedicated faculty counsellor who acts as a mentor and guide throughout their academic journey.
               </p>
-              
+
               <p className="mb-4">
-                The system aims to provide a supportive environment where students can discuss their concerns, seek guidance on 
-                academic matters, and receive help in dealing with personal challenges that may affect their academic performance.
+                This system fosters a supportive environment where students can openly share their concerns, seek academic guidance, and receive help in overcoming personal challenges that may impact their overall performance and well-being.
               </p>
-              
+
               <h2 className="text-xl font-semibold text-iare-maroon mb-4 mt-6">Objectives</h2>
-              
+
               <ul className="list-disc pl-5 mb-6 space-y-2">
                 <li>Monitor and support students' academic progress</li>
                 <li>Identify and address learning difficulties and barriers</li>
@@ -67,9 +64,9 @@ const CounsellingSystem = () => {
                 <li>Facilitate communication between students, faculty, and administration</li>
                 <li>Promote overall student well-being and development</li>
               </ul>
-              
+
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Counselling Process</h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="bg-iare-gray p-4 rounded text-center">
                   <div className="bg-iare-teal text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">1</div>
@@ -78,7 +75,7 @@ const CounsellingSystem = () => {
                     Each student is assigned a faculty counsellor at the beginning of the academic year.
                   </p>
                 </div>
-                
+
                 <div className="bg-iare-gray p-4 rounded text-center">
                   <div className="bg-iare-teal text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">2</div>
                   <h3 className="font-semibold mb-2">Regular Meetings</h3>
@@ -86,7 +83,7 @@ const CounsellingSystem = () => {
                     Scheduled counselling sessions are conducted at least twice a month.
                   </p>
                 </div>
-                
+
                 <div className="bg-iare-gray p-4 rounded text-center">
                   <div className="bg-iare-teal text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">3</div>
                   <h3 className="font-semibold mb-2">Progress Monitoring</h3>
@@ -94,7 +91,7 @@ const CounsellingSystem = () => {
                     Academic performance and attendance are monitored and discussed.
                   </p>
                 </div>
-                
+
                 <div className="bg-iare-gray p-4 rounded text-center">
                   <div className="bg-iare-teal text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">4</div>
                   <h3 className="font-semibold mb-2">Issue Identification</h3>
@@ -102,7 +99,7 @@ const CounsellingSystem = () => {
                     Academic or personal issues affecting performance are identified.
                   </p>
                 </div>
-                
+
                 <div className="bg-iare-gray p-4 rounded text-center">
                   <div className="bg-iare-teal text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">5</div>
                   <h3 className="font-semibold mb-2">Intervention Planning</h3>
@@ -110,7 +107,7 @@ const CounsellingSystem = () => {
                     Strategies to address issues are developed collaboratively.
                   </p>
                 </div>
-                
+
                 <div className="bg-iare-gray p-4 rounded text-center">
                   <div className="bg-iare-teal text-white rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">6</div>
                   <h3 className="font-semibold mb-2">Follow-up</h3>
@@ -119,9 +116,9 @@ const CounsellingSystem = () => {
                   </p>
                 </div>
               </div>
-              
+
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Department Counsellors</h2>
-              
+
               <div className="overflow-x-auto mb-6">
                 <table className="min-w-full border rounded">
                   <thead>
@@ -144,19 +141,11 @@ const CounsellingSystem = () => {
                   </tbody>
                 </table>
               </div>
-              
-              <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Contact Counselling Coordinator</h3>
-                <p className="mb-1"><strong>Dr. Rajasekhar Reddy</strong></p>
-                <p className="mb-1">Coordinator, Student Counselling System</p>
-                <p className="mb-1">Email: counselling@iare.ac.in</p>
-                <p>Phone: +91-9876543220</p>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

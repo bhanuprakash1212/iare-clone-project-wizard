@@ -9,12 +9,12 @@ const ExperientialLearning = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -31,22 +31,21 @@ const ExperientialLearning = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Experiential Learning (ExL)</h1>
-            
+
             <p className="mb-6">
-              Experiential Learning at IARE is designed to provide hands-on, practical learning experiences that complement classroom education.
-              We believe that learning by doing is one of the most effective ways to develop skills, gain knowledge, and prepare for professional careers.
+              Experiential Learning at the Department of Computer Science and Engineering, Sri Venkateswara University College of Engineering, is structured to offer hands-on, practical experiences that go beyond traditional classroom learning. We believe that learning by doing is a powerful approach to developing technical skills, deepening knowledge, and preparing students for successful professional careers in the ever-evolving tech industry.
             </p>
-            
+
             <div className="bg-white border rounded shadow-sm p-5 mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">What is Experiential Learning?</h2>
-              
+
               <p className="mb-4">
                 Experiential Learning is a process through which students develop knowledge, skills, and values from direct experiences outside a traditional academic setting. It encompasses internships, service learning, undergraduate research, study abroad, and other creative and professional work experiences.
               </p>
-              
+
               <div className="flex flex-col md:flex-row gap-4 mt-6">
                 <div className="flex-1 bg-iare-gray p-4 rounded">
                   <h3 className="font-semibold mb-2 text-iare-blue">Learning by Doing</h3>
@@ -62,14 +61,14 @@ const ExperientialLearning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white border rounded shadow-sm p-5 mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Our Approach</h2>
-              
+
               <p className="mb-4">
-                At IARE, we follow the Experiential Learning Cycle developed by educational theorist David A. Kolb:
+                The Department of CSE at Sri Venkateswara University College of Engineering adopts David A. Kolb’s Experiential Learning Cycle to bridge theory and practice through real-world, hands-on learning.
               </p>
-              
+
               <div className="relative bg-iare-lightblue p-6 rounded-lg mb-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded border border-iare-teal shadow-sm">
@@ -96,11 +95,11 @@ const ExperientialLearning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white border rounded shadow-sm p-5">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Experiential Learning Opportunities</h2>
-                
+
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li><strong>Industry Internships:</strong> Gain real-world experience through structured work experiences</li>
                   <li><strong>Project-Based Learning:</strong> Work on real projects that address actual problems</li>
@@ -112,10 +111,10 @@ const ExperientialLearning = () => {
                   <li><strong>Hackathons:</strong> Collaborative programming events</li>
                 </ul>
               </div>
-              
+
               <div className="bg-white border rounded shadow-sm p-5">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Benefits of Experiential Learning</h2>
-                
+
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li>Bridges the gap between theory and practice</li>
                   <li>Develops critical thinking and problem-solving skills</li>
@@ -129,34 +128,24 @@ const ExperientialLearning = () => {
                 </ul>
               </div>
             </div>
-            
+
             <div className="bg-white border rounded shadow-sm p-5 mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Success Stories</h2>
-              
+
               <div className="border-l-4 border-iare-teal pl-4 mb-4">
                 <p className="italic">"The internship program at IARE gave me hands-on experience with industry-standard tools and processes. This practical experience was invaluable when I applied for my first job."</p>
                 <p className="font-semibold mt-2">- Priya Sharma, B.Tech Aeronautical Engineering, 2023</p>
               </div>
-              
+
               <div className="border-l-4 border-iare-teal pl-4">
                 <p className="italic">"Participating in the design challenge helped me apply my theoretical knowledge to solve real-world problems. It was challenging but incredibly rewarding."</p>
                 <p className="font-semibold mt-2">- Rajesh Kumar, B.Tech Computer Science, 2022</p>
               </div>
             </div>
-            
-            <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal mt-8">
-              <p className="mb-4">
-                For more information about our Experiential Learning programs, please contact:
-              </p>
-              <p className="mb-1"><strong>Dr. Suresh Reddy</strong></p>
-              <p className="mb-1">Coordinator, Experiential Learning</p>
-              <p className="mb-1">Email: exl@iare.ac.in</p>
-              <p>Phone: +91-9876543211</p>
-            </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

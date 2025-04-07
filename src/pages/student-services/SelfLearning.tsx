@@ -9,12 +9,12 @@ const SelfLearning = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -31,52 +31,52 @@ const SelfLearning = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Self Learning</h1>
-            
+
             <p className="mb-6">
-              At IARE, we recognize that self-directed learning is a critical skill for lifelong success. Our Self Learning program empowers students to take ownership of their educational journey, fostering independence, curiosity, and a passion for continuous learning beyond the classroom.
+              At the Department of CSE, Sri Venkateswara University College of Engineering, we recognize self-directed learning as a key to lifelong success. Our Self Learning initiatives encourage students to take charge of their academic journey, promoting independence, curiosity, and a drive for continuous learning beyond the classroom.
             </p>
-            
+
             <div className="bg-white border rounded shadow-sm p-5 mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Self Learning Framework</h2>
-              
+
               <p className="mb-4">
                 Our structured framework helps students develop effective self-learning habits:
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="border border-gray-200 rounded p-4">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mb-3">1</div>
                   <h3 className="font-semibold text-iare-blue mb-2">Goal Setting</h3>
                   <p className="text-sm">Defining clear, achievable learning objectives</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-4">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mb-3">2</div>
                   <h3 className="font-semibold text-iare-blue mb-2">Resource Identification</h3>
                   <p className="text-sm">Finding appropriate learning materials and tools</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-4">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mb-3">3</div>
                   <h3 className="font-semibold text-iare-blue mb-2">Learning Plan</h3>
                   <p className="text-sm">Creating a structured approach with timelines</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-4">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mb-3">4</div>
                   <h3 className="font-semibold text-iare-blue mb-2">Implementation</h3>
                   <p className="text-sm">Engaging with the learning material actively</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-4">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mb-3">5</div>
                   <h3 className="font-semibold text-iare-blue mb-2">Reflection</h3>
                   <p className="text-sm">Analyzing progress and understanding</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-4">
                   <div className="bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mb-3">6</div>
                   <h3 className="font-semibold text-iare-blue mb-2">Application</h3>
@@ -84,15 +84,15 @@ const SelfLearning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white border rounded shadow-sm p-5">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Self Learning Resources</h2>
-                
+
                 <p className="mb-4">
-                  IARE provides a comprehensive array of resources to support self-learning:
+                  We provide a comprehensive array of resources to support self-learning:
                 </p>
-                
+
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li><strong>Digital Library:</strong> Access to thousands of e-books, journals, and research papers</li>
                   <li><strong>Online Courses:</strong> Curated selection of MOOCs from platforms like Coursera, edX, and NPTEL</li>
@@ -104,14 +104,14 @@ const SelfLearning = () => {
                   <li><strong>Open Educational Resources:</strong> Freely accessible learning materials</li>
                 </ul>
               </div>
-              
+
               <div className="bg-white border rounded shadow-sm p-5">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Self Learning Support</h2>
-                
+
                 <p className="mb-4">
                   While self-learning emphasizes autonomy, we provide support structures to guide students:
                 </p>
-                
+
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li><strong>Learning Advisors:</strong> Faculty members who suggest resources and learning paths</li>
                   <li><strong>Peer Learning Groups:</strong> Connect with others exploring similar topics</li>
@@ -123,14 +123,14 @@ const SelfLearning = () => {
                 </ul>
               </div>
             </div>
-            
+
             <div className="bg-white border rounded shadow-sm p-5 mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Self Learning Recognition</h2>
-              
+
               <p className="mb-4">
                 We recognize and value the effort students put into self-directed learning:
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="border border-gray-200 rounded p-3 text-center">
                   <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-iare-lightblue flex items-center justify-center">
@@ -141,7 +141,7 @@ const SelfLearning = () => {
                   <h3 className="font-semibold text-iare-blue text-sm">Digital Badges</h3>
                   <p className="text-xs text-gray-600 mt-1">Recognition for completing learning milestones</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-3 text-center">
                   <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-iare-lightblue flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-iare-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -151,7 +151,7 @@ const SelfLearning = () => {
                   <h3 className="font-semibold text-iare-blue text-sm">Portfolio Development</h3>
                   <p className="text-xs text-gray-600 mt-1">Document self-acquired skills and knowledge</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-3 text-center">
                   <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-iare-lightblue flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-iare-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,7 +161,7 @@ const SelfLearning = () => {
                   <h3 className="font-semibold text-iare-blue text-sm">Challenge Examinations</h3>
                   <p className="text-xs text-gray-600 mt-1">Demonstrate proficiency gained through self-study</p>
                 </div>
-                
+
                 <div className="border border-gray-200 rounded p-3 text-center">
                   <div className="w-12 h-12 mx-auto mb-2 rounded-full bg-iare-lightblue flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-iare-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -173,14 +173,14 @@ const SelfLearning = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white border rounded shadow-sm p-5 mb-6">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Developing Self-Learning Skills</h2>
-              
+
               <p className="mb-4">
                 We offer workshops and guidance on developing essential self-learning skills:
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li>Setting effective learning goals</li>
@@ -188,7 +188,7 @@ const SelfLearning = () => {
                   <li>Note-taking and information organization</li>
                   <li>Critical evaluation of resources</li>
                 </ul>
-                
+
                 <ul className="list-disc pl-6 mb-4 space-y-2">
                   <li>Self-assessment techniques</li>
                   <li>Overcoming challenges in independent learning</li>
@@ -196,25 +196,15 @@ const SelfLearning = () => {
                   <li>Metacognition and learning about learning</li>
                 </ul>
               </div>
-              
+
               <p className="text-sm bg-iare-gray p-3 rounded italic">
                 "Self-education is, I firmly believe, the only kind of education there is." — Isaac Asimov
               </p>
             </div>
-            
-            <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal mt-8">
-              <p className="mb-4">
-                For more information about our Self Learning initiatives, please contact:
-              </p>
-              <p className="mb-1"><strong>Dr. Meena Gupta</strong></p>
-              <p className="mb-1">Coordinator, Self Learning Programs</p>
-              <p className="mb-1">Email: sl@iare.ac.in</p>
-              <p>Phone: +91-9876543212</p>
-            </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

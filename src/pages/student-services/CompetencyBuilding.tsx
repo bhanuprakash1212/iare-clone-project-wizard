@@ -75,12 +75,12 @@ const CompetencyBuilding = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -97,26 +97,24 @@ const CompetencyBuilding = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Competency Building and Consultancy</h1>
-            
+
             <div className="bg-white p-6 border rounded shadow-sm">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Building Professional Excellence</h2>
-              
+
               <div className="mb-6">
                 <p className="mb-4">
-                  IARE's Competency Building and Consultancy initiative is designed to develop industry-relevant skills and 
-                  provide real-world experience through consultancy projects. This dual approach ensures that students not only 
-                  acquire theoretical knowledge but also gain practical experience in applying that knowledge to solve real-world problems.
+                  Sri Venkateswara University College of Engineering's Competency Building and Consultancy initiative focuses on developing industry-relevant skills while offering students real-world exposure through consultancy projects. This approach ensures that students not only build strong theoretical foundations but also gain practical experience by applying their knowledge to solve real-life industry challenges.
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="border rounded-lg p-5 bg-iare-lightblue">
                     <h3 className="text-lg font-semibold text-iare-blue mb-3">Competency Building</h3>
                     <p className="text-sm mb-4">
-                      Our competency building programs focus on developing technical, professional, and soft skills that are highly 
-                      valued in the industry. These programs are designed in collaboration with industry partners to ensure relevance 
+                      Our competency building programs focus on developing technical, professional, and soft skills that are highly
+                      valued in the industry. These programs are designed in collaboration with industry partners to ensure relevance
                       and alignment with current market demands.
                     </p>
                     <ul className="list-disc pl-5 text-sm">
@@ -127,12 +125,12 @@ const CompetencyBuilding = () => {
                       <li className="mb-1">Continuous professional development</li>
                     </ul>
                   </div>
-                  
+
                   <div className="border rounded-lg p-5 bg-iare-lightblue">
                     <h3 className="text-lg font-semibold text-iare-blue mb-3">Consultancy Services</h3>
                     <p className="text-sm mb-4">
-                      Our student-faculty consultancy services provide solutions to real-world problems faced by industries, 
-                      startups, and community organizations. These consultancy projects offer students valuable experience in 
+                      Our student-faculty consultancy services provide solutions to real-world problems faced by industries,
+                      startups, and community organizations. These consultancy projects offer students valuable experience in
                       applying their knowledge in practical scenarios while delivering value to clients.
                     </p>
                     <ul className="list-disc pl-5 text-sm">
@@ -145,7 +143,7 @@ const CompetencyBuilding = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Competency Building Programs</h3>
                 <div className="overflow-x-auto">
@@ -171,7 +169,7 @@ const CompetencyBuilding = () => {
                   </table>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Consultancy Services</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -183,7 +181,7 @@ const CompetencyBuilding = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Our Impact</h3>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
@@ -205,7 +203,7 @@ const CompetencyBuilding = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Success Stories</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -217,12 +215,12 @@ const CompetencyBuilding = () => {
                       <h4 className="font-medium text-iare-blue mb-1">Smart Energy Management System</h4>
                       <p className="text-xs text-gray-500 mb-2">Client: Local Municipal Corporation</p>
                       <p className="text-sm">
-                        A team of IARE students developed an IoT-based energy management system for municipal buildings, 
+                        A team of IARE students developed an IoT-based energy management system for municipal buildings,
                         resulting in 30% energy savings and improved operational efficiency.
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded overflow-hidden">
                     <div className="h-48 bg-gray-200">
                       <img src="/placeholder.svg" alt="Project 2" className="w-full h-full object-cover" />
@@ -231,42 +229,19 @@ const CompetencyBuilding = () => {
                       <h4 className="font-medium text-iare-blue mb-1">Healthcare Analytics Platform</h4>
                       <p className="text-xs text-gray-500 mb-2">Client: Regional Hospital</p>
                       <p className="text-sm">
-                        Students from our Data Science competency program developed a predictive analytics platform for 
+                        Students from our Data Science competency program developed a predictive analytics platform for
                         patient readmission risk assessment, improving resource allocation and patient care.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
-                  <h3 className="text-lg font-semibold text-iare-blue mb-2">Enroll in Competency Programs</h3>
-                  <p className="text-sm mb-4">
-                    Interested in enhancing your skills through our competency building programs? 
-                    Registration is open for all IARE students from second year onwards.
-                  </p>
-                  <p className="mb-1 text-sm"><strong>Contact:</strong> Competency Development Cell</p>
-                  <p className="mb-1 text-sm"><strong>Email:</strong> competency.dev@iare.ac.in</p>
-                  <p className="text-sm"><strong>Phone:</strong> +91-9876543210</p>
-                </div>
-                
-                <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
-                  <h3 className="text-lg font-semibold text-iare-blue mb-2">Consultancy Services Inquiry</h3>
-                  <p className="text-sm mb-4">
-                    Need technical solutions or expert consultancy services? Contact our Consultancy Cell 
-                    to discuss your requirements and how we can assist you.
-                  </p>
-                  <p className="mb-1 text-sm"><strong>Contact:</strong> Consultancy Services</p>
-                  <p className="mb-1 text-sm"><strong>Email:</strong> consultancy@iare.ac.in</p>
-                  <p className="text-sm"><strong>Phone:</strong> +91-9876543211</p>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

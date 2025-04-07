@@ -78,12 +78,12 @@ const EmployabilitySkills = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto flex flex-col md:flex-row my-6 px-4">
         <div className="w-full md:w-1/4 mb-6 md:mb-0 md:pr-6">
           <Sidebar />
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <div className="bg-iare-gray p-2 mb-4">
             <nav className="text-sm">
@@ -100,20 +100,18 @@ const EmployabilitySkills = () => {
               </ol>
             </nav>
           </div>
-          
+
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">Career and Employability Skills</h1>
-            
+
             <div className="bg-white p-6 border rounded shadow-sm">
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Bridging the Gap Between Academia and Industry</h2>
-              
+
               <div className="mb-6">
                 <p className="mb-4">
-                  IARE's Career and Employability Skills program is designed to prepare students for successful professional careers 
-                  by developing industry-relevant skills, knowledge, and attitudes. This comprehensive program bridges the gap between 
-                  academic learning and industry requirements, making our students job-ready from day one.
+                  Sri Venkateswara University College of Engineering offers a Career and Employability Skills program aimed at preparing students for successful professional careers by equipping them with industry-relevant skills, knowledge, and attitudes. This comprehensive initiative bridges the gap between academic learning and industry expectations, ensuring our students are job-ready from day one.
                 </p>
-                
+
                 <div className="bg-iare-lightblue p-4 rounded-lg mb-6">
                   <h3 className="text-lg font-semibold text-iare-blue mb-2">Program Highlights</h3>
                   <ul className="list-disc pl-6">
@@ -126,7 +124,7 @@ const EmployabilitySkills = () => {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Skills Development Offerings</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -146,7 +144,7 @@ const EmployabilitySkills = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Program Structure</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -158,19 +156,7 @@ const EmployabilitySkills = () => {
                   ))}
                 </div>
               </div>
-              
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-iare-blue mb-4">Industry Partners</h3>
-                <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-                  {[...Array(6)].map((_, index) => (
-                    <div key={index} className="bg-white p-3 border rounded flex items-center justify-center h-20">
-                      <img src="/placeholder.svg" alt={`Partner ${index + 1}`} className="max-h-full max-w-full" />
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-center mt-2">Our industry partners contribute to curriculum development, provide internships, and participate in campus placements.</p>
-              </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-iare-blue mb-4">Success Stories</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -184,7 +170,7 @@ const EmployabilitySkills = () => {
                         <p className="text-sm text-gray-500 mb-2">BTech CSE, Batch 2022</p>
                         <p className="text-sm mb-2">Currently at: Google</p>
                         <p className="text-sm italic">
-                          "The Career and Employability Skills program at IARE played a crucial role in preparing me for my dream job. 
+                          "The Career and Employability Skills program at IARE played a crucial role in preparing me for my dream job.
                           The mock interviews and industry exposure were particularly helpful."
                         </p>
                       </div>
@@ -192,29 +178,11 @@ const EmployabilitySkills = () => {
                   ))}
                 </div>
               </div>
-              
-              <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Join Our Career Development Program</h3>
-                <p className="mb-4">
-                  Students can enroll in our Career and Employability Skills program starting from their second year of studies. 
-                  The program is designed to provide continuous skill development throughout your academic journey at IARE.
-                </p>
-                <div className="flex flex-col md:flex-row items-center justify-between">
-                  <div>
-                    <p className="mb-1"><strong>Contact:</strong> Career Development Cell</p>
-                    <p className="mb-1"><strong>Email:</strong> career.development@iare.ac.in</p>
-                    <p><strong>Phone:</strong> +91-9876543210</p>
-                  </div>
-                  <button className="mt-4 md:mt-0 bg-iare-blue text-white px-4 py-2 rounded hover:bg-iare-darkblue transition-colors">
-                    Register Now
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
