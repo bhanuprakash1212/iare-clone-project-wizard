@@ -25,7 +25,38 @@ const App = () => (
           <Route path="/student-services/learning-technologies" element={<LearningTechnologies />} />
           <Route path="/student-services/experiential-learning" element={<ExperientialLearning />} />
           <Route path="/student-services/self-learning" element={<SelfLearning />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
+          {/* Placeholder routes - these would be implemented in a full project */}
+          <Route path="/about-us" element={<NotFound />} />
+          <Route path="/study-with-us" element={<NotFound />} />
+          <Route path="/approvals" element={<NotFound />} />
+          <Route path="/departments" element={<NotFound />} />
+          <Route path="/placements" element={<NotFound />} />
+          <Route path="/research" element={<NotFound />} />
+          <Route path="/campus-life" element={<NotFound />} />
+          <Route path="/iqac" element={<NotFound />} />
+          <Route path="/naac" element={<NotFound />} />
+          <Route path="/student-services/career-guidance" element={<NotFound />} />
+          <Route path="/student-services/counselling-system" element={<NotFound />} />
+          <Route path="/student-services/makers-space" element={<NotFound />} />
+          <Route path="/student-services/development-program" element={<NotFound />} />
+          <Route path="/student-services/certifications" element={<NotFound />} />
+          <Route path="/student-services/co-curricular" element={<NotFound />} />
+          <Route path="/student-services/innovation" element={<NotFound />} />
+          <Route path="/student-services/projects" element={<NotFound />} />
+          <Route path="/student-services/international" element={<NotFound />} />
+          <Route path="/student-services/scholarships" element={<NotFound />} />
+          <Route path="/student-services/medical-centre" element={<NotFound />} />
+          <Route path="/student-services/employability" element={<NotFound />} />
+          <Route path="/student-services/competency" element={<NotFound />} />
+          <Route path="/student-services/support-hub" element={<NotFound />} />
+          <Route path="/events" element={<NotFound />} />
+          <Route path="/news" element={<NotFound />} />
+          <Route path="/admissions" element={<NotFound />} />
+          <Route path="/contact" element={<NotFound />} />
+          <Route path="/programs" element={<NotFound />} />
+          
+          {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
