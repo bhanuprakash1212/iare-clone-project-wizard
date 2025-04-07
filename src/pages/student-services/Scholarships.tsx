@@ -103,9 +103,9 @@ const Scholarships = () => {
                   Students maintaining excellent academic records throughout their course can also avail continuing scholarships:
                 </p>
                 <ul className="list-disc pl-6 mb-4">
-                  <li className="mb-2">CGPA > 9.5: 25% tuition fee waiver for the next academic year</li>
-                  <li className="mb-2">CGPA > 9.0: 15% tuition fee waiver for the next academic year</li>
-                  <li className="mb-2">CGPA > 8.5: 10% tuition fee waiver for the next academic year</li>
+                  <li className="mb-2">CGPA {'>'}9.5: 25% tuition fee waiver for the next academic year</li>
+                  <li className="mb-2">CGPA {'>'}9.0: 15% tuition fee waiver for the next academic year</li>
+                  <li className="mb-2">CGPA {'>'}8.5: 10% tuition fee waiver for the next academic year</li>
                 </ul>
               </div>
               
