@@ -68,8 +68,9 @@ const NAAC = () => {
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <div className="inline-block mb-6">
-              <img src="/naac-logo.svg" alt="NAAC Logo" className="h-20 mx-auto" />
+            <div className="mb-6">
+              <h2 className="text-4xl font-bold">NAAC</h2>
+              <p className="text-xl">National Assessment and Accreditation Council</p>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">NAAC Accreditation</h1>
             <p className="text-xl max-w-3xl mx-auto">
@@ -85,7 +86,7 @@ const NAAC = () => {
               <h2 className="text-3xl font-bold mb-4 text-iare-blue">NAAC Accreditation Status</h2>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
                 <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 w-full md:w-auto">
-                  <div className="text-5xl font-bold text-iare-teal mb-2">A++</div>
+                  <div className="text-5xl font-bold text-iare-teal mb-2">A+</div>
                   <div className="text-gray-600">Grade</div>
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 w-full md:w-auto">

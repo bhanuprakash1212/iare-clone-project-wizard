@@ -31,9 +31,9 @@ const Header = () => {
               </div>
             </Link>
           </div>
-          <div className="flex items-center">
-            <img src="/naac-logo.svg" alt="NAAC Accreditation" className="h-12 mx-4" />
-            <img src="/25years-logo.svg" alt="25 Years" className="h-16" />
+          <div className="flex flex-col items-end">
+            <div className="text-lg font-bold text-iare-yellow">NAAC A+ Accredited</div>
+            <div className="text-sm text-white">Celebrating 25 Years of Excellence</div>
           </div>
         </div>
       </div>

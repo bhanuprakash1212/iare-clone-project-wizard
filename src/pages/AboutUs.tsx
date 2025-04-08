@@ -41,18 +41,6 @@ const AboutUs = () => {
     }
   ];
 
-  const milestones = [
-    { year: "1985", event: "Establishment of the Institute of Advanced Computing Studies." },
-    { year: "1995", event: "Upgraded to a fully-fledged engineering college." },
-    { year: "2001", event: "Introduction of Computer Science & Engineering program." },
-    { year: "2006", event: "Achieved Autonomous Status from UGC." },
-    { year: "2012", event: "Accredited by NAAC with 'A' Grade." },
-    { year: "2016", event: "Ranked among Top 100 Engineering Institutions by NIRF." },
-    { year: "2019", event: "Established Center for Advanced Research and Innovation." },
-    { year: "2022", event: "Secured NAAC A++ accreditation with 3.65 CGPA." },
-    { year: "2024", event: "Celebrated 25 years of academic excellence." }
-  ];
-
   const departmentFeatures = [
     {
       icon: <Cpu className="h-8 w-8 text-iare-teal" />,
@@ -84,6 +72,39 @@ const AboutUs = () => {
       title: "Publications",
       description: "Over 200 research papers published in international journals and conferences annually."
     }
+  ];
+
+  const programOutcomes = [
+    "Apply knowledge of computing, mathematics, science, and engineering fundamentals to solve complex computing problems.",
+    "Identify, formulate, research literature, and analyze computing problems to arrive at substantiated conclusions using foundational principles of mathematics and computing sciences.",
+    "Design and develop solutions for complex computing problems, design components or systems that meet specified needs with appropriate consideration of public health, safety, cultural, societal and environmental considerations.",
+    "Apply research-based knowledge including design of experiments, analysis and interpretation of data, synthesis of information to provide valid conclusions.",
+    "Create, select and apply appropriate techniques, resources and modern computing tools to complex computing activities with an understanding of the limitations.",
+    "Apply reasoning through contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+    "Understand the impact of professional engineering solutions in societal and environmental contexts, demonstrate the knowledge of, and need for sustainable development.",
+    "Apply ethical principles and commit to professional ethics, responsibilities and norms of the computing practice.",
+    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+    "Communicate effectively with the engineering community and society, be able to comprehend and write effective reports, design documentation, make effective presentations, and give and receive clear instructions.",
+    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work, as a member and leader in a team.",
+    "Recognize the need for and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+  ];
+
+  const programSpecificOutcomes = [
+    "Analyze and design computing systems, components or processes to meet desired needs within realistic constraints in the domain of specialization.",
+    "Apply standard practices and strategies in software development using open-ended programming environments to deliver quality software products.",
+    "Apply mathematical foundations, algorithmic principles and computer science theory in the modeling and design of computer-based systems.",
+    "Employ modern computer languages, environments and platforms in creating innovative career paths.",
+    "Demonstrate independent learning for continuous professional development.",
+    "Identify, formulate and develop solutions for complex engineering problems with analytical approaches and enhance software usability to alleviate social, industrial and business challenges."
+  ];
+
+  const programEducationalObjectives = [
+    "To prepare graduates with a sound foundation in mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems.",
+    "To prepare graduates for successful careers in industry by providing them with well-balanced training and education in software development relevant to the needs of the industry.",
+    "To promote awareness among graduates for lifelong learning and to introduce them to professional ethics and codes of professional practice.",
+    "To prepare graduates for higher studies by encouraging research and creative problem-solving opportunities.",
+    "To develop the ability to communicate effectively and work collaboratively in teams.",
+    "To develop practical skills to design, develop, implement, and test software systems for various real-life problems."
   ];
 
   return (
@@ -473,97 +494,48 @@ const AboutUs = () => {
             </div>
           </div>
           
-          {/* Milestones */}
+          {/* Program Educational Objectives (PEO) */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
-            <h2 className="text-xl font-semibold text-iare-maroon mb-6">Our Journey</h2>
-            
-            <div className="relative">
-              {/* Timeline */}
-              <div className="absolute left-1/2 -ml-0.5 w-1 h-full bg-iare-teal"></div>
-              
-              {/* Events */}
-              <div className="space-y-8">
-                {milestones.map((milestone, index) => (
-                  <div key={index} className={`relative ${index % 2 === 0 ? 'text-right pr-12 md:pr-16' : 'pl-12 md:pl-16'}`}>
-                    <div className={`flex items-center ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
-                      <div className={`${index % 2 === 0 ? 'order-2 ml-4' : 'order-1 mr-4'}`}>
-                        <div className="absolute top-1/2 transform -translate-y-1/2 left-1/2 -ml-3 w-6 h-6 rounded-full bg-white border-4 border-iare-teal z-10"></div>
-                        <div className={`bg-white p-4 rounded shadow-sm max-w-md ${index % 2 === 0 ? 'ml-auto' : ''}`}>
-                          <div className="font-bold text-iare-teal">{milestone.year}</div>
-                          <p className="text-gray-700">{milestone.event}</p>
-                        </div>
-                      </div>
-                    </div>
+            <h2 className="text-xl font-semibold text-iare-maroon mb-6">Program Educational Objectives (PEO)</h2>
+            <div className="space-y-4">
+              {programEducationalObjectives.map((objective, index) => (
+                <div key={index} className="flex">
+                  <div className="flex-shrink-0 bg-iare-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    {index + 1}
                   </div>
-                ))}
-              </div>
+                  <p className="text-gray-700">{objective}</p>
+                </div>
+              ))}
             </div>
           </div>
           
-          {/* Leadership */}
+          {/* Program Outcomes (PO) */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
-            <h2 className="text-xl font-semibold text-iare-maroon mb-6">University Leadership</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="border rounded-lg overflow-hidden shadow-sm">
-                <div className="bg-gray-200 h-48 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Vice Chancellor" 
-                    className="w-36 h-36 object-cover rounded-full border-4 border-white"
-                  />
+            <h2 className="text-xl font-semibold text-iare-maroon mb-6">Program Outcomes (PO)</h2>
+            <div className="space-y-4">
+              {programOutcomes.map((outcome, index) => (
+                <div key={index} className="flex">
+                  <div className="flex-shrink-0 bg-iare-teal text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    {index + 1}
+                  </div>
+                  <p className="text-gray-700">{outcome}</p>
                 </div>
-                <div className="p-4 text-center">
-                  <h3 className="font-semibold text-iare-blue">Prof. Ramachandra Rao</h3>
-                  <p className="text-gray-600 text-sm mb-2">Vice Chancellor</p>
-                  <p className="text-sm text-gray-700">
-                    Ph.D. in Computer Science<br />
-                    30+ years of academic experience
-                  </p>
-                </div>
-              </div>
-              
-              <div className="border rounded-lg overflow-hidden shadow-sm">
-                <div className="bg-gray-200 h-48 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Pro Vice Chancellor" 
-                    className="w-36 h-36 object-cover rounded-full border-4 border-white"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="font-semibold text-iare-blue">Prof. Sunita Sharma</h3>
-                  <p className="text-gray-600 text-sm mb-2">Pro Vice Chancellor</p>
-                  <p className="text-sm text-gray-700">
-                    Ph.D. in Electronics Engineering<br />
-                    25+ years of research experience
-                  </p>
-                </div>
-              </div>
-              
-              <div className="border rounded-lg overflow-hidden shadow-sm">
-                <div className="bg-gray-200 h-48 flex items-center justify-center">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Registrar" 
-                    className="w-36 h-36 object-cover rounded-full border-4 border-white"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="font-semibold text-iare-blue">Dr. Vijay Kumar</h3>
-                  <p className="text-gray-600 text-sm mb-2">Registrar</p>
-                  <p className="text-sm text-gray-700">
-                    Ph.D. in Administrative Sciences<br />
-                    20+ years of administrative experience
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
-            
-            <div className="mt-6 text-center">
-              <Link to="/about-us/leadership" className="inline-block bg-iare-teal text-white px-4 py-2 rounded hover:bg-iare-blue transition-colors">
-                View Full Leadership Team
-              </Link>
+          </div>
+          
+          {/* Program Specific Outcomes (PSO) */}
+          <div className="bg-white p-6 border rounded shadow-sm mb-8">
+            <h2 className="text-xl font-semibold text-iare-maroon mb-6">Program Specific Outcomes (PSO)</h2>
+            <div className="space-y-4">
+              {programSpecificOutcomes.map((outcome, index) => (
+                <div key={index} className="flex">
+                  <div className="flex-shrink-0 bg-iare-maroon text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-1">
+                    {index + 1}
+                  </div>
+                  <p className="text-gray-700">{outcome}</p>
+                </div>
+              ))}
             </div>
           </div>
           

@@ -104,13 +104,6 @@ const Index = () => {
     }
   ];
 
-  const cseFaculty = [
-    { name: "Dr. L V Narasimha Prasad", position: "Professor & Head of Department", specialization: "Artificial Intelligence" },
-    { name: "Dr. Suresh Kumar", position: "Professor", specialization: "Data Science & Analytics" },
-    { name: "Dr. Rajasekhar Reddy", position: "Associate Professor", specialization: "Cloud Computing & Virtualization" },
-    { name: "Dr. Padmaja Rani", position: "Associate Professor", specialization: "Machine Learning & Pattern Recognition" }
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -214,38 +207,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Faculty Showcase */}
-        <div className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Distinguished Faculty</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">Learn from experts with extensive academic and industry experience</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {cseFaculty.map((faculty, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100">
-                  <div className="bg-gradient-to-r from-iare-blue to-blue-700 text-white p-4 text-center">
-                    <h3 className="font-semibold text-lg">{faculty.name}</h3>
-                  </div>
-                  <div className="p-5">
-                    <p className="text-gray-600 mb-2">{faculty.position}</p>
-                    <p className="text-iare-teal font-medium">{faculty.specialization}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-10">
-              <Link to="/departments" className="bg-iare-blue text-white font-medium px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
-                View All Faculty <ArrowRight size={18} className="ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
         {/* News & Events */}
-        <div className="py-16 bg-gray-50">
+        <div className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div>
