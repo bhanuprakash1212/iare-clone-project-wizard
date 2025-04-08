@@ -23,6 +23,8 @@ import SupportHub from "./pages/student-services/SupportHub";
 import Placements from "./pages/Placements";
 import Departments from "./pages/Departments";
 import CampusLife from "./pages/CampusLife";
+import AboutUs from "./pages/AboutUs";
+import Leadership from "./pages/about-us/Leadership";
 
 const queryClient = new QueryClient();
 
@@ -52,8 +54,11 @@ const App = () => (
           <Route path="/departments" element={<Departments />} />
           <Route path="/campus-life" element={<CampusLife />} />
           
+          {/* About Us routes */}
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/about-us/leadership" element={<Leadership />} />
+          
           {/* Placeholder routes - these would be implemented in a full project */}
-          <Route path="/about-us" element={<NotFound />} />
           <Route path="/study-with-us" element={<NotFound />} />
           <Route path="/approvals" element={<NotFound />} />
           <Route path="/research" element={<NotFound />} />

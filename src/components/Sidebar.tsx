@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
+import { Separator } from './ui/separator';
 
 const Sidebar = () => {
   const location = useLocation();
@@ -35,13 +37,14 @@ const Sidebar = () => {
             className={`py-2 px-4 ${location.pathname === item.path ? 'bg-gray-100 font-medium text-iare-blue' : 'hover:bg-gray-50'}`}
           >
             <Link to={item.path} className="flex items-center">
-              <span className={`mr-2 ${location.pathname === item.path ? 'text-iare-teal' : 'text-gray-400'}`}>•</span>
+              <ChevronRight size={16} className={`mr-2 ${location.pathname === item.path ? 'text-iare-teal' : 'text-gray-400'}`} />
               {item.label}
             </Link>
           </li>
         ))}
       </ul>
-      <div className="bg-iare-teal text-white py-3 px-4 mt-4 font-semibold">
+      <Separator className="my-2" />
+      <div className="bg-iare-teal text-white py-3 px-4 font-semibold">
         Contact Dean of Student Services
       </div>
       <div className="p-4 text-sm">
