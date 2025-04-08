@@ -59,9 +59,6 @@ const Header = () => {
               <Link to="/about-us" className={`block py-3 px-4 ${isActive('/about-us') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>About Us</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/approvals" className={`block py-3 px-4 ${isActive('/approvals') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>Approvals</Link>
-            </li>
-            <li className="border-b md:border-b-0 md:border-r">
               <Link to="/departments" className={`block py-3 px-4 ${isActive('/departments') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>Departments</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
@@ -79,26 +76,6 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-
-      {/* Ticker/News bar */}
-      {/* <div className="bg-iare-darkblue text-white py-2">
-        <div className="container mx-auto px-4 overflow-hidden">
-          <div className="whitespace-nowrap overflow-hidden relative">
-            <div className="inline-block animate-[marquee_20s_linear_infinite]">
-              <span className="mr-8">Campus Placements 2025 : MICROSOFT (5) | AMAZON (8) | GOOGLE (3) | ACCENTURE (45) | TCS (120) | WIPRO (98) | COGNIZANT (65)</span>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className="bg-iare-yellow text-black py-2">
-        <div className="container mx-auto px-4 overflow-hidden">
-          <div className="whitespace-nowrap overflow-hidden relative">
-            <div className="inline-block animate-[marquee_20s_linear_infinite]">
-              <span className="mr-8">Campus Placements 2024 : MICROSOFT (2) | AMAZON (5) | GOOGLE (1) | ACCENTURE (42) | TCS (105) | WIPRO (87) | COGNIZANT (58)</span>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </header>
   );
 };

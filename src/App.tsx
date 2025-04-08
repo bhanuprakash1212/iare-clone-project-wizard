@@ -27,6 +27,7 @@ import Departments from "./pages/Departments";
 import CampusLife from "./pages/CampusLife";
 import AboutUs from "./pages/AboutUs";
 import Leadership from "./pages/about-us/Leadership";
+import NAAC from "./pages/NAAC";
 
 const queryClient = new QueryClient();
 
@@ -62,12 +63,13 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/about-us/leadership" element={<Leadership />} />
           
+          {/* NAAC route */}
+          <Route path="/naac" element={<NAAC />} />
+          
           {/* Placeholder routes - these would be implemented in a full project */}
           <Route path="/study-with-us" element={<NotFound />} />
-          <Route path="/approvals" element={<NotFound />} />
           <Route path="/research" element={<NotFound />} />
           <Route path="/iqac" element={<NotFound />} />
-          <Route path="/naac" element={<NotFound />} />
           <Route path="/student-services/co-curricular" element={<NotFound />} />
           <Route path="/student-services/international" element={<NotFound />} />
           <Route path="/events" element={<NotFound />} />
