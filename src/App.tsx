@@ -20,6 +20,8 @@ import MedicalCentre from "./pages/student-services/MedicalCentre";
 import EmployabilitySkills from "./pages/student-services/EmployabilitySkills";
 import CompetencyBuilding from "./pages/student-services/CompetencyBuilding";
 import SupportHub from "./pages/student-services/SupportHub";
+import Projects from "./pages/student-services/Projects";
+import Innovation from "./pages/student-services/Innovation";
 import Placements from "./pages/Placements";
 import Departments from "./pages/Departments";
 import CampusLife from "./pages/CampusLife";
@@ -50,6 +52,8 @@ const App = () => (
           <Route path="/student-services/employability" element={<EmployabilitySkills />} />
           <Route path="/student-services/competency" element={<CompetencyBuilding />} />
           <Route path="/student-services/support-hub" element={<SupportHub />} />
+          <Route path="/student-services/projects" element={<Projects />} />
+          <Route path="/student-services/innovation" element={<Innovation />} />
           <Route path="/placements" element={<Placements />} />
           <Route path="/departments" element={<Departments />} />
           <Route path="/campus-life" element={<CampusLife />} />
@@ -65,8 +69,6 @@ const App = () => (
           <Route path="/iqac" element={<NotFound />} />
           <Route path="/naac" element={<NotFound />} />
           <Route path="/student-services/co-curricular" element={<NotFound />} />
-          <Route path="/student-services/innovation" element={<NotFound />} />
-          <Route path="/student-services/projects" element={<NotFound />} />
           <Route path="/student-services/international" element={<NotFound />} />
           <Route path="/events" element={<NotFound />} />
           <Route path="/news" element={<NotFound />} />
