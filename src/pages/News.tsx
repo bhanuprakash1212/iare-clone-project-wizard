@@ -1,11 +1,14 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Calendar, Tag, ChevronRight, ArrowUpRight } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const News = () => {
+  const [activeCategory, setActiveCategory] = useState("All News");
+  
   const newsCategories = [
     "All News", "Academic", "Research", "Events", 
     "Achievements", "Placements", "Faculty", "Students"
@@ -20,7 +23,7 @@ const News = () => {
     link: "/news/ai-ml-symposium"
   };
 
-  const latestNews = [
+  const allNews = [
     {
       title: "CSE Students Win International Hackathon Competition",
       date: "April 5, 2025",
@@ -79,6 +82,11 @@ const News = () => {
     { title: "New Curriculum Focused on Industry 4.0 Launched", date: "January 30, 2025", category: "Academic" }
   ];
 
+  // Filter news based on selected category
+  const filteredNews = activeCategory === "All News" 
+    ? allNews 
+    : allNews.filter(news => news.category === activeCategory);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -92,21 +100,22 @@ const News = () => {
           </div>
         </div>
         
-        {/* Categories Filter */}
+        {/* Categories Filter using Tabs */}
         <div className="bg-white border-b">
           <div className="container mx-auto px-4 py-4 overflow-x-auto">
-            <div className="flex space-x-4">
-              {newsCategories.map((category, index) => (
-                <button 
-                  key={index}
-                  className={`px-4 py-2 rounded-md whitespace-nowrap ${
-                    index === 0 ? 'bg-iare-blue text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+            <Tabs defaultValue="All News" value={activeCategory} onValueChange={setActiveCategory}>
+              <TabsList className="flex space-x-2 overflow-x-auto py-1 bg-transparent">
+                {newsCategories.map((category) => (
+                  <TabsTrigger 
+                    key={category}
+                    value={category}
+                    className="px-4 py-2 rounded-md whitespace-nowrap data-[state=active]:bg-iare-blue data-[state=active]:text-white data-[state=inactive]:bg-gray-100 data-[state=inactive]:text-gray-700 data-[state=inactive]:hover:bg-gray-200"
+                  >
+                    {category}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
           </div>
         </div>
         
@@ -148,12 +157,12 @@ const News = () => {
           </div>
         </div>
         
-        {/* Latest News Grid */}
+        {/* Latest News Grid with Tab Content */}
         <div className="py-10 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-6">Latest News</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {latestNews.map((news, index) => (
+              {filteredNews.map((news, index) => (
                 <div 
                   key={index}
                   className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
@@ -186,6 +195,11 @@ const News = () => {
                 </div>
               ))}
             </div>
+            {filteredNews.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-500">No news found in this category. Check back later!</p>
+              </div>
+            )}
           </div>
         </div>
         

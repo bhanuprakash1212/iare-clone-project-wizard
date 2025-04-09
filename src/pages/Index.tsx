@@ -122,8 +122,8 @@ const Index = () => {
       <Header />
 
       <main className="flex-grow">
-        {/* Hero Carousel Banner */}
-        <div className="relative h-[80vh] overflow-hidden">
+        {/* Hero Carousel Banner - Increased height from 80vh to 90vh */}
+        <div className="relative h-[90vh] overflow-hidden">
           <Carousel className="w-full h-full" opts={{ loop: true }}>
             <CarouselContent className="h-full">
               {carouselImages.map((image, index) => (
