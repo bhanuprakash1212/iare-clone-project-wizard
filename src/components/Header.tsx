@@ -33,7 +33,7 @@ const Header = () => {
           </div>
           <div className="flex flex-col items-end">
             <div className="text-lg font-bold text-iare-yellow">NAAC A+ Accredited</div>
-            <div className="text-sm text-white">Celebrating 25 Years of Excellence</div>
+            <div className="text-sm text-white">Celebrating 39 Years of Excellence</div>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ const Header = () => {
               <Link to="/about-us" className={`block py-3 px-4 ${isActive('/about-us') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>About Us</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
-              <Link to="/departments" className={`block py-3 px-4 ${isActive('/departments') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>Departments</Link>
+              <Link to="/departments" className={`block py-3 px-4 ${isActive('/departments') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>Department</Link>
             </li>
             <li className="border-b md:border-b-0 md:border-r">
               <Link to="/placements" className={`block py-3 px-4 ${isActive('/placements') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>Placements</Link>

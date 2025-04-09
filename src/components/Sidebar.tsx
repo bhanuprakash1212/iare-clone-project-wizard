@@ -43,16 +43,6 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
-      <Separator className="my-2" />
-      <div className="bg-iare-teal text-white py-3 px-4 font-semibold">
-        Contact Dean of Student Services
-      </div>
-      <div className="p-4 text-sm">
-        <p className="mb-2"><strong>Dr. L V Narasimha Prasad</strong></p>
-        <p className="mb-2">Dean of Student Services</p>
-        <p className="mb-2">Email: dean.ss@iare.ac.in</p>
-        <p>Phone: +91-9490182900</p>
-      </div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Placements = () => {
   ];
 
   const topRecruiters = [
-    "Microsoft", "Amazon", "Google", "TCS", "Accenture", "Infosys", "Wipro", "Cognizant", 
+    "Microsoft", "Amazon", "Google", "TCS", "Accenture", "Infosys", "Wipro", "Cognizant",
     "Capgemini", "IBM", "Deloitte", "HCL", "Tech Mahindra", "Oracle", "Adobe", "Intel",
     "Cisco", "Goldman Sachs", "Morgan Stanley", "JP Morgan Chase"
   ];
@@ -21,7 +21,7 @@ const Placements = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto px-4 py-8">
         <div className="bg-iare-gray p-2 mb-6">
           <nav className="text-sm">
@@ -34,9 +34,9 @@ const Placements = () => {
             </ol>
           </nav>
         </div>
-        
+
         <h1 className="text-3xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Placements</h1>
-        
+
         <div className="mb-12">
           <div className="bg-white shadow-md rounded overflow-hidden">
             <div className="bg-iare-blue text-white p-4">
@@ -72,7 +72,7 @@ const Placements = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Year-wise Placement Statistics</h2>
           <div className="overflow-x-auto">
@@ -100,7 +100,7 @@ const Placements = () => {
             </table>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div>
             <h2 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Placement Process</h2>
@@ -133,7 +133,7 @@ const Placements = () => {
               </ol>
             </div>
           </div>
-          
+
           <div>
             <h2 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Placement Support</h2>
             <div className="bg-white shadow-md rounded p-6">
@@ -166,14 +166,14 @@ const Placements = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Top Recruiters</h2>
           <div className="bg-white shadow-md rounded p-6">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {topRecruiters.map((company, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-iare-gray p-3 rounded text-center shadow-sm hover:shadow-md transition-shadow"
                 >
                   {company}
@@ -182,31 +182,29 @@ const Placements = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Contact Placement Office</h2>
           <div className="bg-white shadow-md rounded p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xl font-semibold mb-4">Training and Placement Officer</h3>
-                <p className="mb-2"><strong>Dr. K. Srinivas</strong></p>
-                <p className="mb-2">Professor and Dean, Industry Institute Interaction</p>
-                <p className="mb-2">Email: tpo@iare.ac.in</p>
-                <p>Phone: +91-9848688066</p>
+                <p className="mb-2"><strong>Prof. M. SriMurali</strong></p>
+                <p className="mb-2">Email: msrimurali@yahoo.co.in</p>
+                <p>Phone: +91-9603078920</p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-4">Placement Office</h3>
-                <p className="mb-2">Institute of Aeronautical Engineering</p>
-                <p className="mb-2">Dundigal, Hyderabad - 500043</p>
-                <p className="mb-2">Telangana, India</p>
-                <p className="mb-2">Email: placements@iare.ac.in</p>
-                <p>Phone: +91-8886661150</p>
+                <p className="mb-2">Sri venkateswara university</p>
+                <p className="mb-2">Main Building, II floor</p>
+                <p className="mb-2">Tirupati - 517202</p>
+                <p className="mb-2">Andhra Pradesh, India</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

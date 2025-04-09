@@ -116,9 +116,6 @@ const Index = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Department of Computer Science & Engineering</h1>
             <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light">Transforming futures through innovation, research, and excellence in computing education</p>
             <div className="flex flex-wrap justify-center gap-5">
-              <Link to="/programs" className="bg-white text-iare-blue font-semibold px-8 py-4 rounded-lg hover:bg-iare-yellow transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
-                Explore Programs <ArrowRight size={20} className="ml-2" />
-              </Link>
               <Link to="/student-services" className="bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-iare-blue transition-all duration-300 flex items-center">
                 Student Services <ArrowRight size={20} className="ml-2" />
               </Link>
@@ -138,10 +135,10 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {cseAchievements.map((achievement, index) => (
-                <div key={index} className="bg-gradient-to-br from-iare-blue to-blue-700 text-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:scale-105">
-                  <div className="mb-4 bg-white/10 p-4 rounded-full inline-block">{achievement.icon}</div>
+                <div key={index} className=" bg-gray-100 border-2  text-black rounded-xl shadow-sm p-8 transform transition-all duration-300 hover:scale-105">
+                  <div className="mb-4 bg-black/10 p-4 rounded-full inline-block">{achievement.icon}</div>
                   <div className="text-4xl font-bold mb-2">{achievement.value}</div>
-                  <div className="text-gray-200">{achievement.title}</div>
+                  <div className="text-black">{achievement.title}</div>
                 </div>
               ))}
             </div>
@@ -155,8 +152,8 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Academic Programs</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">Our comprehensive programs are designed to provide students with a strong foundation in computer science principles and practical skills</p>
             </div>
-            
-            <div className="overflow-hidden bg-white rounded-xl shadow-xl border border-gray-100">
+
+            <div className="overflow-hidden bg-white rounded-xl shadow-sm border border-gray-100">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead>
                   <tr className="bg-gradient-to-r from-iare-blue to-blue-700 text-white">
@@ -175,12 +172,6 @@ const Index = () => {
                   ))}
                 </tbody>
               </table>
-            </div>
-            
-            <div className="mt-8 text-center">
-              <Link to="/programs" className="inline-flex items-center text-iare-blue hover:text-blue-700 font-medium">
-                View detailed curriculum <ChevronRight className="ml-1" size={18} />
-              </Link>
             </div>
           </div>
         </div>
@@ -215,7 +206,7 @@ const Index = () => {
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 text-iare-blue flex items-center">
                   <Calendar className="mr-3" size={28} /> Upcoming Events
                 </h2>
-                
+
                 <div className="space-y-6">
                   {upcomingEvents.map((event, index) => (
                     <div key={index} className="bg-white rounded-xl shadow-md p-6 border-l-4 border-iare-teal transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -225,19 +216,19 @@ const Index = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-6">
                   <Link to="/events" className="inline-flex items-center text-iare-blue hover:text-blue-700 font-medium">
                     View All Events <ChevronRight className="ml-1" size={18} />
                   </Link>
                 </div>
               </div>
-              
+
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 text-iare-blue flex items-center">
                   <Trophy className="mr-3" size={28} /> Latest News
                 </h2>
-                
+
                 <div className="space-y-6">
                   {news.map((item, index) => (
                     <div key={index} className="bg-white rounded-xl shadow-md p-6 border-l-4 border-iare-yellow transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -247,7 +238,7 @@ const Index = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-6">
                   <Link to="/news" className="inline-flex items-center text-iare-blue hover:text-blue-700 font-medium">
                     View All News <ChevronRight className="ml-1" size={18} />
@@ -257,24 +248,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-iare-blue via-blue-700 to-iare-teal text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Begin Your Journey in Computer Science</h2>
-            <p className="text-xl mb-10 max-w-2xl mx-auto">Join our diverse community of innovators, researchers, and future technology leaders</p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/admissions" className="bg-white text-iare-blue font-semibold px-8 py-4 rounded-lg hover:bg-iare-yellow transition-all duration-300 shadow-lg flex items-center">
-                Apply Now <ArrowRight size={20} className="ml-2" />
-              </Link>
-              <Link to="/contact" className="bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-iare-blue transition-all duration-300 flex items-center">
-                Contact Us <ArrowRight size={20} className="ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
       </main>
-
       <Footer />
     </div>
   );

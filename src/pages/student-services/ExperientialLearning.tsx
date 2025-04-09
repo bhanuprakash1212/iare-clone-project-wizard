@@ -133,13 +133,13 @@ const ExperientialLearning = () => {
               <h2 className="text-xl font-semibold text-iare-maroon mb-4">Success Stories</h2>
 
               <div className="border-l-4 border-iare-teal pl-4 mb-4">
-                <p className="italic">"The internship program at IARE gave me hands-on experience with industry-standard tools and processes. This practical experience was invaluable when I applied for my first job."</p>
-                <p className="font-semibold mt-2">- Priya Sharma, B.Tech Aeronautical Engineering, 2023</p>
+                <p className="italic">"The internship program at Sri Venkateswara University College of Engineering provided me with hands-on experience using industry-standard tools and practices. This practical exposure was incredibly valuable and gave me a strong edge when applying for my first job.</p>
+                <p className="font-semibold mt-2">- Priya Sharma, B.Tech Computer Science & Engineering, 2023</p>
               </div>
 
               <div className="border-l-4 border-iare-teal pl-4">
                 <p className="italic">"Participating in the design challenge helped me apply my theoretical knowledge to solve real-world problems. It was challenging but incredibly rewarding."</p>
-                <p className="font-semibold mt-2">- Rajesh Kumar, B.Tech Computer Science, 2022</p>
+                <p className="font-semibold mt-2">- Rajesh Kumar, B.Tech Computer Science & Engineering, 2022</p>
               </div>
             </div>
           </div>

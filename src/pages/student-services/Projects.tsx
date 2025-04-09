@@ -90,7 +90,7 @@ const Projects = () => {
 
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Projects | Mockups | Competitions</h1>
-            
+
             {/* Hero Section */}
             <div className="bg-white p-6 border rounded shadow-sm mb-8">
               <div className="md:flex items-center">
@@ -104,7 +104,7 @@ const Projects = () => {
                   <p className="text-gray-700">
                     Whether you're building a prototype, participating in a coding competition, or presenting a technical paper, these platforms help you gain valuable hands-on experience, enhance your portfolio, and increase your employability.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-4 mt-6">
                     <div className="flex items-center">
                       <Trophy className="w-5 h-5 text-iare-teal mr-2" />
@@ -121,45 +121,45 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="md:w-1/3">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt="Projects Banner" 
+                  <img
+                    src="https://img.freepik.com/free-vector/project-initiation-abstract-concept-vector-illustration-project-documentation-business-analysis-vision-scope-determine-goals-task-assignment-timeframe-timeline-abstract-metaphor_335657-2944.jpg?semt=ais_country_boost&w=740"
+                    alt="Projects Banner"
                     className="rounded-lg shadow-md w-full h-auto"
                   />
                 </div>
               </div>
             </div>
-            
+
             {/* Main Content Tabs */}
             <div className="bg-white border rounded shadow-sm mb-8">
               <Tabs defaultValue="projects" className="w-full">
                 <TabsList className="w-full grid grid-cols-3 p-0 border-b">
-                  <TabsTrigger 
-                    value="projects" 
+                  <TabsTrigger
+                    value="projects"
                     className="py-3 rounded-none rounded-tl-lg data-[state=active]:border-b-2 data-[state=active]:border-iare-teal"
                   >
                     Student Projects
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="competitions" 
+                  <TabsTrigger
+                    value="competitions"
                     className="py-3 rounded-none data-[state=active]:border-b-2 data-[state=active]:border-iare-teal"
                   >
                     Competitions
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="resources" 
+                  <TabsTrigger
+                    value="resources"
                     className="py-3 rounded-none rounded-tr-lg data-[state=active]:border-b-2 data-[state=active]:border-iare-teal"
                   >
                     Resources & Support
                   </TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="projects" className="p-6">
                   <h3 className="text-lg font-semibold text-iare-maroon mb-4">Featured Student Projects</h3>
                   <p className="text-gray-700 mb-6">
                     Our students work on innovative projects across various domains. Here are some outstanding projects that showcase their creativity and technical expertise.
                   </p>
-                  
+
                   <div className="space-y-6">
                     {featuredProjects.map((project, index) => (
                       <div key={index} className="border rounded-lg overflow-hidden">
@@ -201,7 +201,7 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="mt-8 bg-gray-50 p-4 rounded-lg border">
                     <h3 className="text-lg font-semibold text-iare-maroon mb-3">Project Categories</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -224,18 +224,18 @@ const Projects = () => {
                     </div>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="competitions" className="p-6">
                   <h3 className="text-lg font-semibold text-iare-maroon mb-4">Competitions & Challenges</h3>
                   <p className="text-gray-700 mb-6">
                     We organize and facilitate participation in various technical competitions, hackathons, and challenges to encourage innovation and problem-solving skills among students.
                   </p>
-                  
+
                   <div className="mb-8">
                     <h4 className="font-medium text-iare-blue flex items-center mb-4">
                       <Trophy className="w-5 h-5 mr-2" /> Upcoming Competitions
                     </h4>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {upcomingCompetitions.map((competition, index) => (
                         <div key={index} className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
@@ -269,12 +269,12 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="mb-8">
                     <h4 className="font-medium text-iare-blue flex items-center mb-4">
                       <Award className="w-5 h-5 mr-2" /> External Competitions We Support
                     </h4>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="border p-4 rounded-lg">
                         <div className="flex items-center mb-2">
@@ -322,7 +322,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-iare-blue/5 p-4 rounded-lg border border-iare-blue/20">
                     <h4 className="font-medium text-iare-blue mb-3">Our Track Record</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -341,13 +341,13 @@ const Projects = () => {
                     </div>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="resources" className="p-6">
                   <h3 className="text-lg font-semibold text-iare-maroon mb-4">Resources & Support</h3>
                   <p className="text-gray-700 mb-6">
                     We provide various resources and support services to help students excel in their projects and competitions.
                   </p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3">
@@ -377,7 +377,7 @@ const Projects = () => {
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3">
                         <h4 className="font-medium text-iare-blue">Facilities & Infrastructure</h4>
@@ -407,7 +407,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mb-8">
                     <h4 className="font-medium text-iare-blue mb-4">Training & Workshops</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -434,7 +434,7 @@ const Projects = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gray-50 p-4 rounded-lg border">
                     <h4 className="font-medium text-iare-blue mb-3">How to Get Started</h4>
                     <div className="space-y-3">
@@ -487,24 +487,6 @@ const Projects = () => {
                   </div>
                 </TabsContent>
               </Tabs>
-            </div>
-            
-            {/* Call to Action */}
-            <div className="bg-iare-blue text-white p-6 rounded-lg shadow-sm">
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-3">Ready to Showcase Your Skills?</h3>
-                <p className="mb-6 opacity-90">
-                  Turn your ideas into reality and participate in competitions to gain recognition for your innovation.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-iare-blue px-6 py-2 rounded font-medium hover:bg-gray-100 transition-colors">
-                    Submit Project Proposal
-                  </button>
-                  <button className="bg-iare-teal text-white px-6 py-2 rounded font-medium hover:bg-opacity-90 transition-colors">
-                    View Upcoming Competitions
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>

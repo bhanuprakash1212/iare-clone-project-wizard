@@ -12,10 +12,10 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 border-b border-iare-yellow pb-2">Contact Us</h3>
             <div className="flex items-start mb-2">
               <MapPin size={18} className="mt-1 mr-2 flex-shrink-0" />
-              <p>
-                Institute of Aeronautical Engineering<br />
-                Dundigal, Hyderabad - 500043<br />
-                Telangana, India
+              <p className='uppercase'>
+                Department of CSE SVUCE<br />
+                Tirupati - 517502<br />
+                Andhra Pradesh, India
               </p>
             </div>
             <div className="flex items-center mb-2">
@@ -55,15 +55,15 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
             </div>
-            
+
             <h4 className="text-lg font-semibold mb-2">Location</h4>
             <div className="h-40 bg-gray-700 mb-2 rounded overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.6261653388885!2d78.42557951487804!3d17.475111205491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8fe0c893d7e5%3A0x47b4f6cb5d6784c9!2sInstitute%20of%20Aeronautical%20Engineering!5e0!3m2!1sen!2sin!4v1649933849527!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.489163873453!2d79.39044199678955!3d13.627981799999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b3b377b880b%3A0xa2b39b4759aa90ec!2sDepartment%20Of%20Computer%20Science%20And%20Engineering%2CSVUCE!5e0!3m2!1sen!2sin!4v1744093914277!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
                 title="IARE Location"
               ></iframe>
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p>&copy; {new Date().getFullYear()} Institute of Aeronautical Engineering. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Department of CSE SVUCE. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

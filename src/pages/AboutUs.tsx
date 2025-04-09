@@ -75,42 +75,37 @@ const AboutUs = () => {
   ];
 
   const programOutcomes = [
-    "Apply knowledge of computing, mathematics, science, and engineering fundamentals to solve complex computing problems.",
-    "Identify, formulate, research literature, and analyze computing problems to arrive at substantiated conclusions using foundational principles of mathematics and computing sciences.",
-    "Design and develop solutions for complex computing problems, design components or systems that meet specified needs with appropriate consideration of public health, safety, cultural, societal and environmental considerations.",
-    "Apply research-based knowledge including design of experiments, analysis and interpretation of data, synthesis of information to provide valid conclusions.",
-    "Create, select and apply appropriate techniques, resources and modern computing tools to complex computing activities with an understanding of the limitations.",
-    "Apply reasoning through contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
-    "Understand the impact of professional engineering solutions in societal and environmental contexts, demonstrate the knowledge of, and need for sustainable development.",
-    "Apply ethical principles and commit to professional ethics, responsibilities and norms of the computing practice.",
-    "Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
-    "Communicate effectively with the engineering community and society, be able to comprehend and write effective reports, design documentation, make effective presentations, and give and receive clear instructions.",
-    "Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work, as a member and leader in a team.",
-    "Recognize the need for and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change."
+    "Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems",
+    "Problem analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.",
+    "Design/development of solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.",
+    "Conduct investigations of complex problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.",
+    "Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.",
+    "The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.",
+    "Environment and sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.",
+    "Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.",
+    "Individual and team work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.",
+    "Communication: Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.",
+    "Project management and finance: Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.",
+    "Life-long learning: Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
   ];
 
   const programSpecificOutcomes = [
-    "Analyze and design computing systems, components or processes to meet desired needs within realistic constraints in the domain of specialization.",
-    "Apply standard practices and strategies in software development using open-ended programming environments to deliver quality software products.",
-    "Apply mathematical foundations, algorithmic principles and computer science theory in the modeling and design of computer-based systems.",
-    "Employ modern computer languages, environments and platforms in creating innovative career paths.",
-    "Demonstrate independent learning for continuous professional development.",
-    "Identify, formulate and develop solutions for complex engineering problems with analytical approaches and enhance software usability to alleviate social, industrial and business challenges."
+    "PSO1: Empowering the students for continuous learning and deliver efficient solutions for emerging challenges in the computation domain.",
+    "PS02:Ability to design, develop and implement problems of current research areas."
   ];
 
   const programEducationalObjectives = [
-    "To prepare graduates with a sound foundation in mathematical, scientific and engineering fundamentals necessary to formulate, solve and analyze engineering problems.",
-    "To prepare graduates for successful careers in industry by providing them with well-balanced training and education in software development relevant to the needs of the industry.",
-    "To promote awareness among graduates for lifelong learning and to introduce them to professional ethics and codes of professional practice.",
-    "To prepare graduates for higher studies by encouraging research and creative problem-solving opportunities.",
-    "To develop the ability to communicate effectively and work collaboratively in teams.",
-    "To develop practical skills to design, develop, implement, and test software systems for various real-life problems."
+    "PEO1: To Provide quality learning through effective teaching-learning process enabled by free and open learning environment in turn Producing high quality graduate.",
+    "PEO2: To Prepare students for properly positioning them in the society(academic, industrial, research and entrepreneurial areas in particular) with reference to trans-disciplinary activities, regular professional activities with high degree of innovation, competence, and commitment",
+    "PEO3: To create broad based expertise in the areas of CSE in general and a few (minimum of 4 to 5 ) focused areas for in-depth study and high quality research such as e-technologies, very large databases, data mining / warehousing, networking, security, high performance computing systems, embedded systems, software engineering methodology, s/w quality testing, multimedia, theoretical computer science aspects and so on.",
+    "PEO4: To inculcate the culture of Lifelong learning during the evolution of the student to a full-fledged professional through educating the applicant about the ever increasing needs of the society, technological trends and ethical values.",
+    "PEO5: To set up a sense of efficient administrative / economical practices, to evolve the applicant with the required leadership qualities and managerial skills.",
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto my-6 px-4">
         <div className="bg-iare-gray p-2 mb-4">
           <nav className="text-sm">
@@ -123,23 +118,23 @@ const AboutUs = () => {
             </ol>
           </nav>
         </div>
-        
+
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">About The University</h1>
-          
+          <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-4">About The Department</h1>
+
           {/* Hero Section */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8 overflow-hidden">
             <div className="md:flex items-center">
               <div className="md:w-1/2 p-4">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Welcome to SVUCE</h2>
                 <p className="mb-4 text-gray-700">
-                  SVUCE, established in 1985, is one of the premier technical institutions in India. 
-                  We are committed to imparting quality education in engineering and technology and 
+                  SVUCE, established in 1986, is one of the premier technical institutions in India.
+                  We are committed to imparting quality education in engineering and technology and
                   producing competent professionals with strong ethical values.
                 </p>
                 <p className="mb-4 text-gray-700">
-                  With state-of-the-art infrastructure, dedicated faculty, and innovative teaching 
-                  methodologies, we strive to create an environment that nurtures creativity, research, 
+                  With state-of-the-art infrastructure, dedicated faculty, and innovative teaching
+                  methodologies, we strive to create an environment that nurtures creativity, research,
                   and entrepreneurship among students.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -151,10 +146,7 @@ const AboutUs = () => {
                     <Users className="w-5 h-5 text-iare-teal mr-2" />
                     <span className="text-sm font-medium">Students: 5000+</span>
                   </div>
-                  <div className="flex items-center">
-                    <BookText className="w-5 h-5 text-iare-teal mr-2" />
-                    <span className="text-sm font-medium">Programs: 12</span>
-                  </div>
+
                   <div className="flex items-center">
                     <Glasses className="w-5 h-5 text-iare-teal mr-2" />
                     <span className="text-sm font-medium">Faculty: 350+</span>
@@ -162,22 +154,22 @@ const AboutUs = () => {
                 </div>
               </div>
               <div className="md:w-1/2 p-4">
-                <img 
-                  src="/campus-hero.jpg" 
-                  alt="SVUCE Campus" 
+                <img
+                  src="/campus-hero.jpg"
+                  alt="SVUCE Campus"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                   onError={(e) => {
-                    e.currentTarget.src = '/placeholder.svg';
+                    e.currentTarget.src = 'https://svuniversity.edu.in/storage/2022/10/Computer-Science-and-Engineering-Conference-Hall-I-B.Tech-Class-scaled.jpg';
                   }}
                 />
               </div>
             </div>
           </div>
-          
+
           {/* Department Overview - New Section */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
             <h2 className="text-xl font-semibold text-iare-maroon mb-6">Department of Computer Science & Engineering</h2>
-            
+
             <Tabs defaultValue="overview" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -188,7 +180,7 @@ const AboutUs = () => {
                 <div className="md:flex gap-8">
                   <div className="md:w-2/3">
                     <p className="mb-4 text-gray-700">
-                      The Department of Computer Science and Engineering at SVUCE was established in 2001 with a vision to produce technically competent and socially responsible computer engineers. Over the years, the department has evolved into a center of excellence for computer science education and research.
+                      The Department of Computer Science and Engineering at SVUCE was established in 1986 with a vision to produce technically competent and socially responsible computer engineers. Over the years, the department has evolved into a center of excellence for computer science education and research.
                     </p>
                     <p className="mb-4 text-gray-700">
                       The department offers undergraduate, postgraduate, and doctoral programs in Computer Science and Engineering. Our curriculum is designed to provide a strong foundation in computer science fundamentals while exposing students to cutting-edge technologies such as Artificial Intelligence, Machine Learning, Big Data Analytics, and Cloud Computing.
@@ -229,7 +221,7 @@ const AboutUs = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
                   {departmentFeatures.map((feature, index) => (
                     <div key={index} className="border p-4 rounded-lg hover:shadow-md transition-shadow">
@@ -246,7 +238,7 @@ const AboutUs = () => {
                   ))}
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="programs" className="pt-6">
                 <div className="space-y-6">
                   <div className="border rounded-lg overflow-hidden">
@@ -283,7 +275,7 @@ const AboutUs = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden">
                     <div className="bg-iare-blue/10 px-4 py-3">
                       <h3 className="font-medium text-iare-blue">M.Tech in Computer Science and Engineering</h3>
@@ -316,7 +308,7 @@ const AboutUs = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden">
                     <div className="bg-iare-blue/10 px-4 py-3">
                       <h3 className="font-medium text-iare-blue">Ph.D. in Computer Science and Engineering</h3>
@@ -343,13 +335,13 @@ const AboutUs = () => {
                   </div>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="research" className="pt-6">
                 <div className="space-y-6">
                   <p className="text-gray-700">
                     The department is actively involved in cutting-edge research across various domains of computer science. Our faculty members and research scholars publish regularly in prestigious international journals and conferences.
                   </p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3">
@@ -368,7 +360,7 @@ const AboutUs = () => {
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3">
                         <h3 className="font-medium text-iare-teal">Big Data Analytics</h3>
@@ -386,7 +378,7 @@ const AboutUs = () => {
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3">
                         <h3 className="font-medium text-iare-teal">Cybersecurity</h3>
@@ -404,7 +396,7 @@ const AboutUs = () => {
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3">
                         <h3 className="font-medium text-iare-teal">Internet of Things</h3>
@@ -423,7 +415,7 @@ const AboutUs = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gray-50 p-4 rounded-lg border">
                     <h3 className="font-medium text-iare-blue mb-3">Research Infrastructure</h3>
                     <p className="text-sm text-gray-600 mb-3">
@@ -444,7 +436,7 @@ const AboutUs = () => {
               </TabsContent>
             </Tabs>
           </div>
-          
+
           {/* Vision & Mission */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white p-6 border rounded shadow-sm">
@@ -455,12 +447,10 @@ const AboutUs = () => {
                 <h2 className="text-xl font-semibold text-iare-maroon">Our Vision</h2>
               </div>
               <p className="text-gray-700">
-                To evolve into a premier engineering institution that produces globally competent 
-                graduates with strong technical knowledge, professional skills, and ethical values, 
-                capable of addressing complex challenges and contributing to sustainable development.
+                To be one of the premier departments for achieving excellence in teaching and research with social responsibility and for producing innovative technical graduates in Computer Science and Engineering.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 border rounded shadow-sm">
               <div className="flex items-center mb-4">
                 <div className="bg-iare-teal p-3 rounded-full mr-4">
@@ -469,15 +459,15 @@ const AboutUs = () => {
                 <h2 className="text-xl font-semibold text-iare-maroon">Our Mission</h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Provide quality education through innovative teaching-learning methods.</li>
-                <li>Foster research, innovation, and entrepreneurship among faculty and students.</li>
-                <li>Establish strong industry-academia partnerships for practical exposure.</li>
-                <li>Promote ethical values, professional attitudes, and leadership qualities.</li>
-                <li>Create a vibrant campus culture that nurtures holistic development.</li>
+                <li>To impart Computer Science and Engineering education by utilizing state of the art computing facilities.</li>
+                <li>To inculcate inter-disciplinary approach with reference to academic, industrial and research-oriented activities, infusing scholarly inquisitiveness, making an imprint in the technological, economic and social development of the nation.</li>
+                <li>To impart quality technical education of international standard in terms of providing adequate exposure to quality & methods, e-technologies and work flow automation in particular.</li>
+                <li>To develop adequate expertise within the department, to help and guide all other departments of the institution, constituent and affiliate colleges of the University, dealing with computer science education.</li>
+                <li>To develop capabilities within the department to help and guide industries with respect to the IT requirements.</li>
               </ul>
             </div>
           </div>
-          
+
           {/* Core Values */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
             <h2 className="text-xl font-semibold text-iare-maroon mb-6 text-center">Core Values</h2>
@@ -493,7 +483,7 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Program Educational Objectives (PEO) */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
             <h2 className="text-xl font-semibold text-iare-maroon mb-6">Program Educational Objectives (PEO)</h2>
@@ -508,7 +498,7 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Program Outcomes (PO) */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
             <h2 className="text-xl font-semibold text-iare-maroon mb-6">Program Outcomes (PO)</h2>
@@ -523,7 +513,7 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Program Specific Outcomes (PSO) */}
           <div className="bg-white p-6 border rounded shadow-sm mb-8">
             <h2 className="text-xl font-semibold text-iare-maroon mb-6">Program Specific Outcomes (PSO)</h2>
@@ -538,82 +528,9 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
-          
-          {/* Accreditations */}
-          <div className="bg-white p-6 border rounded shadow-sm">
-            <h2 className="text-xl font-semibold text-iare-maroon mb-6">Accreditations & Rankings</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border p-4 rounded">
-                <h3 className="font-medium text-iare-teal mb-3">Accreditations</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <div className="bg-gray-100 p-2 rounded mr-3">
-                      <img src="/placeholder.svg" alt="NAAC" className="w-12 h-12 object-contain" />
-                    </div>
-                    <div>
-                      <p className="font-medium">NAAC A++ Grade</p>
-                      <p className="text-sm text-gray-600">CGPA: 3.65/4.00</p>
-                    </div>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-gray-100 p-2 rounded mr-3">
-                      <img src="/placeholder.svg" alt="NBA" className="w-12 h-12 object-contain" />
-                    </div>
-                    <div>
-                      <p className="font-medium">NBA Accreditation</p>
-                      <p className="text-sm text-gray-600">All eligible programs accredited</p>
-                    </div>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-gray-100 p-2 rounded mr-3">
-                      <img src="/placeholder.svg" alt="UGC" className="w-12 h-12 object-contain" />
-                    </div>
-                    <div>
-                      <p className="font-medium">UGC Autonomous Status</p>
-                      <p className="text-sm text-gray-600">Extended until 2029</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="border p-4 rounded">
-                <h3 className="font-medium text-iare-teal mb-3">Rankings & Recognitions</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <div className="bg-gray-100 p-2 rounded mr-3">
-                      <img src="/placeholder.svg" alt="NIRF" className="w-12 h-12 object-contain" />
-                    </div>
-                    <div>
-                      <p className="font-medium">NIRF Ranking 2023</p>
-                      <p className="text-sm text-gray-600">Ranked 47th in Engineering Category</p>
-                    </div>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-gray-100 p-2 rounded mr-3">
-                      <img src="/placeholder.svg" alt="THE Impact Rankings" className="w-12 h-12 object-contain" />
-                    </div>
-                    <div>
-                      <p className="font-medium">THE Impact Rankings</p>
-                      <p className="text-sm text-gray-600">Top 300 globally for SDG 4: Quality Education</p>
-                    </div>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-gray-100 p-2 rounded mr-3">
-                      <img src="/placeholder.svg" alt="QS Stars" className="w-12 h-12 object-contain" />
-                    </div>
-                    <div>
-                      <p className="font-medium">QS 5-Star Rating</p>
-                      <p className="text-sm text-gray-600">For Teaching, Employability, and Facilities</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

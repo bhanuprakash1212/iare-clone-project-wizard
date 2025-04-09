@@ -10,7 +10,7 @@ const CampusLife = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <div className="container mx-auto my-6 px-4">
         <div className="bg-iare-gray p-2 mb-4">
           <nav className="text-sm">
@@ -23,15 +23,15 @@ const CampusLife = () => {
             </ol>
           </nav>
         </div>
-        
+
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Campus Life</h1>
-          
+
           {/* Hero Section */}
           <div className="relative h-64 md:h-[400px] rounded-lg overflow-hidden mb-8">
-            <img 
-              src="/placeholder.svg" 
-              alt="IARE Campus" 
+            <img
+              src="https://img.freepik.com/free-vector/student-flat-concept-with-young-men-graduation-scene-with-university-campus-background-vector-illustration_1284-81557.jpg"
+              alt="IARE Campus"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-iare-blue/80 to-transparent flex items-center">
@@ -43,7 +43,7 @@ const CampusLife = () => {
               </div>
             </div>
           </div>
-          
+
           {/* About Campus Life - Tab View */}
           <div className="bg-white rounded-lg shadow-sm border mb-8">
             <Tabs defaultValue="overview" className="w-full">
@@ -53,22 +53,22 @@ const CampusLife = () => {
                 <TabsTrigger value="activities" className="py-3 rounded-none data-[state=active]:border-b-2 data-[state=active]:border-iare-teal">Activities</TabsTrigger>
                 <TabsTrigger value="accommodation" className="py-3 rounded-none rounded-tr-lg data-[state=active]:border-b-2 data-[state=active]:border-iare-teal">Accommodation</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="overview" className="p-6">
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-2/3">
                     <h3 className="text-lg font-semibold text-iare-maroon mb-4">Life at SVUCE</h3>
                     <p className="text-gray-700 mb-4">
-                      Campus life at SVUCE extends beyond academics to provide a holistic development environment. Our campus 
-                      is a thriving community where students engage in various extracurricular activities, develop leadership 
+                      Campus life at SVUCE extends beyond academics to provide a holistic development environment. Our campus
+                      is a thriving community where students engage in various extracurricular activities, develop leadership
                       skills, form lifelong friendships, and create memories that last a lifetime.
                     </p>
                     <p className="text-gray-700">
-                      We believe that learning happens both inside and outside the classroom. Our well-planned campus features 
-                      modern infrastructure, comfortable accommodation, diverse dining options, extensive sports facilities, and 
+                      We believe that learning happens both inside and outside the classroom. Our well-planned campus features
+                      modern infrastructure, comfortable accommodation, diverse dining options, extensive sports facilities, and
                       spaces that foster creativity, innovation, and collaboration.
                     </p>
-                    
+
                     <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="flex flex-col items-center justify-center text-center p-4 border rounded-lg bg-gray-50">
                         <Users className="w-8 h-8 text-iare-teal mb-2" />
@@ -92,7 +92,7 @@ const CampusLife = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="md:w-1/3">
                     <div className="h-full bg-gray-50 rounded-lg p-5 border">
                       <h3 className="text-lg font-semibold text-iare-maroon mb-4">Campus Highlights</h3>
@@ -130,17 +130,17 @@ const CampusLife = () => {
                   </div>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="facilities" className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="col-span-1 md:col-span-3 mb-2">
                     <h3 className="text-lg font-semibold text-iare-maroon mb-3">World-Class Facilities</h3>
                     <p className="text-gray-700">Our campus is equipped with modern facilities designed to enhance student learning and experience.</p>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                     <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Library" className="w-full h-full object-cover" />
+                      <img src="https://www.svulibrary.ac.in/data1/images/image.jpg" alt="Library" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-semibold text-iare-blue flex items-center">
@@ -151,10 +151,10 @@ const CampusLife = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                     <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Sports Complex" className="w-full h-full object-cover" />
+                      <img src="https://img.freepik.com/premium-vector/charming-vector-illustration-sports-hall-icon-vector-illustration_1325322-25658.jpg" alt="Sports Complex" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-semibold text-iare-blue flex items-center">
@@ -165,24 +165,24 @@ const CampusLife = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                     <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Cafeteria" className="w-full h-full object-cover" />
+                      <img src="https://static.vecteezy.com/system/resources/thumbnails/000/167/400/small_2x/REST.jpg" alt="Cafeteria" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-semibold text-iare-blue flex items-center">
-                        <Coffee className="w-4 h-4 mr-2" /> Food Court
+                        <Coffee className="w-4 h-4 mr-2" /> Canteen
                       </h4>
                       <p className="text-sm text-gray-600 mt-2">
                         Multiple dining options serving a variety of cuisines at affordable prices, with hygiene as the top priority.
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                     <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Auditorium" className="w-full h-full object-cover" />
+                      <img src="https://images.shiksha.com/mediadata/images/1742186850php8rAWpJ.jpeg" alt="Auditorium" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-semibold text-iare-blue flex items-center">
@@ -193,24 +193,24 @@ const CampusLife = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                     <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Labs" className="w-full h-full object-cover" />
+                      <img src="https://svuniversity.edu.in/storage/2021/12/DSC04929-scaled.jpg" alt="Labs" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-semibold text-iare-blue flex items-center">
-                        <Award className="w-4 h-4 mr-2" /> Research Labs
+                        <Award className="w-4 h-4 mr-2" /> Labs
                       </h4>
                       <p className="text-sm text-gray-600 mt-2">
-                        Advanced research laboratories equipped with cutting-edge technology and equipment for various disciplines.
+                        Advanced laboratories equipped with cutting-edge technology and equipment for various disciplines.
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                     <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Wi-Fi Campus" className="w-full h-full object-cover" />
+                      <img src="https://img.freepik.com/premium-vector/eco-friendly-lifestyle-modern-flat-design-style-vector-illustration-blue-background-with-set-icons-cityscape-with-skyscrapers-fountain-people-road-recycling-saving-energy-concept_89615-899.jpg" alt="Wi-Fi Campus" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-4">
                       <h4 className="font-semibold text-iare-blue flex items-center">
@@ -223,13 +223,13 @@ const CampusLife = () => {
                   </div>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="activities" className="p-6">
                 <h3 className="text-lg font-semibold text-iare-maroon mb-4">Student Activities & Clubs</h3>
                 <p className="text-gray-700 mb-6">
                   We offer a wide range of extracurricular activities to help students develop leadership skills, pursue their interests, and build a well-rounded personality.
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="border rounded-lg overflow-hidden">
                     <div className="bg-iare-blue/10 px-4 py-3 flex items-center">
@@ -250,7 +250,7 @@ const CampusLife = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden">
                     <div className="bg-iare-blue/10 px-4 py-3 flex items-center">
                       <Award className="w-5 h-5 text-iare-teal mr-2" />
@@ -270,7 +270,7 @@ const CampusLife = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden">
                     <div className="bg-iare-blue/10 px-4 py-3 flex items-center">
                       <Activity className="w-5 h-5 text-iare-teal mr-2" />
@@ -290,7 +290,7 @@ const CampusLife = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="border rounded-lg overflow-hidden">
                     <div className="bg-iare-blue/10 px-4 py-3 flex items-center">
                       <Users className="w-5 h-5 text-iare-teal mr-2" />
@@ -312,7 +312,7 @@ const CampusLife = () => {
                   </div>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="accommodation" className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
@@ -320,7 +320,7 @@ const CampusLife = () => {
                     <p className="text-gray-700 mb-4">
                       Our on-campus hostels provide a safe, comfortable, and conducive environment for students to live and study.
                     </p>
-                    
+
                     <div className="space-y-4 mb-6">
                       <div className="flex items-start">
                         <Home className="w-5 h-5 text-iare-teal mr-3 mt-0.5" />
@@ -358,22 +358,22 @@ const CampusLife = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <Link to="/campus-life/accommodation" className="inline-block bg-iare-teal text-white px-4 py-2 rounded hover:bg-iare-blue transition-colors">
                       Learn More About Hostels
                     </Link>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-lg font-semibold text-iare-maroon mb-4">Transportation</h3>
                     <p className="text-gray-700 mb-4">
                       For day scholars, we provide convenient transportation facilities connecting major points in the city.
                     </p>
-                    
+
                     <div className="mb-6">
                       <div className="border rounded-lg overflow-hidden">
                         <div className="h-48 bg-gray-200">
-                          <img src="/placeholder.svg" alt="Transportation" className="w-full h-full object-cover" />
+                          <img src="https://images.vexels.com/media/users/3/155560/raw/792fd524109799c5e9d86b22d5246c47-travelling-school-bus-illustration.jpg" alt="Transportation" className="w-full h-full object-cover" />
                         </div>
                         <div className="p-4">
                           <h4 className="font-semibold text-iare-blue flex items-center">
@@ -400,7 +400,7 @@ const CampusLife = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <Link to="/campus-life/transportation" className="inline-block bg-iare-teal text-white px-4 py-2 rounded hover:bg-iare-blue transition-colors">
                       View Transportation Routes
                     </Link>
@@ -409,42 +409,16 @@ const CampusLife = () => {
               </TabsContent>
             </Tabs>
           </div>
-          
-          {/* Virtual Tour Section */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border mb-8">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-semibold text-iare-maroon">Take a Virtual Tour</h3>
-              <p className="text-gray-600">Explore our campus from the comfort of your home</p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <img src="/placeholder.svg" alt="Campus Overview" className="w-full h-full object-cover" />
-              </div>
-              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <img src="/placeholder.svg" alt="Library" className="w-full h-full object-cover" />
-              </div>
-              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <img src="/placeholder.svg" alt="Sports Complex" className="w-full h-full object-cover" />
-              </div>
-            </div>
-            
-            <div className="text-center mt-6">
-              <button className="bg-iare-teal text-white px-6 py-2 rounded hover:bg-iare-blue transition-colors">
-                Watch Full Video Tour
-              </button>
-            </div>
-          </div>
-          
+
           {/* Campus Life Events */}
           <div className="bg-white p-6 rounded-lg shadow-sm border">
-            <h3 className="text-xl font-semibold text-iare-maroon mb-6">Upcoming Campus Events</h3>
-            
+            <h3 className="text-xl font-semibold text-iare-maroon mb-6">Campus Events</h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                 <div className="h-40 relative bg-iare-blue/10">
                   <div className="absolute top-0 left-0 bg-iare-teal text-white px-3 py-1 rounded-br">
-                    APR 15
+                    MAR 27
                   </div>
                   <div className="flex items-center justify-center h-full">
                     <Camera className="w-12 h-12 text-iare-teal" />
@@ -452,31 +426,31 @@ const CampusLife = () => {
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-iare-blue">Annual Tech Fest 2025</h4>
-                  <p className="text-xs text-gray-500 mb-2">April 15-17, 2025 • Main Auditorium</p>
+                  <p className="text-xs text-gray-500 mb-2">March 27-28, 2025</p>
                   <p className="text-sm text-gray-600">
-                    Three-day technical festival featuring competitions, workshops, and guest lectures.
+                    Two-day technical festival featuring competitions, workshops, and guest lectures.
                   </p>
                 </div>
               </div>
-              
+
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                 <div className="h-40 relative bg-iare-blue/10">
                   <div className="absolute top-0 left-0 bg-iare-teal text-white px-3 py-1 rounded-br">
-                    MAY 10
+                    APR 17
                   </div>
                   <div className="flex items-center justify-center h-full">
                     <Award className="w-12 h-12 text-iare-teal" />
                   </div>
                 </div>
                 <div className="p-4">
-                  <h4 className="font-semibold text-iare-blue">Sports Tournament</h4>
-                  <p className="text-xs text-gray-500 mb-2">May 10-12, 2025 • Sports Complex</p>
+                  <h4 className="font-semibold text-iare-blue">Rapsody Tournament</h4>
+                  <p className="text-xs text-gray-500 mb-2">April 17, 2025</p>
                   <p className="text-sm text-gray-600">
                     Inter-college sports tournament with competitions in cricket, football, basketball, and more.
                   </p>
                 </div>
               </div>
-              
+
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
                 <div className="h-40 relative bg-iare-blue/10">
                   <div className="absolute top-0 left-0 bg-iare-teal text-white px-3 py-1 rounded-br">
@@ -488,23 +462,17 @@ const CampusLife = () => {
                 </div>
                 <div className="p-4">
                   <h4 className="font-semibold text-iare-blue">Alumni Meet 2025</h4>
-                  <p className="text-xs text-gray-500 mb-2">June 5, 2025 • Convention Center</p>
+                  <p className="text-xs text-gray-500 mb-2">June 5, 2025 </p>
                   <p className="text-sm text-gray-600">
                     Annual alumni gathering to reconnect with the alma mater and network with fellow alumni.
                   </p>
                 </div>
               </div>
             </div>
-            
-            <div className="text-center mt-6">
-              <Link to="/campus-life/events" className="inline-block bg-iare-teal text-white px-6 py-2 rounded hover:bg-iare-blue transition-colors">
-                View All Events
-              </Link>
-            </div>
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

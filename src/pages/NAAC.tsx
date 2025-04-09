@@ -69,7 +69,7 @@ const NAAC = () => {
         <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <div className="mb-6">
-              <h2 className="text-4xl font-bold">NAAC</h2>
+              <h2 className="text-4xl font-bold">NAAC A+</h2>
               <p className="text-xl">National Assessment and Accreditation Council</p>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">NAAC Accreditation</h1>
@@ -162,44 +162,15 @@ const NAAC = () => {
             </div>
 
             <div className="mt-10 text-center">
-              <a href="https://www.iare.ac.in/NAAC/" target="_blank" rel="noopener noreferrer" 
-                 className="inline-flex items-center text-iare-blue font-medium hover:text-blue-700 transition-colors">
+              <a href="https://www.iare.ac.in/NAAC/" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center text-iare-blue font-medium hover:text-blue-700 transition-colors">
                 View Complete NAAC Repository <ExternalLink size={16} className="ml-2" />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Timeline */}
-        <div className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-iare-blue">NAAC Journey</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                Our journey of continuous improvement and excellence in quality education
-              </p>
-            </div>
 
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-iare-blue"></div>
-              
-              <div className="space-y-12">
-                {timeline.map((item, index) => (
-                  <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} relative items-center`}>
-                    <div className="w-1/2"></div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-iare-blue flex items-center justify-center text-white z-10">
-                      {index + 1}
-                    </div>
-                    <div className={`w-1/2 p-6 bg-white rounded-xl shadow-md ${index % 2 === 0 ? 'text-right mr-6' : 'ml-6'}`}>
-                      <h3 className="text-xl font-bold text-iare-blue mb-2">{item.year}</h3>
-                      <p className="text-gray-600">{item.event}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* IQAC Section */}
         <div className="py-16 bg-white">
