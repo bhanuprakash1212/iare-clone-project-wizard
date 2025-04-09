@@ -1,11 +1,23 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, Tag, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { Calendar, Tag, ChevronRight, ArrowUpRight, Search, Filter, BookmarkPlus, Share2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { 
+  Tabs, 
+  TabsContent, 
+  TabsList, 
+  TabsTrigger 
+} from "@/components/ui/tabs";
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
 
 const News = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('All News');
+
   const newsCategories = [
     "All News", "Academic", "Research", "Events", 
     "Achievements", "Placements", "Faculty", "Students"
@@ -79,157 +91,250 @@ const News = () => {
     { title: "New Curriculum Focused on Industry 4.0 Launched", date: "January 30, 2025", category: "Academic" }
   ];
 
+  // Filter news based on category and search
+  const filteredNews = latestNews.filter(news => 
+    (activeCategory === 'All News' || news.category === activeCategory) && 
+    (news.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       <Header />
       
       <main className="flex-grow">
         {/* Page Header */}
-        <div className="bg-gradient-to-r from-iare-blue to-blue-700 text-white py-12">
+        <div className="bg-gradient-to-r from-gray-900 to-black text-white py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-2">News & Announcements</h1>
-            <p className="text-xl">Stay updated with the latest happenings from our department</p>
-          </div>
-        </div>
-        
-        {/* Categories Filter */}
-        <div className="bg-white border-b">
-          <div className="container mx-auto px-4 py-4 overflow-x-auto">
-            <div className="flex space-x-4">
-              {newsCategories.map((category, index) => (
-                <button 
-                  key={index}
-                  className={`px-4 py-2 rounded-md whitespace-nowrap ${
-                    index === 0 ? 'bg-iare-blue text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
+            <div className="max-w-4xl">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">News & Announcements</h1>
+              <div className="w-24 h-1 bg-iare-yellow my-6"></div>
+              <p className="text-xl text-gray-300">Stay updated with the latest happenings from our department</p>
             </div>
           </div>
         </div>
         
-        {/* Featured News */}
-        <div className="py-10 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6">Featured News</h2>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="md:flex">
-                <div className="md:w-1/2">
-                  <img 
-                    src={featuredNews.image} 
-                    alt={featuredNews.title}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="md:w-1/2 p-6 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center mb-2">
-                      <span className="bg-iare-blue text-white text-sm px-3 py-1 rounded-full mr-2">
-                        {featuredNews.category}
-                      </span>
-                      <span className="text-gray-500 flex items-center text-sm">
-                        <Calendar size={16} className="mr-1" /> {featuredNews.date}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4">{featuredNews.title}</h3>
-                    <p className="text-gray-600 mb-6">{featuredNews.excerpt}</p>
-                  </div>
-                  <a 
-                    href={featuredNews.link}
-                    className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700"
-                  >
-                    Read Full Story <ArrowUpRight size={18} className="ml-1" />
-                  </a>
+        {/* Search and Filter Bar */}
+        <div className="bg-white border-b sticky top-0 z-10 shadow-sm">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-col md:flex-row justify-between gap-4">
+              <div className="relative w-full md:w-1/3">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={18} />
+                <Input 
+                  type="text" 
+                  placeholder="Search news..." 
+                  className="pl-10 bg-gray-50 border-gray-200"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <Filter size={18} className="text-gray-600" />
+                <span className="text-sm text-gray-600 mr-2">Filter by:</span>
+                <div className="flex flex-wrap gap-2">
+                  {newsCategories.map((category, index) => (
+                    <button 
+                      key={index}
+                      className={cn(
+                        "px-3 py-1.5 rounded-md text-sm whitespace-nowrap transition-all",
+                        activeCategory === category 
+                          ? "bg-gray-900 text-white" 
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                      )}
+                      onClick={() => setActiveCategory(category)}
+                    >
+                      {category}
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Latest News Grid */}
-        <div className="py-10 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6">Latest News</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {latestNews.map((news, index) => (
-                <div 
-                  key={index}
-                  className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
-                >
-                  <div className="h-48 overflow-hidden">
+        <div className="container mx-auto px-4 py-8">
+          <Tabs defaultValue="featured" className="w-full">
+            <TabsList className="w-full md:w-auto mb-6 bg-white border">
+              <TabsTrigger value="featured" className="text-base">Featured</TabsTrigger>
+              <TabsTrigger value="latest" className="text-base">Latest News</TabsTrigger>
+              <TabsTrigger value="archive" className="text-base">Archives</TabsTrigger>
+            </TabsList>
+            
+            {/* Featured News Tab */}
+            <TabsContent value="featured" className="mt-6">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="grid md:grid-cols-2">
+                  <div className="h-80 md:h-auto">
                     <img 
-                      src={news.image} 
-                      alt={news.title}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      src={featuredNews.image} 
+                      alt={featuredNews.title}
+                      className="h-full w-full object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-2">
-                      <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">
-                        {news.category}
-                      </span>
-                      <span className="text-gray-500 text-xs flex items-center">
-                        <Calendar size={12} className="mr-1" /> {news.date}
-                      </span>
+                  <div className="p-8 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center mb-4">
+                        <Badge className="mr-2 bg-gray-900 hover:bg-gray-800">
+                          {featuredNews.category}
+                        </Badge>
+                        <span className="text-gray-500 flex items-center text-sm">
+                          <Calendar size={16} className="mr-1" /> {featuredNews.date}
+                        </span>
+                      </div>
+                      <h3 className="text-3xl font-bold mb-4">{featuredNews.title}</h3>
+                      <p className="text-gray-600 mb-6 text-lg">{featuredNews.excerpt}</p>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{news.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
-                    <a 
-                      href={news.link}
-                      className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm"
-                    >
-                      Continue Reading <ChevronRight size={16} className="ml-1" />
-                    </a>
+                    <div className="flex justify-between items-center">
+                      <a 
+                        href={featuredNews.link}
+                        className="inline-flex items-center font-medium bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-800 transition-colors"
+                      >
+                        Read Full Story <ArrowUpRight size={18} className="ml-2" />
+                      </a>
+                      <div className="flex gap-2">
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                          <BookmarkPlus size={18} className="text-gray-700" />
+                        </button>
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                          <Share2 size={18} className="text-gray-700" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        {/* News Archive */}
-        <div className="py-10 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6">News Archive</h2>
-            <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-              <div className="divide-y">
-                {archiveNews.map((news, index) => (
-                  <div key={index} className="p-4 hover:bg-gray-50">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                      <div className="flex flex-col md:flex-row md:items-center">
-                        <span className="text-gray-500 text-sm mr-4 mb-2 md:mb-0">
-                          <Calendar size={16} className="inline mr-1" /> {news.date}
-                        </span>
-                        <h3 className="font-medium">{news.title}</h3>
+              </div>
+            </TabsContent>
+            
+            {/* Latest News Tab */}
+            <TabsContent value="latest" className="mt-6">
+              {searchQuery || activeCategory !== 'All News' ? (
+                <div className="mb-6">
+                  <h3 className="text-lg font-medium text-gray-600">
+                    Found {filteredNews.length} results {activeCategory !== 'All News' && `in "${activeCategory}"`}
+                    {searchQuery && ` for "${searchQuery}"`}
+                  </h3>
+                </div>
+              ) : null}
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredNews.length > 0 ? (
+                  filteredNews.map((news, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    >
+                      <div className="h-52 overflow-hidden">
+                        <img 
+                          src={news.image} 
+                          alt={news.title}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        />
                       </div>
-                      <div className="mt-2 md:mt-0 flex items-center">
-                        <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-4">
-                          {news.category}
-                        </span>
-                        <a href="#" className="text-iare-blue hover:text-blue-700">
-                          <ChevronRight size={20} />
-                        </a>
+                      <div className="p-6">
+                        <div className="flex justify-between items-center mb-3">
+                          <Badge variant="outline" className="text-xs">
+                            {news.category}
+                          </Badge>
+                          <span className="text-gray-500 text-xs flex items-center">
+                            <Calendar size={12} className="mr-1" /> {news.date}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold mb-3 line-clamp-2">{news.title}</h3>
+                        <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
+                        <div className="flex justify-between items-center">
+                          <a 
+                            href={news.link}
+                            className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm group"
+                          >
+                            Read More <ChevronRight size={16} className="ml-1 group-hover:ml-2 transition-all" />
+                          </a>
+                          <div className="flex gap-1">
+                            <button className="p-1.5 rounded-full hover:bg-gray-100">
+                              <BookmarkPlus size={16} className="text-gray-500" />
+                            </button>
+                            <button className="p-1.5 rounded-full hover:bg-gray-100">
+                              <Share2 size={16} className="text-gray-500" />
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
+                  ))
+                ) : (
+                  <div className="col-span-3 py-16 text-center">
+                    <p className="text-gray-500 text-lg">No news articles match your search criteria.</p>
+                    <button 
+                      className="mt-4 text-iare-blue hover:underline"
+                      onClick={() => {
+                        setSearchQuery('');
+                        setActiveCategory('All News');
+                      }}
+                    >
+                      Clear filters
+                    </button>
                   </div>
-                ))}
+                )}
               </div>
-            </div>
-            <div className="mt-6 text-center">
-              <button className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50">
-                Load More News
-              </button>
-            </div>
-          </div>
+              
+              <div className="mt-10 text-center">
+                <button className="bg-white border border-gray-300 text-gray-800 px-6 py-3 rounded-md hover:bg-gray-50 shadow-sm">
+                  Load More News
+                </button>
+              </div>
+            </TabsContent>
+            
+            {/* Archive Tab */}
+            <TabsContent value="archive" className="mt-6">
+              <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+                <div className="divide-y">
+                  {archiveNews.map((news, index) => (
+                    <div key={index} className="p-5 hover:bg-gray-50 transition-colors">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div className="flex flex-col md:flex-row md:items-center">
+                          <span className="text-gray-500 text-sm mr-4 mb-2 md:mb-0">
+                            <Calendar size={16} className="inline mr-1" /> {news.date}
+                          </span>
+                          <h3 className="font-medium">{news.title}</h3>
+                        </div>
+                        <div className="mt-2 md:mt-0 flex items-center">
+                          <Badge variant="outline" className="mr-4">
+                            {news.category}
+                          </Badge>
+                          <a href="#" className="text-iare-blue hover:text-blue-700">
+                            <ChevronRight size={20} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="mt-10 flex justify-between items-center">
+                <button className="bg-white border border-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-50 disabled:opacity-50" disabled>
+                  Previous
+                </button>
+                <div className="flex items-center space-x-2">
+                  <button className="w-8 h-8 flex items-center justify-center rounded bg-gray-900 text-white">1</button>
+                  <button className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100">2</button>
+                  <button className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100">3</button>
+                  <span className="px-2">...</span>
+                  <button className="w-8 h-8 flex items-center justify-center rounded hover:bg-gray-100">10</button>
+                </div>
+                <button className="bg-white border border-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-50">
+                  Next
+                </button>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
         
         {/* Newsletter Signup */}
-        <div className="py-16 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
+        <div className="py-20 bg-gradient-to-r from-gray-900 to-black text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <div className="w-20 h-1 bg-iare-yellow mx-auto my-6"></div>
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
               Subscribe to our newsletter to receive the latest news and updates from our department
             </p>
             <div className="max-w-md mx-auto">
@@ -243,7 +348,7 @@ const News = () => {
                   Subscribe
                 </button>
               </div>
-              <p className="text-sm mt-2 text-gray-200">
+              <p className="text-sm mt-2 text-gray-400">
                 We respect your privacy. Your information is safe with us.
               </p>
             </div>
