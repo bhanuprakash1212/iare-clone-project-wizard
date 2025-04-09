@@ -70,6 +70,9 @@ const Header = () => {
             <li className="border-b md:border-b-0 md:border-r">
               <Link to="/student-services" className={`block py-3 px-4 ${isActive('/student-services') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>Student Services</Link>
             </li>
+            <li className="border-b md:border-b-0 md:border-r">
+              <Link to="/news" className={`block py-3 px-4 ${isActive('/news') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>News</Link>
+            </li>
             <li>
               <Link to="/naac" className={`block py-3 px-4 ${isActive('/naac') ? 'bg-[#efb800] text-black' : 'hover:bg-gray-100'} transition duration-300`}>NAAC</Link>
             </li>

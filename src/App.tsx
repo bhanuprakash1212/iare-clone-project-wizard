@@ -28,6 +28,7 @@ import CampusLife from "./pages/CampusLife";
 import AboutUs from "./pages/AboutUs";
 import Leadership from "./pages/about-us/Leadership";
 import NAAC from "./pages/NAAC";
+import News from "./pages/News";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/placements" element={<Placements />} />
           <Route path="/departments" element={<Departments />} />
           <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/news" element={<News />} />
           
           {/* About Us routes */}
           <Route path="/about-us" element={<AboutUs />} />
@@ -73,7 +75,6 @@ const App = () => (
           <Route path="/student-services/co-curricular" element={<NotFound />} />
           <Route path="/student-services/international" element={<NotFound />} />
           <Route path="/events" element={<NotFound />} />
-          <Route path="/news" element={<NotFound />} />
           <Route path="/admissions" element={<NotFound />} />
           <Route path="/contact" element={<NotFound />} />
           <Route path="/programs" element={<NotFound />} />

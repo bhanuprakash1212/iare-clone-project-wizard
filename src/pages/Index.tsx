@@ -1,50 +1,33 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ArrowRight, Book, Award, Star, Grid, Code, Brain, Server, Network, Globe, Users, Laptop, GraduationCap, Briefcase, Calendar, Trophy, ChevronRight } from 'lucide-react';
+import { 
+  ArrowRight, Book, Award, GraduationCap, Briefcase, 
+  ChevronRight, Brain, Server, Grid, Code, Network, Globe 
+} from 'lucide-react';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 const Index = () => {
-  const upcomingEvents = [
+  const carouselImages = [
     {
-      date: "April 15, 2025",
-      title: "CSE Technical Symposium",
-      description: "A two-day symposium featuring speakers from leading tech companies and workshops on emerging technologies."
+      url: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      title: "Innovation in Computer Science Education"
     },
     {
-      date: "April 20, 2025",
-      title: "Campus Recruitment Drive - Microsoft",
-      description: "Microsoft will be conducting recruitment for 2025 passing out CSE students."
+      url: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      title: "Building the Future with Technology"
     },
     {
-      date: "May 5, 2025",
-      title: "International Conference on AI & ML",
-      description: "Annual conference featuring research papers, workshops, and expert talks on artificial intelligence and machine learning."
-    }
-  ];
-
-  const cseCourses = [
-    { name: "B.Tech in Computer Science & Engineering", duration: "4 Years", intake: 300 },
-    { name: "M.Tech in Computer Science & Engineering", duration: "2 Years", intake: 30 },
-    { name: "Ph.D in Computer Science & Engineering", duration: "3-5 Years", intake: 10 }
-  ];
-
-  const news = [
-    {
-      date: "April 5, 2025",
-      title: "CSE Students Win International Hackathon",
-      content: "A team of 5 CSE students won the first prize at the International Coding Hackathon held in Singapore."
-    },
-    {
-      date: "March 30, 2025",
-      title: "CSE Department Receives Research Grant",
-      content: "The CSE department has been awarded a research grant of ₹1.2 crore for advanced AI research."
-    },
-    {
-      date: "March 25, 2025",
-      title: "New AI & ML Lab Inauguration",
-      content: "State-of-the-art AI and ML laboratory inaugurated with NVIDIA GPU infrastructure and research facilities."
+      url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      title: "Excellence in Research and Development"
     }
   ];
 
@@ -65,9 +48,9 @@ const Index = () => {
       icon: <GraduationCap className="w-10 h-10 text-white" />
     },
     {
-      title: "Labs & Research Centers",
-      value: "15",
-      icon: <Laptop className="w-10 h-10 text-white" />
+      title: "Innovative Projects",
+      value: "250+",
+      icon: <Award className="w-10 h-10 text-white" />
     }
   ];
 
@@ -89,166 +72,206 @@ const Index = () => {
     },
     {
       title: "Internet of Things & Embedded Systems",
-      icon: <Network className="w-8 h-8 text-iare-maroon" />,
+      icon: <Network className="w-8 h-8 text-iare-blue" />,
       description: "Building connected devices, sensor networks, and real-time systems for smart applications."
     },
     {
       title: "Cyber Security & Blockchain",
-      icon: <Code className="w-8 h-8 text-iare-blue" />,
+      icon: <Code className="w-8 h-8 text-iare-teal" />,
       description: "Implementing security protocols, ethical hacking, digital forensics, and blockchain applications."
     },
     {
       title: "Web & Mobile Development",
-      icon: <Globe className="w-8 h-8 text-iare-teal" />,
+      icon: <Globe className="w-8 h-8 text-iare-yellow" />,
       description: "Creating responsive web applications and cross-platform mobile solutions with modern frameworks."
     }
   ];
+
+  const news = [
+    {
+      date: "April 5, 2025",
+      title: "CSE Students Win International Hackathon",
+      content: "A team of 5 CSE students won the first prize at the International Coding Hackathon held in Singapore."
+    },
+    {
+      date: "March 30, 2025",
+      title: "CSE Department Receives Research Grant",
+      content: "The CSE department has been awarded a research grant of ₹1.2 crore for advanced AI research."
+    },
+    {
+      date: "March 25, 2025",
+      title: "New AI & ML Lab Inauguration",
+      content: "State-of-the-art AI and ML laboratory inaugurated with NVIDIA GPU infrastructure and research facilities."
+    }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const buttons = document.querySelectorAll('.carousel-button-next');
+      if (buttons.length > 0) {
+        (buttons[0] as HTMLButtonElement).click();
+      }
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
 
       <main className="flex-grow">
-        {/* Hero Banner - Modern Design */}
-        <div className="bg-gradient-to-r from-iare-blue via-blue-700 to-iare-teal text-white h-[75vh] flex items-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
-          <div className="container mx-auto px-4 text-center relative z-20">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">Department of Computer Science & Engineering</h1>
-            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-light">Transforming futures through innovation, research, and excellence in computing education</p>
-            <div className="flex flex-wrap justify-center gap-5">
-              <Link to="/student-services" className="bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-iare-blue transition-all duration-300 flex items-center">
-                Student Services <ArrowRight size={20} className="ml-2" />
-              </Link>
+        {/* Hero Carousel Banner */}
+        <div className="relative h-[80vh] overflow-hidden">
+          <Carousel className="w-full h-full" opts={{ loop: true }}>
+            <CarouselContent className="h-full">
+              {carouselImages.map((image, index) => (
+                <CarouselItem key={index} className="h-full">
+                  <div className="relative w-full h-full">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center" 
+                      style={{ backgroundImage: `url(${image.url})` }}
+                    >
+                      <div className="absolute inset-0 bg-black opacity-50"></div>
+                    </div>
+                    <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10">
+                      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white max-w-4xl">{image.title}</h1>
+                      <p className="text-xl md:text-2xl text-white max-w-3xl mb-8">
+                        Department of Computer Science & Engineering
+                      </p>
+                      <Link 
+                        to="/student-services" 
+                        className="bg-white text-iare-blue font-bold px-8 py-3 rounded-md hover:bg-iare-yellow transition-all duration-300 flex items-center"
+                      >
+                        Explore Programs <ArrowRight size={20} className="ml-2" />
+                      </Link>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden">
+              <CarouselPrevious className="carousel-button-prev" />
+              <CarouselNext className="carousel-button-next" />
             </div>
-          </div>
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  className="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                  onClick={() => {
+                    // Implementation for direct slide navigation
+                  }}
+                />
+              ))}
+            </div>
+          </Carousel>
         </div>
 
-        {/* Key Highlights */}
-        <div className="py-16 bg-gradient-to-b from-gray-100 to-white">
+        {/* Key Highlights Section with Card Layout */}
+        <div className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="flex justify-center mb-16">
-              <div className="text-center max-w-3xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Excellence in Computer Science Education</h2>
-                <p className="text-gray-600 text-lg">Empowering students with cutting-edge knowledge and practical skills for the digital future</p>
-              </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Excellence in Computing Education</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Our department is committed to providing quality education and research opportunities in computer science
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {cseAchievements.map((achievement, index) => (
-                <div key={index} className=" bg-gray-100 border-2  text-black rounded-xl shadow-sm p-8 transform transition-all duration-300 hover:scale-105">
-                  <div className="mb-4 bg-black/10 p-4 rounded-full inline-block">{achievement.icon}</div>
-                  <div className="text-4xl font-bold mb-2">{achievement.value}</div>
-                  <div className="text-black">{achievement.title}</div>
+                <div 
+                  key={index}
+                  className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-100"
+                >
+                  <div className="p-6">
+                    <div className="bg-gradient-to-r from-iare-blue to-blue-700 p-4 rounded-full inline-block mb-4">
+                      {achievement.icon}
+                    </div>
+                    <h3 className="text-4xl font-bold mb-2">{achievement.value}</h3>
+                    <p className="text-gray-600">{achievement.title}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Programs Section */}
-        <div className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Academic Programs</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">Our comprehensive programs are designed to provide students with a strong foundation in computer science principles and practical skills</p>
-            </div>
-
-            <div className="overflow-hidden bg-white rounded-xl shadow-sm border border-gray-100">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead>
-                  <tr className="bg-gradient-to-r from-iare-blue to-blue-700 text-white">
-                    <th className="py-4 px-6 text-left font-semibold text-lg">Program</th>
-                    <th className="py-4 px-6 text-left font-semibold text-lg">Duration</th>
-                    <th className="py-4 px-6 text-left font-semibold text-lg">Annual Intake</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {cseCourses.map((course, index) => (
-                    <tr key={index} className="hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6">{course.name}</td>
-                      <td className="py-4 px-6">{course.duration}</td>
-                      <td className="py-4 px-6">{course.intake}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        {/* Specializations Grid */}
+        {/* Specializations Section */}
         <div className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Areas of Specialization</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">Our department offers specialized training and research opportunities in several cutting-edge domains</p>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Our department offers specialized training and research opportunities in several cutting-edge domains
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cseSpecializations.map((specialization, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cseSpecializations.map((spec, index) => (
+                <div 
+                  key={index}
+                  className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+                >
                   <div className="flex items-center mb-4">
-                    <div className="p-3 rounded-full bg-gray-100">{specialization.icon}</div>
-                    <h3 className="text-xl font-semibold ml-4 text-iare-blue">{specialization.title}</h3>
+                    <div className="p-3 rounded-full bg-gray-100">{spec.icon}</div>
+                    <h3 className="text-xl font-bold ml-4">{spec.title}</h3>
                   </div>
-                  <p className="text-gray-600">{specialization.description}</p>
+                  <p className="text-gray-600">{spec.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* News & Events */}
+        {/* Latest News Section */}
         <div className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-iare-blue flex items-center">
-                  <Calendar className="mr-3" size={28} /> Upcoming Events
-                </h2>
+            <div className="flex justify-between items-center mb-12">
+              <h2 className="text-3xl font-bold text-iare-blue">Latest News</h2>
+              <Link to="/news" className="text-iare-blue font-medium flex items-center hover:text-blue-700">
+                View All News <ChevronRight size={20} className="ml-1" />
+              </Link>
+            </div>
 
-                <div className="space-y-6">
-                  {upcomingEvents.map((event, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-md p-6 border-l-4 border-iare-teal transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
-                      <div className="text-iare-teal font-semibold mb-1">{event.date}</div>
-                      <h3 className="font-bold text-xl mb-2">{event.title}</h3>
-                      <p className="text-gray-600">{event.description}</p>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {news.map((item, index) => (
+                <div 
+                  key={index}
+                  className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <div className="p-6">
+                    <div className="text-iare-yellow font-medium mb-2">{item.date}</div>
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-gray-600 mb-4">{item.content}</p>
+                    <Link to={`/news`} className="text-iare-blue font-medium flex items-center hover:text-blue-700">
+                      Read More <ChevronRight size={18} className="ml-1" />
+                    </Link>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
-                <div className="mt-6">
-                  <Link to="/events" className="inline-flex items-center text-iare-blue hover:text-blue-700 font-medium">
-                    View All Events <ChevronRight className="ml-1" size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6 text-iare-blue flex items-center">
-                  <Trophy className="mr-3" size={28} /> Latest News
-                </h2>
-
-                <div className="space-y-6">
-                  {news.map((item, index) => (
-                    <div key={index} className="bg-white rounded-xl shadow-md p-6 border-l-4 border-iare-yellow transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
-                      <div className="text-iare-yellow font-semibold mb-1">{item.date}</div>
-                      <h3 className="font-bold text-xl mb-2">{item.title}</h3>
-                      <p className="text-gray-600">{item.content}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6">
-                  <Link to="/news" className="inline-flex items-center text-iare-blue hover:text-blue-700 font-medium">
-                    View All News <ChevronRight className="ml-1" size={18} />
-                  </Link>
-                </div>
-              </div>
+        {/* Call to Action */}
+        <div className="py-16 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Shape Your Future?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">Join our department and gain the skills needed to thrive in the ever-evolving field of computer science and engineering</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/about-us" className="bg-white text-iare-blue font-bold px-8 py-3 rounded-md hover:bg-iare-yellow hover:text-white transition-all duration-300">
+                Learn More
+              </Link>
+              <Link to="/student-services" className="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-md hover:bg-white hover:text-iare-blue transition-all duration-300">
+                Student Resources
+              </Link>
             </div>
           </div>
         </div>
       </main>
+
       <Footer />
     </div>
   );
