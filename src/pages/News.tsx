@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, Tag, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { Calendar, Tag, ChevronRight, ArrowUpRight, Search } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -93,16 +93,27 @@ const News = () => {
       
       <main className="flex-grow">
         {/* Page Header */}
-        <div className="bg-gradient-to-r from-iare-blue to-blue-700 text-white py-12">
+        <div className="bg-gradient-to-r from-iare-blue to-blue-700 text-white py-10">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-2">News & Announcements</h1>
+            <h1 className="text-3xl font-bold mb-2">News & Announcements</h1>
             <p className="text-xl">Stay updated with the latest happenings from our department</p>
           </div>
         </div>
         
         {/* Categories Filter using Tabs */}
-        <div className="bg-white border-b">
-          <div className="container mx-auto px-4 py-4 overflow-x-auto">
+        <div className="sticky top-0 z-10 bg-white border-b shadow-sm">
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex justify-between items-center mb-3">
+              <h2 className="text-xl font-semibold">Browse by Category</h2>
+              <div className="relative w-48">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
+                <input 
+                  type="text" 
+                  placeholder="Search news..." 
+                  className="pl-10 pr-4 py-2 border rounded-full w-full text-sm focus:outline-none focus:ring-1 focus:ring-iare-blue"
+                />
+              </div>
+            </div>
             <Tabs defaultValue="All News" value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="flex space-x-2 overflow-x-auto py-1 bg-transparent">
                 {newsCategories.map((category) => (
@@ -119,20 +130,31 @@ const News = () => {
           </div>
         </div>
         
-        {/* Featured News */}
-        <div className="py-10 bg-gray-50">
+        {/* Content Area with Tab Indicator */}
+        <div className="container mx-auto px-4 py-6">
+          <div className="bg-blue-50 rounded-lg p-3 mb-6 flex items-center">
+            <span className="text-iare-blue font-medium">Currently viewing: </span>
+            <span className="ml-2 bg-iare-blue text-white px-3 py-1 rounded-full text-sm">{activeCategory}</span>
+            <span className="ml-auto text-sm text-gray-500">
+              {filteredNews.length} {filteredNews.length === 1 ? 'result' : 'results'} found
+            </span>
+          </div>
+        </div>
+        
+        {/* Featured News - Reduced height */}
+        <div className="py-6 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6">Featured News</h2>
+            <h2 className="text-2xl font-bold mb-4">Featured News</h2>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="md:flex">
-                <div className="md:w-1/2">
+                <div className="md:w-2/5">
                   <img 
                     src={featuredNews.image} 
                     alt={featuredNews.title}
-                    className="h-full w-full object-cover"
+                    className="h-64 md:h-full w-full object-cover"
                   />
                 </div>
-                <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                <div className="md:w-3/5 p-6 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center mb-2">
                       <span className="bg-iare-blue text-white text-sm px-3 py-1 rounded-full mr-2">
@@ -158,46 +180,53 @@ const News = () => {
         </div>
         
         {/* Latest News Grid with Tab Content */}
-        <div className="py-10 bg-white">
+        <div className="py-8 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-6">Latest News</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredNews.map((news, index) => (
-                <div 
-                  key={index}
-                  className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={news.image} 
-                      alt={news.title}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-2">
-                      <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">
-                        {news.category}
-                      </span>
-                      <span className="text-gray-500 text-xs flex items-center">
-                        <Calendar size={12} className="mr-1" /> {news.date}
-                      </span>
+            {filteredNews.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredNews.map((news, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+                  >
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={news.image} 
+                        alt={news.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{news.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
-                    <a 
-                      href={news.link}
-                      className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm"
-                    >
-                      Continue Reading <ChevronRight size={16} className="ml-1" />
-                    </a>
+                    <div className="p-6">
+                      <div className="flex items-center mb-2">
+                        <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">
+                          {news.category}
+                        </span>
+                        <span className="text-gray-500 text-xs flex items-center">
+                          <Calendar size={12} className="mr-1" /> {news.date}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{news.title}</h3>
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
+                      <a 
+                        href={news.link}
+                        className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm"
+                      >
+                        Continue Reading <ChevronRight size={16} className="ml-1" />
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            {filteredNews.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-500">No news found in this category. Check back later!</p>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-gray-50 rounded-lg p-12 text-center">
+                <p className="text-gray-500 mb-4">No news found in the "{activeCategory}" category.</p>
+                <button 
+                  onClick={() => setActiveCategory("All News")}
+                  className="bg-iare-blue text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  View All News
+                </button>
               </div>
             )}
           </div>
@@ -240,7 +269,7 @@ const News = () => {
         </div>
         
         {/* Newsletter Signup */}
-        <div className="py-16 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
+        <div className="py-12 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">

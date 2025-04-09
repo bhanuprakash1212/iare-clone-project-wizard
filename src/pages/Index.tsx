@@ -122,7 +122,7 @@ const Index = () => {
       <Header />
 
       <main className="flex-grow">
-        {/* Hero Carousel Banner - Increased height from 80vh to 90vh */}
+        {/* Hero Carousel Banner - Minimalist Design */}
         <div className="relative h-[90vh] overflow-hidden">
           <Carousel className="w-full h-full" opts={{ loop: true }}>
             <CarouselContent className="h-full">
@@ -133,19 +133,29 @@ const Index = () => {
                       className="absolute inset-0 bg-cover bg-center" 
                       style={{ backgroundImage: `url(${image.url})` }}
                     >
-                      <div className="absolute inset-0 bg-black opacity-50"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
                     </div>
-                    <div className="relative h-full flex flex-col justify-center items-center text-center px-4 z-10">
-                      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white max-w-4xl">{image.title}</h1>
-                      <p className="text-xl md:text-2xl text-white max-w-3xl mb-8">
-                        Department of Computer Science & Engineering
-                      </p>
-                      <Link 
-                        to="/student-services" 
-                        className="bg-white text-iare-blue font-bold px-8 py-3 rounded-md hover:bg-iare-yellow transition-all duration-300 flex items-center"
-                      >
-                        Explore Programs <ArrowRight size={20} className="ml-2" />
-                      </Link>
+                    <div className="relative h-full flex flex-col justify-center items-start text-left px-8 md:px-16 lg:px-24 z-10 max-w-5xl">
+                      <div className="bg-iare-blue/20 backdrop-blur-sm px-6 py-4 rounded-lg inline-block mb-6">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-tight">{image.title}</h1>
+                        <p className="text-xl md:text-2xl text-white/90 max-w-2xl">
+                          Department of Computer Science & Engineering
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-4">
+                        <Link 
+                          to="/student-services" 
+                          className="bg-iare-blue text-white font-medium px-8 py-3 rounded-md hover:bg-blue-700 transition-all duration-300 flex items-center"
+                        >
+                          Explore Programs <ArrowRight size={18} className="ml-2" />
+                        </Link>
+                        <Link 
+                          to="/about-us" 
+                          className="bg-white/10 backdrop-blur-sm text-white border border-white/30 font-medium px-8 py-3 rounded-md hover:bg-white/20 transition-all duration-300"
+                        >
+                          Learn More
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>
@@ -155,11 +165,11 @@ const Index = () => {
               <CarouselPrevious className="carousel-button-prev" />
               <CarouselNext className="carousel-button-next" />
             </div>
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+            <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3">
               {carouselImages.map((_, index) => (
                 <button
                   key={index}
-                  className="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
+                  className="w-3 h-3 rounded-full bg-white/30 hover:bg-white/80 transition-all duration-300"
                   onClick={() => {
                     // Implementation for direct slide navigation
                   }}
@@ -169,13 +179,15 @@ const Index = () => {
           </Carousel>
         </div>
 
-        {/* Key Highlights Section with Card Layout */}
+        {/* Key Highlights Section - More Minimal Design */}
         <div className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Excellence in Computing Education</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                Our department is committed to providing quality education and research opportunities in computer science
+              <span className="bg-blue-50 text-iare-blue px-4 py-1 rounded-full text-sm font-medium mb-3 inline-block">EXCELLENCE METRICS</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Our Department at a Glance</h2>
+              <div className="w-20 h-1 bg-iare-blue mx-auto mb-6"></div>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Setting new standards in computing education with outstanding outcomes
               </p>
             </div>
 
@@ -183,28 +195,30 @@ const Index = () => {
               {cseAchievements.map((achievement, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-100"
+                  className="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 border border-gray-100 p-6 group"
                 >
-                  <div className="p-6">
-                    <div className="bg-gradient-to-r from-iare-blue to-blue-700 p-4 rounded-full inline-block mb-4">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gradient-to-br from-iare-blue to-blue-600 p-4 rounded-xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
                       {achievement.icon}
                     </div>
-                    <h3 className="text-4xl font-bold mb-2">{achievement.value}</h3>
-                    <p className="text-gray-600">{achievement.title}</p>
                   </div>
+                  <h3 className="text-4xl font-bold mb-2 text-gray-900">{achievement.value}</h3>
+                  <p className="text-gray-600">{achievement.title}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Specializations Section */}
+        {/* Specializations Section - Clean Cards */}
         <div className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iare-blue">Areas of Specialization</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                Our department offers specialized training and research opportunities in several cutting-edge domains
+              <span className="bg-blue-50 text-iare-blue px-4 py-1 rounded-full text-sm font-medium mb-3 inline-block">FOCUS AREAS</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Areas of Specialization</h2>
+              <div className="w-20 h-1 bg-iare-blue mx-auto mb-6"></div>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Cutting-edge domains where our faculty and students excel in research and innovation
               </p>
             </div>
 
@@ -212,11 +226,13 @@ const Index = () => {
               {cseSpecializations.map((spec, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-lg shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+                  className="bg-white rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border border-gray-100 group"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="p-3 rounded-full bg-gray-100">{spec.icon}</div>
-                    <h3 className="text-xl font-bold ml-4">{spec.title}</h3>
+                    <div className="p-3 rounded-full bg-blue-50 group-hover:bg-blue-100 transition-colors">
+                      {spec.icon}
+                    </div>
+                    <h3 className="text-xl font-bold ml-4 group-hover:text-iare-blue transition-colors">{spec.title}</h3>
                   </div>
                   <p className="text-gray-600">{spec.description}</p>
                 </div>
@@ -225,13 +241,16 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Latest News Section */}
+        {/* Latest News Section - Clean Design */}
         <div className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center mb-12">
-              <h2 className="text-3xl font-bold text-iare-blue">Latest News</h2>
-              <Link to="/news" className="text-iare-blue font-medium flex items-center hover:text-blue-700">
-                View All News <ChevronRight size={20} className="ml-1" />
+              <div>
+                <span className="bg-blue-50 text-iare-blue px-4 py-1 rounded-full text-sm font-medium mb-3 inline-block">LATEST UPDATES</span>
+                <h2 className="text-3xl font-bold text-gray-900">Department News</h2>
+              </div>
+              <Link to="/news" className="text-iare-blue font-medium flex items-center hover:text-blue-700 group">
+                View All News <ChevronRight size={20} className="ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
@@ -239,14 +258,14 @@ const Index = () => {
               {news.map((item, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1 group"
                 >
                   <div className="p-6">
                     <div className="text-iare-yellow font-medium mb-2">{item.date}</div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-iare-blue transition-colors">{item.title}</h3>
                     <p className="text-gray-600 mb-4">{item.content}</p>
-                    <Link to={`/news`} className="text-iare-blue font-medium flex items-center hover:text-blue-700">
-                      Read More <ChevronRight size={18} className="ml-1" />
+                    <Link to={`/news`} className="text-iare-blue font-medium flex items-center hover:text-blue-700 group">
+                      Read More <ChevronRight size={18} className="ml-1 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -255,11 +274,12 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="py-16 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
+        {/* Call to Action - Simplified */}
+        <div className="py-20 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
+            <span className="bg-white/10 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium mb-6 inline-block">JOIN US</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Shape Your Future?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">Join our department and gain the skills needed to thrive in the ever-evolving field of computer science and engineering</p>
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">Join our department and gain the skills needed to thrive in the ever-evolving field of computer science</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/about-us" className="bg-white text-iare-blue font-bold px-8 py-3 rounded-md hover:bg-iare-yellow hover:text-white transition-all duration-300">
                 Learn More
