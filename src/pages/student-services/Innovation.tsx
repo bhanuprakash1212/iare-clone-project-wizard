@@ -10,12 +10,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Innovation = () => {
   const successStories = [
     {
-      name: "EcoTech Solutions",
-      founders: "Raj Kumar & Team",
-      year: "2022",
-      description: "Developed a smart waste management system using IoT sensors to optimize waste collection routes.",
-      achievements: "Secured ₹25 lakhs in seed funding, deployed in 3 municipalities",
-      image: "/placeholder.svg"
+      name: "NxtJob",
+      founders: "Shaik Asif Ali & Team",
+      year: "",
+      description: "Involved in migration of codebase from chatgpt-3.5-turbo model to chatgpt-4 model",
+      achievements: "Secured ₹100 crore turnover in 2023",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEdzi8PrqIbpc13aY3JrryoN6ZhLMhDjAyuPiriHazeOdU780i25N3bu6Zbs1Rccaw3zE&usqp=CAU"
     },
     {
       name: "HealthAssist",
@@ -26,12 +26,12 @@ const Innovation = () => {
       image: "/placeholder.svg"
     },
     {
-      name: "AgriConnect",
-      founders: "Arun Patel & Team",
-      year: "2021",
-      description: "Built a platform connecting farmers directly with consumers, eliminating middlemen and improving farmers' income.",
-      achievements: "Impacted 500+ farmers, received national innovation award",
-      image: "/placeholder.svg"
+      name: "Ceraas",
+      founders: "M. Poorna Prasad & Team",
+      year: "2024",
+      description: "Empowering startups and students by delivering innovative IT solutions, practical internship experiences, and groundbreaking projects in IoT and cybersecurity.",
+      achievements: "Organized Ceeras Ideathon 2024 & launched Hackathon 2025.",
+      image: "https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/uploadedManual-677f68bb70004_screenshot_2024-12-05_095649.png?d=200x200"
     }
   ];
 
@@ -87,7 +87,7 @@ const Innovation = () => {
 
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-iare-blue border-b-2 border-iare-teal pb-2 mb-6">Innovation Creativity Entrepreneurship</h1>
-            
+
             {/* Hero Section */}
             <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white p-6 rounded-lg shadow-sm mb-8">
               <div className="md:flex items-center">
@@ -101,7 +101,7 @@ const Innovation = () => {
                   <p className="opacity-90">
                     We provide comprehensive support through mentorship, funding, infrastructure, and networking opportunities to help transform innovative ideas into successful ventures.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-4 mt-6">
                     <div className="flex items-center">
                       <Rocket className="w-5 h-5 mr-2" />
@@ -125,45 +125,43 @@ const Innovation = () => {
                       <p className="text-sm opacity-90">
                         A dedicated space for ideation, prototyping, and collaboration
                       </p>
-                      <button className="mt-4 bg-white text-iare-blue px-4 py-1.5 rounded text-sm font-medium hover:bg-opacity-90 transition-colors">
-                        Book a Session
-                      </button>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             {/* Main Content Tabs */}
             <div className="bg-white border rounded shadow-sm mb-8">
               <Tabs defaultValue="programs" className="w-full">
                 <TabsList className="w-full grid grid-cols-3 p-0 border-b">
-                  <TabsTrigger 
-                    value="programs" 
+                  <TabsTrigger
+                    value="programs"
                     className="py-3 rounded-none rounded-tl-lg data-[state=active]:border-b-2 data-[state=active]:border-iare-teal"
                   >
                     Programs & Initiatives
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="incubation" 
+                  <TabsTrigger
+                    value="incubation"
                     className="py-3 rounded-none data-[state=active]:border-b-2 data-[state=active]:border-iare-teal"
                   >
                     Incubation & Support
                   </TabsTrigger>
-                  <TabsTrigger 
-                    value="success" 
+                  <TabsTrigger
+                    value="success"
                     className="py-3 rounded-none rounded-tr-lg data-[state=active]:border-b-2 data-[state=active]:border-iare-teal"
                   >
                     Success Stories
                   </TabsTrigger>
                 </TabsList>
-                
+
                 <TabsContent value="programs" className="p-6">
                   <h3 className="text-lg font-semibold text-iare-maroon mb-4">Our Programs & Initiatives</h3>
                   <p className="text-gray-700 mb-6">
                     We offer a range of programs and initiatives designed to nurture innovation and entrepreneurial skills among students.
                   </p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3 flex items-center">
@@ -199,7 +197,7 @@ const Innovation = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3 flex items-center">
                         <Briefcase className="w-5 h-5 text-iare-teal mr-2" />
@@ -235,12 +233,12 @@ const Innovation = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-8">
                     <h4 className="font-medium text-iare-blue flex items-center mb-4">
                       <Clock className="w-5 h-5 mr-2" /> Upcoming Programs
                     </h4>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {upcomingPrograms.map((program, index) => (
                         <div key={index} className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
@@ -260,28 +258,23 @@ const Innovation = () => {
                               <span className="font-medium text-iare-blue">Eligibility:</span> {program.eligibility}
                             </div>
                           </div>
-                          <div className="px-4 py-3 bg-gray-50 border-t">
-                            <button className="w-full bg-iare-teal text-white px-3 py-1.5 rounded text-sm hover:bg-iare-blue transition-colors">
-                              Register Now
-                            </button>
-                          </div>
                         </div>
                       ))}
                     </div>
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="incubation" className="p-6">
                   <h3 className="text-lg font-semibold text-iare-maroon mb-4">Incubation & Support</h3>
                   <p className="text-gray-700 mb-6">
                     Our incubation center provides comprehensive support to student startups, helping them transform innovative ideas into successful ventures.
                   </p>
-                  
+
                   <div className="mb-8">
                     <div className="relative border rounded-lg overflow-hidden">
                       <div className="md:flex">
-                        <div className="md:w-1/3 bg-iare-blue/10 p-6 flex items-center justify-center">
-                          <Building className="w-20 h-20 text-iare-blue" />
+                        <div className="md:w-1/3 bg-iare-blue/10 flex items-center justify-center">
+                          <img className='h-full' src="https://media.istockphoto.com/id/1131588991/vector/businesspeople-brainstorming-successful-startup-idea-sitting-at-table-in-a-shape-of-bright.jpg?s=612x612&w=0&k=20&c=iqWyGYsHlGAJeRC-B_0gzZ0Egfzh0BOFD7Ku7dV0rmA=" alt="" />
                         </div>
                         <div className="md:w-2/3 p-6">
                           <h4 className="text-lg font-semibold text-iare-maroon mb-3">SVUCE Startup Incubation Center</h4>
@@ -310,7 +303,7 @@ const Innovation = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3 flex items-center justify-center">
@@ -345,7 +338,7 @@ const Innovation = () => {
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3 flex items-center justify-center">
                         <h4 className="font-medium text-iare-blue">Mentorship & Training</h4>
@@ -379,7 +372,7 @@ const Innovation = () => {
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="border rounded-lg overflow-hidden">
                       <div className="bg-iare-teal/10 px-4 py-3 flex items-center justify-center">
                         <h4 className="font-medium text-iare-blue">Funding & Networking</h4>
@@ -414,7 +407,7 @@ const Innovation = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gray-50 p-4 rounded-lg border">
                     <h4 className="font-medium text-iare-blue mb-3">How to Apply for Incubation</h4>
                     <div className="space-y-3">
@@ -424,7 +417,7 @@ const Innovation = () => {
                         </div>
                         <div>
                           <p className="font-medium">Submit Application</p>
-                          <p className="text-sm text-gray-600">Fill out the online application form with details about your startup idea.</p>
+                          <p className="text-sm text-gray-600">Fill out the application form with details about your startup idea.</p>
                         </div>
                       </div>
                       <div className="flex items-start">
@@ -455,29 +448,25 @@ const Innovation = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-4 text-center">
-                      <button className="bg-iare-teal text-white px-6 py-2 rounded hover:bg-iare-blue transition-colors">
-                        Apply for Incubation
-                      </button>
-                    </div>
+
                   </div>
                 </TabsContent>
-                
+
                 <TabsContent value="success" className="p-6">
                   <h3 className="text-lg font-semibold text-iare-maroon mb-4">Success Stories</h3>
                   <p className="text-gray-700 mb-6">
                     Our incubation center has nurtured several successful startups founded by our students. Here are some inspiring success stories.
                   </p>
-                  
+
                   <div className="space-y-8">
                     {successStories.map((story, index) => (
                       <div key={index} className="border rounded-lg overflow-hidden">
                         <div className="md:flex">
                           <div className="md:w-1/4">
                             <div className="h-full">
-                              <img 
-                                src={story.image} 
-                                alt={story.name} 
+                              <img
+                                src={story.image}
+                                alt={story.name}
                                 className="w-full h-full object-cover"
                               />
                             </div>
@@ -504,10 +493,10 @@ const Innovation = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="mt-8 bg-iare-blue/5 p-4 rounded-lg border border-iare-blue/20">
                     <h4 className="font-medium text-iare-blue mb-3">Startup Showcase</h4>
-                    
+
                     <div className="md:flex items-center">
                       <div className="md:w-2/3 mb-4 md:mb-0 md:pr-6">
                         <p className="text-sm text-gray-700 mb-3">
@@ -544,80 +533,10 @@ const Innovation = () => {
                 </TabsContent>
               </Tabs>
             </div>
-            
-            {/* Expert Mentors Section */}
-            <div className="bg-white p-6 border rounded shadow-sm mb-8">
-              <h3 className="text-lg font-semibold text-iare-maroon mb-6">Our Expert Mentors</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gray-200 mx-auto mb-3">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt="Dr. Rajesh Kumar" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <h4 className="font-medium">Dr. Rajesh Kumar</h4>
-                  <p className="text-xs text-gray-600">Professor & Startup Advisor</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gray-200 mx-auto mb-3">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt="Ms. Priya Sharma" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <h4 className="font-medium">Ms. Priya Sharma</h4>
-                  <p className="text-xs text-gray-600">Angel Investor</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gray-200 mx-auto mb-3">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt="Mr. Arun Patel" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <h4 className="font-medium">Mr. Arun Patel</h4>
-                  <p className="text-xs text-gray-600">Serial Entrepreneur</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gray-200 mx-auto mb-3">
-                    <img 
-                      src="/placeholder.svg" 
-                      alt="Dr. Meena Reddy" 
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  <h4 className="font-medium">Dr. Meena Reddy</h4>
-                  <p className="text-xs text-gray-600">Industry Expert</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Call to Action */}
-            <div className="bg-gradient-to-r from-iare-maroon to-iare-blue text-white p-6 rounded-lg shadow-sm">
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-3">Turn Your Ideas into Reality</h3>
-                <p className="mb-6 opacity-90">
-                  Join our innovation and entrepreneurship ecosystem and get the support you need to bring your ideas to life.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-iare-blue px-6 py-2 rounded font-medium hover:bg-gray-100 transition-colors">
-                    Join Entrepreneurship Cell
-                  </button>
-                  <button className="bg-iare-teal text-white px-6 py-2 rounded font-medium hover:bg-opacity-90 transition-colors">
-                    Submit Startup Idea
-                  </button>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

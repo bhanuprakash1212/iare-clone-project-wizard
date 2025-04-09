@@ -3,16 +3,16 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { 
-  ArrowRight, Book, Award, GraduationCap, Briefcase, 
-  ChevronRight, Brain, Server, Grid, Code, Network, Globe 
+import {
+  ArrowRight, Book, Award, GraduationCap, Briefcase,
+  ChevronRight, Brain, Server, Grid, Code, Network, Globe
 } from 'lucide-react';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
 } from "@/components/ui/carousel";
 
 const Index = () => {
@@ -113,7 +113,7 @@ const Index = () => {
         (buttons[0] as HTMLButtonElement).click();
       }
     }, 5000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -123,14 +123,14 @@ const Index = () => {
 
       <main className="flex-grow">
         {/* Hero Carousel Banner - Minimalist Design */}
-        <div className="relative h-[90vh] overflow-hidden">
-          <Carousel className="w-full h-full" opts={{ loop: true }}>
+        <div className="relative h-[80vh] overflow-hidden">
+          <Carousel className="w-full h-[80vh]" opts={{ loop: true }}>
             <CarouselContent className="h-full">
               {carouselImages.map((image, index) => (
                 <CarouselItem key={index} className="h-full">
-                  <div className="relative w-full h-full">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center" 
+                  <div className="relative w-full h-[80vh]">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center"
                       style={{ backgroundImage: `url(${image.url})` }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
@@ -143,14 +143,14 @@ const Index = () => {
                         </p>
                       </div>
                       <div className="flex flex-wrap gap-4">
-                        <Link 
-                          to="/student-services" 
+                        <Link
+                          to="/student-services"
                           className="bg-iare-blue text-white font-medium px-8 py-3 rounded-md hover:bg-blue-700 transition-all duration-300 flex items-center"
                         >
                           Explore Programs <ArrowRight size={18} className="ml-2" />
                         </Link>
-                        <Link 
-                          to="/about-us" 
+                        <Link
+                          to="/about-us"
                           className="bg-white/10 backdrop-blur-sm text-white border border-white/30 font-medium px-8 py-3 rounded-md hover:bg-white/20 transition-all duration-300"
                         >
                           Learn More
@@ -193,7 +193,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {cseAchievements.map((achievement, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1 border border-gray-100 p-6 group"
                 >
@@ -224,7 +224,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {cseSpecializations.map((spec, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-xl shadow-sm p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1 border border-gray-100 group"
                 >
@@ -256,7 +256,7 @@ const Index = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {news.map((item, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1 group"
                 >
