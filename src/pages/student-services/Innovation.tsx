@@ -18,12 +18,12 @@ const Innovation = () => {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEdzi8PrqIbpc13aY3JrryoN6ZhLMhDjAyuPiriHazeOdU780i25N3bu6Zbs1Rccaw3zE&usqp=CAU"
     },
     {
-      name: "HealthAssist",
-      founders: "Priya Sharma & Team",
+      name: "Tekie’s Zen",
+      founders: "Trived Chinchula & Team",
       year: "2023",
-      description: "Created an AI-powered mobile app that helps diagnose common skin conditions using image recognition.",
-      achievements: "Selected for Google Startup Accelerator, 50,000+ app downloads",
-      image: "/placeholder.svg"
+      description: "IoT, Full Stack Development, Web Development, React & React Native, Data Science, Outsourcing, Java Full Stack Development, DevOps, GoLang, and Python",
+      achievements: "Successfully completed 100+ client projects across IT staffing, consulting, and IoT development.",
+      image: "https://media.licdn.com/dms/image/v2/C4E0BAQHbh5KnX7IU4w/company-logo_200_200/company-logo_200_200/0/1677176687226/tekiez_logo?e=2147483647&v=beta&t=K8Lq4z7TQPv-htX-6eF6Fg6XRhGc3FoHVWuSTsBMaaY"
     },
     {
       name: "Ceraas",
