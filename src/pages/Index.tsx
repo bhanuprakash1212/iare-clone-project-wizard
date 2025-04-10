@@ -90,8 +90,8 @@ const Index = () => {
   const news = [
     {
       date: "April 5, 2025",
-      title: "CSE Students Win International Hackathon",
-      content: "A team of 5 CSE students won the first prize at the International Coding Hackathon held in Singapore."
+      title: "CSE Students Win  Hackathon",
+      content: "A team of 3 CSE students won the first prize at the Coding Hackathon held in Tiruvantapuram."
     },
     {
       date: "March 30, 2025",

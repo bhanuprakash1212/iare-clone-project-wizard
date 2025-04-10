@@ -20,23 +20,22 @@ const Footer = () => {
             </div>
             <div className="flex items-center mb-2">
               <Mail size={18} className="mr-2 flex-shrink-0" />
-              <p>info@iare.ac.in</p>
+              <p>principal_svuce2003@yahoo.co.in</p>
             </div>
             <div className="flex items-center">
               <Phone size={18} className="mr-2 flex-shrink-0" />
-              <p>+91-40-29705852, 29705853</p>
+              <p>+91-877-2289561</p>
             </div>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4 border-b border-iare-yellow pb-2">Quick Links</h3>
             <ul>
               <li className="mb-2"><Link to="/about-us" className="hover:text-iare-yellow transition-colors">About Us</Link></li>
-              <li className="mb-2"><Link to="/admissions" className="hover:text-iare-yellow transition-colors">Admissions</Link></li>
               <li className="mb-2"><Link to="/departments" className="hover:text-iare-yellow transition-colors">Departments</Link></li>
               <li className="mb-2"><Link to="/placements" className="hover:text-iare-yellow transition-colors">Placements</Link></li>
-              <li className="mb-2"><Link to="/research" className="hover:text-iare-yellow transition-colors">Research</Link></li>
+              <li className="mb-2"><Link to="/news" className="hover:text-iare-yellow transition-colors">News</Link></li>
               <li className="mb-2"><Link to="/student-services" className="hover:text-iare-yellow transition-colors">Student Services</Link></li>
-              <li className="mb-2"><Link to="/contact" className="hover:text-iare-yellow transition-colors">Contact</Link></li>
+              <li className="mb-2"><Link to="/campus-life" className="hover:text-iare-yellow transition-colors">Campus Life</Link></li>
             </ul>
           </div>
           <div>
