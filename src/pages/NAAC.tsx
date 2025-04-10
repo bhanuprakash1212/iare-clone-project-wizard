@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FileText, Download, ExternalLink, Award, CheckCircle, Calendar, Users, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const NAAC = () => {
   const naacCriteria = [
@@ -54,7 +55,7 @@ const NAAC = () => {
   ];
 
   const timeline = [
-    { year: "2022", event: "Achieved A++ grade with CGPA of 3.71 on a 4-point scale" },
+    { year: "2022", event: "Achieved A+ grade with CGPA of 3.71 on a 4-point scale" },
     { year: "2017", event: "Reaccredited with A grade in the 3rd Cycle" },
     { year: "2010", event: "Reaccredited with A grade in the 2nd Cycle" },
     { year: "2004", event: "First accredited with A grade" }
@@ -64,67 +65,80 @@ const NAAC = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white py-16">
+      <main className="flex-grow bg-white">
+        {/* Hero Section - Simplified */}
+        <div className="bg-gradient-to-r from-iare-blue to-iare-teal text-white py-12">
           <div className="container mx-auto px-4 text-center">
-            <div className="mb-6">
-              <h2 className="text-4xl font-bold">NAAC A+</h2>
-              <p className="text-xl">National Assessment and Accreditation Council</p>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">NAAC Accreditation</h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">NAAC Accreditation</h1>
+            <p className="text-lg max-w-2xl mx-auto">
               National Assessment and Accreditation Council (NAAC) accreditation is a performance assessment to evaluate the quality of education at SVUCE
             </p>
           </div>
         </div>
 
-        {/* NAAC Grade Section */}
-        <div className="py-16 bg-white">
+        {/* NAAC Grade Section - More minimal */}
+        <div className="py-10 bg-white">
           <div className="container mx-auto px-4">
-            <div className="bg-gray-50 rounded-xl p-8 md:p-12 shadow-lg border border-gray-100 text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-iare-blue">NAAC Accreditation Status</h2>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
-                <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 w-full md:w-auto">
-                  <div className="text-5xl font-bold text-iare-teal mb-2">A+</div>
-                  <div className="text-gray-600">Grade</div>
+            <div className="bg-gray-50 rounded-lg p-8 shadow-sm border border-gray-100">
+              <h2 className="text-2xl font-bold mb-6 text-iare-blue text-center">Accreditation Status</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-white rounded p-4 shadow-sm border border-gray-200 text-center">
+                  <div className="text-3xl font-bold text-iare-teal mb-1">A+</div>
+                  <div className="text-gray-600 text-sm">Grade</div>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 w-full md:w-auto">
-                  <div className="text-5xl font-bold text-iare-teal mb-2">3.71</div>
-                  <div className="text-gray-600">CGPA (out of 4)</div>
+                <div className="bg-white rounded p-4 shadow-sm border border-gray-200 text-center">
+                  <div className="text-3xl font-bold text-iare-teal mb-1">3.71</div>
+                  <div className="text-gray-600 text-sm">CGPA (out of 4)</div>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 w-full md:w-auto">
-                  <div className="text-5xl font-bold text-iare-teal mb-2">4th</div>
-                  <div className="text-gray-600">Cycle</div>
+                <div className="bg-white rounded p-4 shadow-sm border border-gray-200 text-center">
+                  <div className="text-3xl font-bold text-iare-teal mb-1">4th</div>
+                  <div className="text-gray-600 text-sm">Cycle</div>
                 </div>
-                <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 w-full md:w-auto">
-                  <div className="text-5xl font-bold text-iare-teal mb-2">2022</div>
-                  <div className="text-gray-600">Valid Until 2029</div>
+                <div className="bg-white rounded p-4 shadow-sm border border-gray-200 text-center">
+                  <div className="text-3xl font-bold text-iare-teal mb-1">2022</div>
+                  <div className="text-gray-600 text-sm">Valid Until 2029</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* NAAC Criteria */}
-        <div className="py-16 bg-gray-50">
+        {/* Timeline Section - Added as a simple, clean timeline */}
+        <div className="py-8 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-iare-blue">Assessment Criteria</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                NAAC assesses and accredits institutions based on the following seven criteria
-              </p>
+            <h2 className="text-2xl font-bold mb-6 text-iare-blue text-center">Accreditation History</h2>
+            <div className="max-w-3xl mx-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-24">Year</TableHead>
+                    <TableHead>Achievement</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {timeline.map((item, index) => (
+                    <TableRow key={index}>
+                      <TableCell className="font-medium">{item.year}</TableCell>
+                      <TableCell>{item.event}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </div>
+          </div>
+        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* NAAC Criteria - Streamlined layout */}
+        <div className="py-10 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl font-bold mb-6 text-iare-blue text-center">Assessment Criteria</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
               {naacCriteria.map((criterion, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <div className="flex items-start">
-                    <div className="mr-4 bg-gray-100 p-3 rounded-full">{criterion.icon}</div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2 text-iare-blue">Criterion {index + 1}: {criterion.title}</h3>
-                      <p className="text-gray-600 text-sm">{criterion.description}</p>
-                    </div>
+                <div key={index} className="flex items-start p-4 bg-gray-50 rounded border border-gray-100">
+                  <div className="mr-3 bg-gray-100 p-2 rounded">{criterion.icon}</div>
+                  <div>
+                    <h3 className="font-medium text-base mb-1 text-iare-blue">Criterion {index + 1}: {criterion.title}</h3>
+                    <p className="text-gray-600 text-sm">{criterion.description}</p>
                   </div>
                 </div>
               ))}
@@ -132,80 +146,61 @@ const NAAC = () => {
           </div>
         </div>
 
-        {/* Documents Section */}
-        <div className="py-16 bg-white">
+        {/* Documents Section - Clean list */}
+        <div className="py-10 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-iare-blue">NAAC Documents</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                Access key documents related to our NAAC accreditation process
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 className="text-2xl font-bold mb-6 text-iare-blue text-center">Key Documents</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {documents.map((document, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex items-center">
-                  <div className="mr-4 text-iare-blue">
-                    <FileText size={36} />
-                  </div>
+                <div key={index} className="bg-white p-4 rounded shadow-sm border border-gray-100 flex items-center">
+                  <FileText className="text-iare-blue mr-3 flex-shrink-0" size={20} />
                   <div className="flex-grow">
-                    <h3 className="font-semibold text-lg mb-1">{document.title}</h3>
-                    <p className="text-gray-500 text-sm">{document.format}</p>
+                    <h3 className="font-medium text-sm">{document.title}</h3>
+                    <p className="text-gray-500 text-xs">{document.format}</p>
                   </div>
-                  <div>
-                    <button className="p-2 text-iare-teal hover:text-iare-blue transition-colors">
-                      <Download size={20} />
-                    </button>
-                  </div>
+                  <button className="text-iare-teal hover:text-iare-blue transition-colors">
+                    <Download size={18} />
+                  </button>
                 </div>
               ))}
             </div>
-
-            <div className="mt-10 text-center">
+            <div className="mt-6 text-center">
               <a href="https://www.iare.ac.in/NAAC/" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center text-iare-blue font-medium hover:text-blue-700 transition-colors">
-                View Complete NAAC Repository <ExternalLink size={16} className="ml-2" />
+                className="inline-flex items-center text-iare-blue text-sm font-medium hover:text-blue-700 transition-colors">
+                View Complete NAAC Repository <ExternalLink size={14} className="ml-1" />
               </a>
             </div>
           </div>
         </div>
 
-
-
-        {/* IQAC Section */}
-        <div className="py-16 bg-white">
+        {/* IQAC Section - Simplified */}
+        <div className="py-10 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-iare-blue">Internal Quality Assurance Cell (IQAC)</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                The IQAC is committed to maintaining and enhancing quality in all academic and administrative aspects
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-8 shadow-md border border-gray-100">
-              <h3 className="text-xl font-bold mb-4 text-iare-blue">IQAC Objectives</h3>
-              <ul className="space-y-3 text-gray-700">
+            <h2 className="text-2xl font-bold mb-6 text-iare-blue text-center">Internal Quality Assurance Cell</h2>
+            <div className="bg-gray-50 rounded p-6 shadow-sm border border-gray-100 max-w-3xl mx-auto">
+              <h3 className="text-lg font-bold mb-4 text-iare-blue">IQAC Objectives</h3>
+              <ul className="space-y-2 text-gray-700 text-sm">
                 <li className="flex items-start">
-                  <CheckCircle className="text-iare-teal mr-3 flex-shrink-0 mt-1" size={18} />
-                  <span>Develop a system for conscious, consistent and catalytic improvement in the performance of the institution</span>
+                  <CheckCircle className="text-iare-teal mr-2 flex-shrink-0 mt-0.5" size={16} />
+                  <span>Develop a system for conscious, consistent and catalytic improvement</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-iare-teal mr-3 flex-shrink-0 mt-1" size={18} />
-                  <span>Promote measures for institutional functioning towards quality enhancement through internalization of quality culture</span>
+                  <CheckCircle className="text-iare-teal mr-2 flex-shrink-0 mt-0.5" size={16} />
+                  <span>Promote quality enhancement through internalization of quality culture</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-iare-teal mr-3 flex-shrink-0 mt-1" size={18} />
-                  <span>Ensure timely, efficient and progressive performance of academic, administrative and financial tasks</span>
+                  <CheckCircle className="text-iare-teal mr-2 flex-shrink-0 mt-0.5" size={16} />
+                  <span>Ensure timely, efficient performance of academic and administrative tasks</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="text-iare-teal mr-3 flex-shrink-0 mt-1" size={18} />
-                  <span>Act as a nodal agency for coordinating quality-related activities, including adoption and dissemination of best practices</span>
+                  <CheckCircle className="text-iare-teal mr-2 flex-shrink-0 mt-0.5" size={16} />
+                  <span>Coordinate quality-related activities and dissemination of best practices</span>
                 </li>
               </ul>
 
-              <div className="mt-6 text-center">
-                <Link to="https://www.nls.ac.in/about/internal-quality-assurance-cell-iqac/" target='blank' className="inline-flex items-center bg-iare-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Visit IQAC Page <ExternalLink size={16} className="ml-2" />
+              <div className="mt-4 text-center">
+                <Link to="https://www.nls.ac.in/about/internal-quality-assurance-cell-iqac/" target='blank' className="inline-flex items-center bg-iare-blue text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors">
+                  Visit IQAC Page <ExternalLink size={14} className="ml-1" />
                 </Link>
               </div>
             </div>

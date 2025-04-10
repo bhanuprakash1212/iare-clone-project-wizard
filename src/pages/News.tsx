@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Calendar, Tag, ChevronRight, ArrowUpRight, Search } from 'lucide-react';
+import { Calendar, Tag, ChevronRight, ArrowUpRight, Search, Youtube, Play, ExternalLink } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -11,7 +10,7 @@ const News = () => {
 
   const newsCategories = [
     "All News", "Academic", "Research", "Events",
-    "Achievements", "Placements", "Faculty", "Students"
+    "Achievements", "Placements", "Faculty", "Students", "Videos"
   ];
 
   const featuredNews = {
@@ -22,6 +21,37 @@ const News = () => {
     excerpt: "The Department of Computer Science & Engineering hosted a two-day national-level Tech Fest featuring a vibrant mix of technical and non-technical events, celebrating innovation, creativity, and collaboration across various domains of technology",
     link: "/news/ai-ml-symposium"
   };
+
+  const youtubeVideos = [
+    {
+      title: "SVUCE College Annual Day Celebrations",
+      date: "March 15, 2023",
+      videoId: "CPItn6A_PV8",
+      thumbnail: `https://img.youtube.com/vi/CPItn6A_PV8/maxresdefault.jpg`,
+      description: "Highlights from the Annual Day celebrations at Sri Venkateswara University College of Engineering"
+    },
+    {
+      title: "SVUCE CSE Department Activities",
+      date: "February 10, 2023",
+      videoId: "GFCS2R53bJM",
+      thumbnail: `https://img.youtube.com/vi/GFCS2R53bJM/maxresdefault.jpg`,
+      description: "Overview of activities and achievements in the Computer Science department"
+    },
+    {
+      title: "Latest Campus Tour - SVUCE",
+      date: "January 25, 2023",
+      videoId: "q-5RVsGRnQ0",
+      thumbnail: `https://img.youtube.com/vi/q-5RVsGRnQ0/maxresdefault.jpg`,
+      description: "Take a virtual tour of our beautiful campus and state-of-the-art facilities"
+    },
+    {
+      title: "SVUCE Placements Overview 2023",
+      date: "December 5, 2023",
+      videoId: "lHQdwRaOGvc",
+      thumbnail: `https://img.youtube.com/vi/lHQdwRaOGvc/maxresdefault.jpg`,
+      description: "Details about placement statistics and top recruiters at SVUCE"
+    }
+  ];
 
   const allNews = [
     {
@@ -65,7 +95,6 @@ const News = () => {
       link: "/news/skill-development-seminars"
     },
     {
-
       title: "Prof. Ch D V Subba Rao Appointed as ISRO Expert Panel Member",
       date: "December 1, 2023",
       category: "Faculty",
@@ -107,8 +136,6 @@ const News = () => {
     }
   ];
 
-
-
   const archiveNews = [
     { title: "CSE Department Hosts Annual Technical Fest", date: "February 25, 2025", category: "Events" },
     { title: "Students Create Smart Campus App", date: "February 15, 2025", category: "Students" },
@@ -117,7 +144,6 @@ const News = () => {
     { title: "New Curriculum Focused on Industry 4.0 Launched", date: "January 30, 2025", category: "Academic" }
   ];
 
-  // Filter news based on selected category
   const filteredNews = activeCategory === "All News"
     ? allNews
     : allNews.filter(news => news.category === activeCategory);
@@ -127,7 +153,6 @@ const News = () => {
       <Header />
 
       <main className="flex-grow">
-        {/* Page Header */}
         <div className="bg-gradient-to-r from-iare-blue to-blue-700 text-white py-10">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl font-bold mb-2">News & Announcements</h1>
@@ -135,7 +160,6 @@ const News = () => {
           </div>
         </div>
 
-        {/* Categories Filter using Tabs */}
         <div className="sticky top-0 z-10 bg-white border-b shadow-sm">
           <div className="container mx-auto px-4 py-3">
             <div className="flex justify-between items-center mb-3">
@@ -165,109 +189,175 @@ const News = () => {
           </div>
         </div>
 
-        {/* Content Area with Tab Indicator */}
         <div className="container mx-auto px-4 py-6">
           <div className="bg-blue-50 rounded-lg p-3 mb-6 flex items-center">
             <span className="text-iare-blue font-medium">Currently viewing: </span>
             <span className="ml-2 bg-iare-blue text-white px-3 py-1 rounded-full text-sm">{activeCategory}</span>
-            <span className="ml-auto text-sm text-gray-500">
-              {filteredNews.length} {filteredNews.length === 1 ? 'result' : 'results'} found
-            </span>
+            {activeCategory === "Videos" ? (
+              <span className="ml-auto text-sm text-gray-500">
+                {youtubeVideos.length} {youtubeVideos.length === 1 ? 'result' : 'results'} found
+              </span>
+            ) : (
+              <span className="ml-auto text-sm text-gray-500">
+                {filteredNews.length} {filteredNews.length === 1 ? 'result' : 'results'} found
+              </span>
+            )}
           </div>
         </div>
 
-        {/* Featured News - Reduced height */}
-        <div className="py-6 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-4">Featured News</h2>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="md:flex">
-                <div className="md:w-2/5">
-                  <img
-                    src={featuredNews.image}
-                    alt={featuredNews.title}
-                    className="h-64 md:h-full w-full object-cover"
-                  />
-                </div>
-                <div className="md:w-3/5 p-6 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center mb-2">
-                      <span className="bg-iare-blue text-white text-sm px-3 py-1 rounded-full mr-2">
-                        {featuredNews.category}
-                      </span>
-                      <span className="text-gray-500 flex items-center text-sm">
-                        <Calendar size={16} className="mr-1" /> {featuredNews.date}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4">{featuredNews.title}</h3>
-                    <p className="text-gray-600 mb-6">{featuredNews.excerpt}</p>
-                  </div>
-                  <a
-                    href={featuredNews.link}
-                    className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700"
-                  >
-                    Read Full Story <ArrowUpRight size={18} className="ml-1" />
-                  </a>
-                </div>
+        {activeCategory === "Videos" ? (
+          <div className="py-8 bg-white">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center mb-6">
+                <Youtube className="text-red-600 mr-2" size={24} />
+                <h2 className="text-2xl font-bold">SVUCE YouTube Channel</h2>
+                <a 
+                  href="https://www.youtube.com/@svucestudentversion5669" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="ml-auto text-iare-blue hover:text-blue-700 flex items-center text-sm font-medium"
+                >
+                  Visit Channel <ExternalLink size={16} className="ml-1" />
+                </a>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Latest News Grid with Tab Content */}
-        <div className="py-8 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-6">Latest News</h2>
-            {filteredNews.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredNews.map((news, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
-                  >
-                    <div className="h-48 overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                {youtubeVideos.map((video, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div className="relative h-56 overflow-hidden group">
                       <img
-                        src={news.image}
-                        alt={news.title}
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
+                      <a 
+                        href={`https://www.youtube.com/watch?v=${video.videoId}`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="absolute inset-0 flex items-center justify-center"
+                      >
+                        <div className="bg-red-600 text-white p-4 rounded-full opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                          <Play size={24} fill="white" />
+                        </div>
+                      </a>
                     </div>
-                    <div className="p-6">
+                    <div className="p-5">
                       <div className="flex items-center mb-2">
-                        <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">
-                          {news.category}
+                        <span className="bg-red-100 text-red-600 text-xs px-2 py-1 rounded mr-2">
+                          YouTube
                         </span>
                         <span className="text-gray-500 text-xs flex items-center">
-                          <Calendar size={12} className="mr-1" /> {news.date}
+                          <Calendar size={12} className="mr-1" /> {video.date}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold mb-2">{news.title}</h3>
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
+                      <h3 className="text-xl font-bold mb-2">{video.title}</h3>
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-2">{video.description}</p>
                       <a
-                        href={news.link}
-                        className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm"
+                        href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center font-medium text-red-600 hover:text-red-700 text-sm"
                       >
-                        Continue Reading <ChevronRight size={16} className="ml-1" />
+                        Watch Video <ChevronRight size={16} className="ml-1" />
                       </a>
                     </div>
                   </div>
                 ))}
               </div>
-            ) : (
-              <div className="bg-gray-50 rounded-lg p-12 text-center">
-                <p className="text-gray-500 mb-4">No news found in the "{activeCategory}" category.</p>
-                <button
-                  onClick={() => setActiveCategory("All News")}
-                  className="bg-iare-blue text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-                >
-                  View All News
-                </button>
-              </div>
-            )}
+            </div>
           </div>
-        </div>
+        ) : (
+          <>
+            <div className="py-6 bg-gray-50">
+              <div className="container mx-auto px-4">
+                <h2 className="text-2xl font-bold mb-4">Featured News</h2>
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="md:flex">
+                    <div className="md:w-2/5">
+                      <img
+                        src={featuredNews.image}
+                        alt={featuredNews.title}
+                        className="h-64 md:h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="md:w-3/5 p-6 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center mb-2">
+                          <span className="bg-iare-blue text-white text-sm px-3 py-1 rounded-full mr-2">
+                            {featuredNews.category}
+                          </span>
+                          <span className="text-gray-500 flex items-center text-sm">
+                            <Calendar size={16} className="mr-1" /> {featuredNews.date}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl font-bold mb-4">{featuredNews.title}</h3>
+                        <p className="text-gray-600 mb-6">{featuredNews.excerpt}</p>
+                      </div>
+                      <a
+                        href={featuredNews.link}
+                        className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700"
+                      >
+                        Read Full Story <ArrowUpRight size={18} className="ml-1" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        {/* News Archive */}
+            <div className="py-8 bg-white">
+              <div className="container mx-auto px-4">
+                <h2 className="text-2xl font-bold mb-6">Latest News</h2>
+                {filteredNews.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredNews.map((news, index) => (
+                      <div
+                        key={index}
+                        className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+                      >
+                        <div className="h-48 overflow-hidden">
+                          <img
+                            src={news.image}
+                            alt={news.title}
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                          />
+                        </div>
+                        <div className="p-6">
+                          <div className="flex items-center mb-2">
+                            <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded mr-2">
+                              {news.category}
+                            </span>
+                            <span className="text-gray-500 text-xs flex items-center">
+                              <Calendar size={12} className="mr-1" /> {news.date}
+                            </span>
+                          </div>
+                          <h3 className="text-xl font-bold mb-2">{news.title}</h3>
+                          <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
+                          <a
+                            href={news.link}
+                            className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm"
+                          >
+                            Continue Reading <ChevronRight size={16} className="ml-1" />
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 rounded-lg p-12 text-center">
+                    <p className="text-gray-500 mb-4">No news found in the "{activeCategory}" category.</p>
+                    <button
+                      onClick={() => setActiveCategory("All News")}
+                      className="bg-iare-blue text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                      View All News
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </>
+        )}
+
         <div className="py-10 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-6">News Archive</h2>
@@ -303,7 +393,6 @@ const News = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
         <div className="py-12 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
