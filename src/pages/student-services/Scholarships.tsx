@@ -53,7 +53,7 @@ const Scholarships = () => {
               <TabsList className="grid w-full grid-cols-3 mb-6">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
                 <TabsTrigger value="government">Government Scholarships</TabsTrigger>
-                <TabsTrigger value="institutional">Institutional Scholarships</TabsTrigger>
+                <TabsTrigger value="non-government">Non-Government Scholarships</TabsTrigger>
               </TabsList>
               
               <TabsContent value="overview" className="bg-white p-6 border rounded shadow-sm">
@@ -133,73 +133,127 @@ const Scholarships = () => {
                 </div>
               </TabsContent>
               
-              <TabsContent value="institutional" className="bg-white p-6 border rounded shadow-sm">
-                <h2 className="text-xl font-semibold text-iare-maroon mb-4">Institutional Scholarships</h2>
+              <TabsContent value="non-government" className="bg-white p-6 border rounded shadow-sm">
+                <h2 className="text-xl font-semibold text-iare-maroon mb-4">Non-Government Scholarships</h2>
                 
                 <p className="mb-4">
-                  IARE offers various institutional scholarships to encourage academic excellence and support deserving students.
+                  Various non-government organizations, foundations, and institutions offer scholarships to deserving students based on merit, community, economic background, and other criteria.
                 </p>
                 
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Merit-Based Tuition Fee Waivers</h3>
+                <h3 className="text-lg font-semibold text-iare-blue mb-2">Available Non-Government Scholarships</h3>
                 
                 <Table className="mb-6">
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="bg-iare-darkblue text-white">Academic Performance</TableHead>
-                      <TableHead className="bg-iare-darkblue text-white">Scholarship Amount</TableHead>
+                      <TableHead className="bg-iare-darkblue text-white w-1/12">No</TableHead>
+                      <TableHead className="bg-iare-darkblue text-white w-3/12">Scholarship</TableHead>
+                      <TableHead className="bg-iare-darkblue text-white w-4/12">Scholarship Details</TableHead>
+                      <TableHead className="bg-iare-darkblue text-white w-4/12">Scholarship Amount</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">CGPA above 9.5</TableCell>
-                      <TableCell>25% tuition fee waiver for the next academic year</TableCell>
+                      <TableCell>1</TableCell>
+                      <TableCell className="font-medium">
+                        LIC Golden Jubilee Scholarship
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>Family Annual Income should be less than or equal to Rs 2,00,000</TableCell>
+                      <TableCell>Scholarship amount is Rs.20,000 per year approximately</TableCell>
                     </TableRow>
+                    
                     <TableRow>
-                      <TableCell className="font-medium">CGPA above 9.0</TableCell>
-                      <TableCell>15% tuition fee waiver for the next academic year</TableCell>
+                      <TableCell>2</TableCell>
+                      <TableCell className="font-medium">
+                        Santoor Women's Scholarship
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>Passed class 12 from a government school/junior college</TableCell>
+                      <TableCell>Scholarship amount is Rs.24,000 per year approximately</TableCell>
                     </TableRow>
+                    
                     <TableRow>
-                      <TableCell className="font-medium">CGPA above 8.5</TableCell>
-                      <TableCell>10% tuition fee waiver for the next academic year</TableCell>
+                      <TableCell>3</TableCell>
+                      <TableCell className="font-medium">
+                        South Central Railway Employees Co Op Credit Society Ltd Scholarship
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>Parent should be a railway employee</TableCell>
+                      <TableCell>Scholarship amount is Rs.6,000 per year approximately</TableCell>
+                    </TableRow>
+                    
+                    <TableRow>
+                      <TableCell>4</TableCell>
+                      <TableCell className="font-medium">
+                        IAFBA Scholarship
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>
+                        <ol className="list-decimal pl-4">
+                          <li>Excel in sports</li>
+                          <li>Children of serving IAF</li>
+                        </ol>
+                      </TableCell>
+                      <TableCell>Scholarship amount is Rs.3,000 per year approximately</TableCell>
+                    </TableRow>
+                    
+                    <TableRow>
+                      <TableCell>5</TableCell>
+                      <TableCell className="font-medium">
+                        Merit Scholarship Telangana State Police Education Fund
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>Children of serving TS Police Department</TableCell>
+                      <TableCell>Scholarship amount is Rs.10,000 per year approximately</TableCell>
+                    </TableRow>
+                    
+                    <TableRow>
+                      <TableCell>6</TableCell>
+                      <TableCell className="font-medium">
+                        Scholarship Under Sri Ramanuja Scheme
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>
+                        <ol className="list-decimal pl-4">
+                          <li>Applicant must belong to Brahmin community</li>
+                          <li>Family Annual Income should be less than or equal to Rs.1,50,000 in rural and Rs 2,00,000 in urban Areas</li>
+                        </ol>
+                      </TableCell>
+                      <TableCell>Full Fee reimbursement as Scholarship</TableCell>
+                    </TableRow>
+                    
+                    <TableRow>
+                      <TableCell>7</TableCell>
+                      <TableCell className="font-medium">
+                        Reddy Jana Sangham Foundation U.S.A Scholarship
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>Applicant must belong to Reddy community</TableCell>
+                      <TableCell>Scholarship amount is Rs.8,000 per year approximately</TableCell>
+                    </TableRow>
+                    
+                    <TableRow>
+                      <TableCell>8</TableCell>
+                      <TableCell className="font-medium">
+                        North South Foundation College Scholarship
+                        <div className="text-xs text-blue-600 hover:underline cursor-pointer mt-1">Click here to Apply</div>
+                      </TableCell>
+                      <TableCell>Family Annual Income should be less than or equal to Rs 1,20,000</TableCell>
+                      <TableCell>Scholarship amount is Rs.25,000 per year approximately</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
                 
-                <h3 className="text-lg font-semibold text-iare-blue mb-2">Special Category Scholarships</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="border p-4 rounded shadow-sm">
-                    <h4 className="font-medium text-iare-maroon mb-2">Sports Excellence Scholarship</h4>
-                    <p className="text-sm">For students representing at state/national/international levels in sports</p>
-                    <p className="text-xs mt-2 font-bold">Scholarship amount: Up to 50% tuition fee waiver</p>
-                  </div>
-                  <div className="border p-4 rounded shadow-sm">
-                    <h4 className="font-medium text-iare-maroon mb-2">Research Scholarship</h4>
-                    <p className="text-sm">For students publishing research papers in reputed journals</p>
-                    <p className="text-xs mt-2 font-bold">Scholarship amount: Up to 20% tuition fee waiver</p>
-                  </div>
-                  <div className="border p-4 rounded shadow-sm">
-                    <h4 className="font-medium text-iare-maroon mb-2">Innovation Scholarship</h4>
-                    <p className="text-sm">For students with patents or innovative projects</p>
-                    <p className="text-xs mt-2 font-bold">Scholarship amount: Up to 30% tuition fee waiver</p>
-                  </div>
-                  <div className="border p-4 rounded shadow-sm">
-                    <h4 className="font-medium text-iare-maroon mb-2">Sibling Scholarship</h4>
-                    <p className="text-sm">For siblings studying concurrently at IARE</p>
-                    <p className="text-xs mt-2 font-bold">Scholarship amount: 10% tuition fee waiver for the younger sibling</p>
-                  </div>
-                </div>
-                
-                <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
-                  <h3 className="text-lg font-semibold text-iare-blue mb-2">How to Apply for Institutional Scholarships</h3>
+                <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal mt-8">
+                  <h3 className="text-lg font-semibold text-iare-blue mb-2">How to Apply for Non-Government Scholarships</h3>
                   <p className="mb-2">
-                    Applications for institutional scholarships are accepted at the beginning of each academic year.
+                    For assistance with non-government scholarship applications, please visit the Scholarship Section or contact:
                   </p>
                   <p className="mb-1">
-                    <strong>Contact:</strong> Dean, Student Affairs
+                    <strong>Email:</strong> scholarships@iare.ac.in
                   </p>
                   <p>
-                    <strong>Email:</strong> dean.studentaffairs@iare.ac.in
+                    <strong>Phone:</strong> +91-8888123456
                   </p>
                 </div>
               </TabsContent>
