@@ -9,8 +9,8 @@ const News = () => {
   const [activeCategory, setActiveCategory] = useState("All News");
 
   const newsCategories = [
-    "All News", "Academic", "Research", "Events",
-    "Achievements", "Placements", "Faculty", "Students", "Videos"
+    "All News", "Academic", "Events",
+    "Achievements", "Faculty", "Students", "Videos"
   ];
 
   const featuredNews = {
@@ -211,9 +211,9 @@ const News = () => {
               <div className="flex items-center mb-6">
                 <Youtube className="text-red-600 mr-2" size={24} />
                 <h2 className="text-2xl font-bold">SVUCE YouTube Channel</h2>
-                <a 
-                  href="https://www.youtube.com/@svucestudentversion5669" 
-                  target="_blank" 
+                <a
+                  href="https://www.youtube.com/@svucestudentversion5669"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="ml-auto text-iare-blue hover:text-blue-700 flex items-center text-sm font-medium"
                 >
@@ -229,10 +229,10 @@ const News = () => {
                         alt={video.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      <a 
-                        href={`https://www.youtube.com/watch?v=${video.videoId}`} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="absolute inset-0 flex items-center justify-center"
                       >
                         <div className="bg-red-600 text-white p-4 rounded-full opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
