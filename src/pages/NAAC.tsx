@@ -204,7 +204,7 @@ const NAAC = () => {
               </ul>
 
               <div className="mt-6 text-center">
-                <Link to="/iqac" className="inline-flex items-center bg-iare-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                <Link to="https://www.nls.ac.in/about/internal-quality-assurance-cell-iqac/" target='blank' className="inline-flex items-center bg-iare-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Visit IQAC Page <ExternalLink size={16} className="ml-2" />
                 </Link>
               </div>

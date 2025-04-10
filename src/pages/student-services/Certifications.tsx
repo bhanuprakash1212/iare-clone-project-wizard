@@ -41,16 +41,16 @@ const Certifications = () => {
 
   const successStories = [
     {
-      student: "Rahul Sharma",
-      batch: "CSE 2025",
+      student: "Jitendar Reddy ",
+      batch: "CSE 2020",
       certification: "AWS Solutions Architect",
-      outcome: "Secured internship at Amazon with 60,000 per month stipend."
+      outcome: "Secured Job at Amazon"
     },
     {
-      student: "Priya Patel",
-      batch: "IT 2024",
+      student: "Jayasree Kurmannagari",
+      batch: "CSE 2020",
       certification: "Microsoft Azure Developer",
-      outcome: "Received pre-placement offer from Microsoft with 25 LPA package."
+      outcome: "Received placement offer from Walmart with 35 LPA package."
     },
     {
       student: "Karthik Reddy",
@@ -59,10 +59,10 @@ const Certifications = () => {
       outcome: "Selected for AI research position at Google India."
     },
     {
-      student: "Ananya Singh",
-      batch: "ECE 2024",
-      certification: "CCNA & CCNP",
-      outcome: "Placed at Cisco with 18 LPA package."
+      student: "Jayaprasanna",
+      batch: "CSE 2021",
+      certification: "Golang Developer",
+      outcome: "Placed at Fanatics with 25 LPA package."
     }
   ];
 

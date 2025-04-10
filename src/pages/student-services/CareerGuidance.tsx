@@ -103,7 +103,7 @@ const CareerGuidance = () => {
                 <li>Internship and placement opportunities</li>
               </ul>
 
-              <h2 className="text-xl font-semibold text-iare-maroon mb-4">Upcoming Events</h2>
+              <h2 className="text-xl font-semibold text-iare-maroon mb-4">Events</h2>
 
               <div className="border rounded overflow-hidden mb-6">
                 <table className="min-w-full">
@@ -116,25 +116,21 @@ const CareerGuidance = () => {
                   </thead>
                   <tbody>
                     <tr className="border-b">
-                      <td className="py-2 px-4">May 20, 2025</td>
-                      <td className="py-2 px-4">Career in Artificial Intelligence</td>
-                      <td className="py-2 px-4">Seminar Hall - 1</td>
+                      <td className="py-2 px-4">April 3, 2025</td>
+                      <td className="py-2 px-4">Career Guidence & Resume Building</td>
+                      <td className="py-2 px-4">MB - 200</td>
                     </tr>
                     <tr className="border-b bg-gray-50">
-                      <td className="py-2 px-4">May 25, 2025</td>
+                      <td className="py-2 px-4">April 4, 2025</td>
                       <td className="py-2 px-4">Resume Building Workshop</td>
-                      <td className="py-2 px-4">Computer Lab - 3</td>
+                      <td className="py-2 px-4">MB - 200</td>
                     </tr>
                     <tr className="border-b">
-                      <td className="py-2 px-4">June 5, 2025</td>
-                      <td className="py-2 px-4">Mock Interview Day</td>
-                      <td className="py-2 px-4">Interview Panel Rooms</td>
+                      <td className="py-2 px-4">April 9, 2025</td>
+                      <td className="py-2 px-4">Ai Skills by Microsoft</td>
+                      <td className="py-2 px-4">SVU Auditorium</td>
                     </tr>
-                    <tr className="bg-gray-50">
-                      <td className="py-2 px-4">June 15, 2025</td>
-                      <td className="py-2 px-4">Higher Education Abroad Seminar</td>
-                      <td className="py-2 px-4">Auditorium</td>
-                    </tr>
+
                   </tbody>
                 </table>
               </div>

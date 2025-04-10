@@ -86,9 +86,9 @@ const MedicalCentre = () => {
 
               <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal">
                 <h3 className="text-lg font-semibold text-iare-blue mb-2">Contact Medical Centre</h3>
-                <p className="mb-1"><strong>Location:</strong> Ground Floor, Main Building</p>
-                <p className="mb-1"><strong>Email:</strong> medical.centre@iare.ac.in</p>
-                <p className="mb-1"><strong>Emergency Contact:</strong> +91-9876543210</p>
+                <p className="mb-1"><strong>Location:</strong> SV University Gate-1</p>
+                <p className="mb-1"><strong>Email:</strong> registrar@svumail.edu.in</p>
+                <p className="mb-1"><strong>Emergency Contact:</strong>+91 (877) 2289545</p>
                 <p><strong>Working Hours:</strong> 24/7 (Emergency Services)</p>
               </div>
             </div>

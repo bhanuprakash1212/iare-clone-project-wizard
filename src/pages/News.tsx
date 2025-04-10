@@ -8,71 +8,106 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const News = () => {
   const [activeCategory, setActiveCategory] = useState("All News");
-  
+
   const newsCategories = [
-    "All News", "Academic", "Research", "Events", 
+    "All News", "Academic", "Research", "Events",
     "Achievements", "Placements", "Faculty", "Students"
   ];
 
   const featuredNews = {
-    title: "Department of CSE Hosts National AI & ML Symposium",
+    title: "Department of CSE Hosts National Level Symposium",
     date: "April 10, 2025",
     category: "Events",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80",
-    excerpt: "The Department of Computer Science & Engineering hosted a two-day national symposium on Artificial Intelligence and Machine Learning with over 30 speakers from industry and academia presenting cutting-edge research and innovations.",
+    excerpt: "The Department of Computer Science & Engineering hosted a two-day national-level Tech Fest featuring a vibrant mix of technical and non-technical events, celebrating innovation, creativity, and collaboration across various domains of technology",
     link: "/news/ai-ml-symposium"
   };
 
   const allNews = [
     {
-      title: "CSE Students Win International Hackathon Competition",
-      date: "April 5, 2025",
+      title: "CSE Students Launch Startup NxtJob",
+      date: "February 15, 2024",
+      category: "Startups",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEdzi8PrqIbpc13aY3JrryoN6ZhLMhDjAyuPiriHazeOdU780i25N3bu6Zbs1Rccaw3zE&usqp=CAU",
+      excerpt: "Shaik Asif Ali from the CSE department launched a startup called NxtJob, contributing to AI integration and extensive testing using modern frameworks.",
+      link: "/news/nxtjob-startup"
+    },
+    {
+      title: "Student Bags Onsite Internship at Amazon",
+      date: "January 30, 2024",
       category: "Achievements",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      excerpt: "A team of five CSE students secured the first position at the International Coding Hackathon held in Singapore, competing against teams from 25 countries.",
-      link: "/news/international-hackathon-win"
+      image: "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      excerpt: "Shaik Asma Naaz, a student from CSE, secured a prestigious onsite internship at Amazon, Chennai.",
+      link: "/news/amazon-internship"
     },
     {
-      title: "Department Receives Major Research Grant for AI Research",
-      date: "March 30, 2025",
-      category: "Research",
-      image: "https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      excerpt: "The CSE department has been awarded a research grant of ₹1.2 crore for advanced AI research in healthcare applications.",
-      link: "/news/research-grant"
-    },
-    {
-      title: "New AI & ML Laboratory Inaugurated",
-      date: "March 25, 2025",
-      category: "Academic",
-      image: "https://images.unsplash.com/photo-1573164574511-73c773193279?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      excerpt: "State-of-the-art AI and ML laboratory inaugurated with NVIDIA GPU infrastructure and research facilities for students and faculty.",
-      link: "/news/ai-ml-lab-inauguration"
-    },
-    {
-      title: "Department Signs MoU with Microsoft for Training Programs",
-      date: "March 20, 2025",
-      category: "Academic",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      excerpt: "The Department of CSE has signed a Memorandum of Understanding with Microsoft for specialized training programs in cloud computing and AI.",
-      link: "/news/microsoft-mou"
-    },
-    {
-      title: "Faculty Research Paper Published in Leading International Journal",
-      date: "March 15, 2025",
-      category: "Research",
-      image: "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      excerpt: "Dr. Suresh Kumar's research paper on 'Efficient Deep Learning Models for Edge Computing' has been published in IEEE Transactions on Neural Networks.",
-      link: "/news/faculty-research-paper"
-    },
-    {
-      title: "CSE Department Organizes Industry Conclave",
-      date: "March 10, 2025",
+      title: "Tech Fest Showcases Innovation and Talent",
+      date: "February 3, 2024",
       category: "Events",
-      image: "https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      excerpt: "The department organized an Industry Conclave with representatives from 15+ tech companies to discuss industry-academia collaboration.",
-      link: "/news/industry-conclave"
+      image: "https://media.istockphoto.com/id/1390307475/vector/vector-modern-poster-tech-fest-unique-silver-alphabet-letters-and-numbers-set.jpg?s=612x612&w=0&k=20&c=dInBWq3UABY834WyxCDnhvW5-4mU25dXVB-hr8GrJAs=",
+      excerpt: "The department hosted a national-level Tech Fest with a wide array of technical and non-technical events, drawing participation from across the country.",
+      link: "/news/tech-fest-2024"
+    },
+    {
+      title: "Faculty Honored with State Teaching Award",
+      date: "December 5, 2023",
+      category: "Faculty",
+      image: "https://images.unsplash.com/photo-1587614203976-365c74645e83?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      excerpt: "Prof. M Humera Khanam received the State Award for University Teachers from the Department of Higher Education, Andhra Pradesh.",
+      link: "/news/faculty-state-award"
+    },
+    {
+      title: "CSE Department Conducts Skill Development Seminars",
+      date: "November 15, 2023",
+      category: "Events",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      excerpt: "The department organized multiple seminars on skill development and digital learning, including sessions on AI, machine learning, and education technologies.",
+      link: "/news/skill-development-seminars"
+    },
+    {
+
+      title: "Prof. Ch D V Subba Rao Appointed as ISRO Expert Panel Member",
+      date: "December 1, 2023",
+      category: "Faculty",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcW23lFQWso3j_ut0FNY-XpipCsZ4R4ATcug&s",
+      excerpt: "Prof. Ch D V Subba Rao has been serving as an External Expert for the Departmental Promotion Committees at ISRO since 2017.",
+      link: "/news/isro-panel-member"
+    },
+    {
+      title: "CSE Alumni Achieve Big in Global Tech Industry",
+      date: "October 25, 2023",
+      category: "Alumni",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      excerpt: "Notable alumni include Jitendar Reddy Mitta (SDE @Amazon, 48 LPA), Trived Chinchula (CEO, Tekie’s Zen), and Jayasree Kurmannagari (SDE @Walmart, 35 LPA).",
+      link: "/news/alumni-success"
+    },
+    {
+      title: "National Seminar on Skill Development Conducted",
+      date: "November 14, 2021",
+      category: "Events",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzWWDCC3xXd8hfcuS6PqbuELwb2vmDyFBFgg&s",
+      excerpt: "Prof. Ch D V Subba Rao organized a national seminar on ‘Advancing Skill Development’ featuring Prof. K N Satyanarayana, Director of IIT Tirupati.",
+      link: "/news/skill-development-seminar-2021"
+    },
+    {
+      title: "Microsoft Upskilling Program Reaches 5000 Students",
+      date: "June 30, 2022",
+      category: "Achievements",
+      image: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWCZER-Legal-IP-Trademarks-CP-MS-logo-740x417-1?wid=406&hei=230&fit=crop",
+      excerpt: "An online upskilling program in collaboration with Microsoft was conducted by Prof. Humera Khanam under APSCHE, benefitting 5000+ students.",
+      link: "/news/microsoft-upskilling"
+    },
+    {
+      title: "Students Crack GATE, CAT & Enter Premier Institutes",
+      date: "March 10, 2024",
+      category: "Achievements",
+      image: "https://ijkenggacademy.in/wp-content/uploads/2022/11/gate.jpeg",
+      excerpt: "CSE students secured admissions into IIT Madras, IISC Bangalore, IIM Lucknow, and more through GATE & CAT with top scores.",
+      link: "/news/gate-cat-success"
     }
   ];
+
+
 
   const archiveNews = [
     { title: "CSE Department Hosts Annual Technical Fest", date: "February 25, 2025", category: "Events" },
@@ -83,14 +118,14 @@ const News = () => {
   ];
 
   // Filter news based on selected category
-  const filteredNews = activeCategory === "All News" 
-    ? allNews 
+  const filteredNews = activeCategory === "All News"
+    ? allNews
     : allNews.filter(news => news.category === activeCategory);
 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
+
       <main className="flex-grow">
         {/* Page Header */}
         <div className="bg-gradient-to-r from-iare-blue to-blue-700 text-white py-10">
@@ -99,7 +134,7 @@ const News = () => {
             <p className="text-xl">Stay updated with the latest happenings from our department</p>
           </div>
         </div>
-        
+
         {/* Categories Filter using Tabs */}
         <div className="sticky top-0 z-10 bg-white border-b shadow-sm">
           <div className="container mx-auto px-4 py-3">
@@ -107,9 +142,9 @@ const News = () => {
               <h2 className="text-xl font-semibold">Browse by Category</h2>
               <div className="relative w-48">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <input 
-                  type="text" 
-                  placeholder="Search news..." 
+                <input
+                  type="text"
+                  placeholder="Search news..."
                   className="pl-10 pr-4 py-2 border rounded-full w-full text-sm focus:outline-none focus:ring-1 focus:ring-iare-blue"
                 />
               </div>
@@ -117,7 +152,7 @@ const News = () => {
             <Tabs defaultValue="All News" value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="flex space-x-2 overflow-x-auto py-1 bg-transparent">
                 {newsCategories.map((category) => (
-                  <TabsTrigger 
+                  <TabsTrigger
                     key={category}
                     value={category}
                     className="px-4 py-2 rounded-md whitespace-nowrap data-[state=active]:bg-iare-blue data-[state=active]:text-white data-[state=inactive]:bg-gray-100 data-[state=inactive]:text-gray-700 data-[state=inactive]:hover:bg-gray-200"
@@ -129,7 +164,7 @@ const News = () => {
             </Tabs>
           </div>
         </div>
-        
+
         {/* Content Area with Tab Indicator */}
         <div className="container mx-auto px-4 py-6">
           <div className="bg-blue-50 rounded-lg p-3 mb-6 flex items-center">
@@ -140,7 +175,7 @@ const News = () => {
             </span>
           </div>
         </div>
-        
+
         {/* Featured News - Reduced height */}
         <div className="py-6 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -148,8 +183,8 @@ const News = () => {
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="md:flex">
                 <div className="md:w-2/5">
-                  <img 
-                    src={featuredNews.image} 
+                  <img
+                    src={featuredNews.image}
                     alt={featuredNews.title}
                     className="h-64 md:h-full w-full object-cover"
                   />
@@ -167,7 +202,7 @@ const News = () => {
                     <h3 className="text-2xl font-bold mb-4">{featuredNews.title}</h3>
                     <p className="text-gray-600 mb-6">{featuredNews.excerpt}</p>
                   </div>
-                  <a 
+                  <a
                     href={featuredNews.link}
                     className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700"
                   >
@@ -178,7 +213,7 @@ const News = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Latest News Grid with Tab Content */}
         <div className="py-8 bg-white">
           <div className="container mx-auto px-4">
@@ -186,13 +221,13 @@ const News = () => {
             {filteredNews.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredNews.map((news, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1"
                   >
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={news.image} 
+                      <img
+                        src={news.image}
                         alt={news.title}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
@@ -208,7 +243,7 @@ const News = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-2">{news.title}</h3>
                       <p className="text-gray-600 text-sm mb-4 line-clamp-3">{news.excerpt}</p>
-                      <a 
+                      <a
                         href={news.link}
                         className="inline-flex items-center font-medium text-iare-blue hover:text-blue-700 text-sm"
                       >
@@ -221,7 +256,7 @@ const News = () => {
             ) : (
               <div className="bg-gray-50 rounded-lg p-12 text-center">
                 <p className="text-gray-500 mb-4">No news found in the "{activeCategory}" category.</p>
-                <button 
+                <button
                   onClick={() => setActiveCategory("All News")}
                   className="bg-iare-blue text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
                 >
@@ -231,7 +266,7 @@ const News = () => {
             )}
           </div>
         </div>
-        
+
         {/* News Archive */}
         <div className="py-10 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -267,7 +302,7 @@ const News = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Newsletter Signup */}
         <div className="py-12 bg-gradient-to-r from-iare-blue to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -277,9 +312,9 @@ const News = () => {
             </p>
             <div className="max-w-md mx-auto">
               <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="Your email address" 
+                <input
+                  type="email"
+                  placeholder="Your email address"
                   className="flex-grow px-4 py-3 rounded-l-md text-gray-900 focus:outline-none"
                 />
                 <button className="bg-iare-yellow text-gray-900 font-bold px-6 py-3 rounded-r-md hover:bg-yellow-500 transition-colors">
@@ -293,7 +328,7 @@ const News = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

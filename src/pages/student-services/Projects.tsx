@@ -260,11 +260,7 @@ const Projects = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="px-4 py-3 bg-gray-50 border-t">
-                            <button className="w-full bg-iare-teal text-white px-3 py-1.5 rounded text-sm hover:bg-iare-blue transition-colors">
-                              Register Now
-                            </button>
-                          </div>
+
                         </div>
                       ))}
                     </div>

@@ -88,7 +88,7 @@ const SupportHub = () => {
               <div className="mb-6">
                 <div className="relative h-64 overflow-hidden rounded-lg mb-6">
                   <img
-                    src="/placeholder.svg"
+                    src="https://thumbs.dreamstime.com/b/success-overlapping-letters-banner-colorful-semi-transparent-squares-background-vector-121138745.jpg"
                     alt="Student Learning Support Hub"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
@@ -173,77 +173,6 @@ const SupportHub = () => {
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-iare-blue mb-4">Support Hub Schedule</h3>
-
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border">
-                    <thead>
-                      <tr className="bg-iare-teal text-white">
-                        <th className="py-2 px-4 border">Day</th>
-                        <th className="py-2 px-4 border">Morning Session (9:00 AM - 12:00 PM)</th>
-                        <th className="py-2 px-4 border">Afternoon Session (1:00 PM - 5:00 PM)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td className="py-2 px-4 border font-medium">Monday</td>
-                        <td className="py-2 px-4 border">Mathematics, Physics, Chemistry</td>
-                        <td className="py-2 px-4 border">Programming Languages, Data Structures</td>
-                      </tr>
-                      <tr className="bg-gray-50">
-                        <td className="py-2 px-4 border font-medium">Tuesday</td>
-                        <td className="py-2 px-4 border">Electronics, Electrical Engineering</td>
-                        <td className="py-2 px-4 border">Computer Networks, Operating Systems</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-4 border font-medium">Wednesday</td>
-                        <td className="py-2 px-4 border">Study Skills Workshop, Language Support</td>
-                        <td className="py-2 px-4 border">Database Systems, Web Technologies</td>
-                      </tr>
-                      <tr className="bg-gray-50">
-                        <td className="py-2 px-4 border font-medium">Thursday</td>
-                        <td className="py-2 px-4 border">Mechanical Systems, Thermodynamics</td>
-                        <td className="py-2 px-4 border">AI/ML, Data Science, Cloud Computing</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 px-4 border font-medium">Friday</td>
-                        <td className="py-2 px-4 border">Control Systems, Digital Logic</td>
-                        <td className="py-2 px-4 border">Mobile App Development, Software Engineering</td>
-                      </tr>
-                      <tr className="bg-gray-50">
-                        <td className="py-2 px-4 border font-medium">Saturday</td>
-                        <td colSpan={2} className="py-2 px-4 border text-center">Special Sessions & Appointments Only</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p className="text-sm text-center mt-2">Schedule is subject to change. Please check the Support Hub notice board for updates.</p>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-iare-blue mb-4">Success Stories</h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {[...Array(3)].map((_, index) => (
-                    <div key={index} className="border p-4 rounded bg-gray-50">
-                      <div className="flex items-center mb-3">
-                        <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-3">
-                          <img src="/placeholder.svg" alt={`Student ${index + 1}`} className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-iare-blue">Student Name</h4>
-                          <p className="text-xs text-gray-500">BTech CSE</p>
-                        </div>
-                      </div>
-                      <p className="text-sm italic">
-                        "The Support Hub's assistance helped me overcome my challenges in advanced mathematics.
-                        The personalized tutoring sessions and resources transformed my understanding and performance."
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

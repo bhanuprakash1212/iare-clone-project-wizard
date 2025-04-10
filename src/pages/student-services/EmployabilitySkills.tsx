@@ -157,27 +157,6 @@ const EmployabilitySkills = () => {
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-iare-blue mb-4">Success Stories</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {[...Array(3)].map((_, index) => (
-                    <div key={index} className="bg-white border rounded-lg overflow-hidden shadow-sm">
-                      <div className="h-48 bg-gray-200">
-                        <img src="/placeholder.svg" alt={`Student ${index + 1}`} className="w-full h-full object-cover" />
-                      </div>
-                      <div className="p-4">
-                        <h4 className="font-medium text-iare-blue mb-1">Student Name</h4>
-                        <p className="text-sm text-gray-500 mb-2">BTech CSE, Batch 2022</p>
-                        <p className="text-sm mb-2">Currently at: Google</p>
-                        <p className="text-sm italic">
-                          "The Career and Employability Skills program at IARE played a crucial role in preparing me for my dream job.
-                          The mock interviews and industry exposure were particularly helpful."
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

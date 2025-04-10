@@ -7,12 +7,68 @@ import Footer from '../../components/Footer';
 
 const CounsellingSystem = () => {
   const counsellorData = [
-    { name: "Dr. Anitha Rani", department: "Computer Science & Engineering", email: "anitha.r@iare.ac.in", phone: "+91-9876543211" },
-    { name: "Dr. Srinivas Reddy", department: "Information Technology", email: "srinivas.r@iare.ac.in", phone: "+91-9876543212" },
-    { name: "Dr. Padmaja Rani", department: "Electronics & Communication", email: "padmaja.r@iare.ac.in", phone: "+91-9876543213" },
-    { name: "Dr. Venkatesh Kumar", department: "Mechanical Engineering", email: "venkatesh.k@iare.ac.in", phone: "+91-9876543214" },
-    { name: "Dr. Sudha Rani", department: "Aeronautical Engineering", email: "sudha.r@iare.ac.in", phone: "+91-9876543215" },
+    // {
+    //   name: "Dr. Ch.D.V. Subba Rao",
+    //   department: "Computer Science & Engineering",
+    //   email: "subbarao_chdv@hotmail.com",
+    //   phone: "+91 9849879861"
+    // },
+    {
+      name: "Dr. M. Humera Khanam",
+      department: "Computer Science & Engineering",
+      email: "phumera.svec@gmail.com",
+      phone: "+91-9490923045"
+    },
+    {
+      name: "Dr. D. Vivekananda Reddy",
+      department: "Computer Science & Engineering",
+      email: "svuvivek@gmail.com",
+      phone: "+91 9441005225"
+    },
+    {
+      name: "Dr. N. Usha Rani",
+      department: "Computer Science & Engineering",
+      email: "usharani.ur@gmail.com",
+      phone: "+91-9493564899"
+    },
+    {
+      name: "Dr. Suresh Kumar Reddy K",
+      department: "Computer Science & Engineering",
+      email: "sureshreddysvu@gmail.com",
+      phone: "+91-9701207488"
+    },
+    {
+      name: "Ms. T. Hemalatha",
+      department: "Computer Science & Engineering",
+      email: "thirupathuruhemalatha@gmail.com",
+      phone: "+91-8978227231"
+    },
+    {
+      name: "Mr. K Venkata Chalapathi",
+      department: "Computer Science & Engineering",
+      email: "venkata.chalapathi87@gmail.com",
+      phone: "+91-9652621516"
+    },
+    {
+      name: "Mr. J. Sreekanth Reddy",
+      department: "Computer Science & Engineering",
+      email: "sjsreddy99492@gmail.com",
+      phone: "+91-9949298398"
+    },
+    {
+      name: "Mrs. D. Kalpana Chowdary",
+      department: "Computer Science & Engineering",
+      email: "dutulurukalapana@gmail.com",
+      phone: "+91-9618139191"
+    },
+    {
+      name: "Ms. P. Hima Chandana",
+      department: "Computer Science & Engineering",
+      email: "hima8022@gmail.com",
+      phone: "+91-9642052535"
+    }
   ];
+
 
   return (
     <div className="flex flex-col min-h-screen">

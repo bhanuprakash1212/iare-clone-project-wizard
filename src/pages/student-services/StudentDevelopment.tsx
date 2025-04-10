@@ -160,9 +160,9 @@ const StudentDevelopment = () => {
                 </div>
               </div>
 
-              <h2 className="text-xl font-semibold text-iare-maroon mb-4">Upcoming Programs</h2>
+              {/* <h2 className="text-xl font-semibold text-iare-maroon mb-4">Upcoming Programs</h2> */}
 
-              <div className="overflow-x-auto mb-6">
+              {/* <div className="overflow-x-auto mb-6">
                 <table className="min-w-full border rounded">
                   <thead>
                     <tr className="bg-iare-blue text-white">
@@ -183,7 +183,7 @@ const StudentDevelopment = () => {
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

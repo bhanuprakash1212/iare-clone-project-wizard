@@ -23,15 +23,15 @@ const Departments = () => {
 
   const facultyMembers = [
     {
-      name: "Dr. D. Vivekananda Reddy",
-      position: "Professor & Head of Department",
+      name: "Dr. Ch.D.V. Subba Rao",
+      position: "Professor & Vice Principal",
       qualification: "Ph.D, M.Tech",
-      specialization: "Software Engineering, Software Testing, Artificial Intelligence , Machine Learning,IoT, Data Science",
+      specialization: "Distributed/Peer to Peer Systems, Advanced Computing,Wireless Networks, Data Engineering",
       experience: "16+ years",
-      image: "/faculty/hod.png",
-      email: "svuvivek@gmail.com",
-      phone: "+91 9441005225",
-      dlink: "https://svuce.edu.in/cseFiles/Profile-DVR.pdf",
+      image: "https://svuniversity.edu.in/storage/2022/02/Dr-Ch-D-V-Subba-Rao.png",
+      email: "subbarao_chdv@hotmail.com	",
+      phone: "+91 9849879861",
+      dlink: "https://svuce.edu.in/cseFiles/Ch_D_V_Subba_Rao.pdf",
       publications: 43,
       projects: 8,
       awards: ["ACM", "IAENG", "CSI", "IEI"],
@@ -51,6 +51,21 @@ const Departments = () => {
       dlink: "https://svuce.edu.in/cseFiles/Profile-MHK-21-7-2018.pdf",
       awards: ["Outstanding Researcher Award 2021"],
       bio: "Dr. M. Purnachandra Rao specializes in AI and machine learning with applications in healthcare and finance. His research has been published in several high-impact journals and conference proceedings."
+    },
+    {
+      name: "Dr. D. Vivekananda Reddy",
+      position: "Professor & Head of Department",
+      qualification: "Ph.D, M.Tech",
+      specialization: "Software Engineering, Software Testing, Artificial Intelligence , Machine Learning,IoT, Data Science",
+      experience: "16+ years",
+      image: "/faculty/hod.png",
+      email: "svuvivek@gmail.com",
+      phone: "+91 9441005225",
+      dlink: "https://svuce.edu.in/cseFiles/Profile-DVR.pdf",
+      publications: 43,
+      projects: 8,
+      awards: ["ACM", "IAENG", "CSI", "IEI"],
+      bio: "The faculty member holds several key positions of responsibility at Sri Venkateswara University and SVU College of Engineering (SVUCE), actively contributing to both academic and administrative domains. They serve as the Coordinator for the Online Help Line Center under APSCHE and as the DZPAY Coordinator at SVU. Additionally, they are the Nodal Officer for E-OFFICE and the Nodal Officer for NIC at the university. Their academic involvement includes roles such as Coordinator for Evaluation and Examinations at SVU and Mentor and Nodal Officer for the PMSSS scheme at SVUCE. They also coordinate with Dassault Systems through APSSDC and function as the MIS-Nodal Officer for TEQIP-III. Furthermore, they contribute to postgraduate academic activities as the PG Coordinator for AICTE at SVUCE. Beyond academics, they also serve as the Care Taking Officer (CTO) and NCC Officer at SVU, showcasing their dedication to student welfare and discipline."
     },
     {
       name: "Dr. N. Usha Rani",

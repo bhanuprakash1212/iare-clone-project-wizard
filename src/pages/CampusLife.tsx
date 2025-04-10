@@ -72,12 +72,12 @@ const CampusLife = () => {
                     <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="flex flex-col items-center justify-center text-center p-4 border rounded-lg bg-gray-50">
                         <Users className="w-8 h-8 text-iare-teal mb-2" />
-                        <span className="font-medium">30+</span>
+                        <span className="font-medium">15+</span>
                         <span className="text-sm text-gray-600">Student Clubs</span>
                       </div>
                       <div className="flex flex-col items-center justify-center text-center p-4 border rounded-lg bg-gray-50">
                         <Activity className="w-8 h-8 text-iare-teal mb-2" />
-                        <span className="font-medium">20+</span>
+                        <span className="font-medium">10+</span>
                         <span className="text-sm text-gray-600">Annual Events</span>
                       </div>
                       <div className="flex flex-col items-center justify-center text-center p-4 border rounded-lg bg-gray-50">
@@ -87,7 +87,7 @@ const CampusLife = () => {
                       </div>
                       <div className="flex flex-col items-center justify-center text-center p-4 border rounded-lg bg-gray-50">
                         <Book className="w-8 h-8 text-iare-teal mb-2" />
-                        <span className="font-medium">100K+</span>
+                        <span className="font-medium">10K+</span>
                         <span className="text-sm text-gray-600">Library Books</span>
                       </div>
                     </div>
@@ -359,9 +359,7 @@ const CampusLife = () => {
                       </div>
                     </div>
 
-                    <Link to="/campus-life/accommodation" className="inline-block bg-iare-teal text-white px-4 py-2 rounded hover:bg-iare-blue transition-colors">
-                      Learn More About Hostels
-                    </Link>
+
                   </div>
 
                   <div>
@@ -400,10 +398,6 @@ const CampusLife = () => {
                         </div>
                       </div>
                     </div>
-
-                    <Link to="/campus-life/transportation" className="inline-block bg-iare-teal text-white px-4 py-2 rounded hover:bg-iare-blue transition-colors">
-                      View Transportation Routes
-                    </Link>
                   </div>
                 </div>
               </TabsContent>
@@ -416,12 +410,12 @@ const CampusLife = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                <div className="h-40 relative bg-iare-blue/10">
+                <div className="h-auto relative bg-iare-blue/10">
                   <div className="absolute top-0 left-0 bg-iare-teal text-white px-3 py-1 rounded-br">
                     MAR 27
                   </div>
                   <div className="flex items-center justify-center h-full">
-                    <Camera className="w-12 h-12 text-iare-teal" />
+                    <img src="https://i.ytimg.com/vi/AAohmp72rLI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDnHVfIq-oOauU9mDd2SJPQmH2ixw" alt="" />
                   </div>
                 </div>
                 <div className="p-4">
@@ -434,12 +428,12 @@ const CampusLife = () => {
               </div>
 
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                <div className="h-40 relative bg-iare-blue/10">
+                <div className="h-auto relative bg-iare-blue/10">
                   <div className="absolute top-0 left-0 bg-iare-teal text-white px-3 py-1 rounded-br">
                     APR 17
                   </div>
                   <div className="flex items-center justify-center h-full">
-                    <Award className="w-12 h-12 text-iare-teal" />
+                    <img className='w-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtliiSenhJlf5GKWV_3b_H2O59DjCSVsKMYQ&s" alt="" />
                   </div>
                 </div>
                 <div className="p-4">
@@ -452,12 +446,12 @@ const CampusLife = () => {
               </div>
 
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-                <div className="h-40 relative bg-iare-blue/10">
+                <div className="h-auto relative bg-iare-blue/10">
                   <div className="absolute top-0 left-0 bg-iare-teal text-white px-3 py-1 rounded-br">
                     JUN 05
                   </div>
                   <div className="flex items-center justify-center h-full">
-                    <Users className="w-12 h-12 text-iare-teal" />
+                    <img src="https://i0.wp.com/davynr.ac.in/wp-content/uploads/2018/04/Alumni.jpg?resize=835%2C430&ssl=1" alt="" />
                   </div>
                 </div>
                 <div className="p-4">
@@ -472,7 +466,6 @@ const CampusLife = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

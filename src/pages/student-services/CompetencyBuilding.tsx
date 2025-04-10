@@ -204,39 +204,6 @@ const CompetencyBuilding = () => {
                 </div>
               </div>
 
-              <div className="mb-8">
-                <h3 className="text-lg font-semibold text-iare-blue mb-4">Success Stories</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="border rounded overflow-hidden">
-                    <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Project 1" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="p-4">
-                      <h4 className="font-medium text-iare-blue mb-1">Smart Energy Management System</h4>
-                      <p className="text-xs text-gray-500 mb-2">Client: Local Municipal Corporation</p>
-                      <p className="text-sm">
-                        A team of IARE students developed an IoT-based energy management system for municipal buildings,
-                        resulting in 30% energy savings and improved operational efficiency.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="border rounded overflow-hidden">
-                    <div className="h-48 bg-gray-200">
-                      <img src="/placeholder.svg" alt="Project 2" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="p-4">
-                      <h4 className="font-medium text-iare-blue mb-1">Healthcare Analytics Platform</h4>
-                      <p className="text-xs text-gray-500 mb-2">Client: Regional Hospital</p>
-                      <p className="text-sm">
-                        Students from our Data Science competency program developed a predictive analytics platform for
-                        patient readmission risk assessment, improving resource allocation and patient care.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
