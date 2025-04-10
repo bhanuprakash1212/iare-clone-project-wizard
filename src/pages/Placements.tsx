@@ -6,16 +6,16 @@ import Footer from '../components/Footer';
 
 const Placements = () => {
   const placementStats = [
-    { year: "2024", companies: 382, offers: 3814, highestPackage: "₹54.0 LPA", averagePackage: "₹8.5 LPA" },
-    { year: "2023", companies: 347, offers: 3569, highestPackage: "₹52.0 LPA", averagePackage: "₹7.9 LPA" },
-    { year: "2022", companies: 312, offers: 3205, highestPackage: "₹48.5 LPA", averagePackage: "₹7.2 LPA" },
-    { year: "2021", companies: 286, offers: 2918, highestPackage: "₹45.0 LPA", averagePackage: "₹6.8 LPA" },
+    // { year: "2023", companies: 382, offers: 3814, highestPackage: "₹54.0 LPA", averagePackage: "₹8.5 LPA" },
+    { year: "2022", companies: 347, offers: 36, highestPackage: "18 LPA", averagePackage: "₹4.5 LPA" },
+    { year: "2021", companies: 36, offers: 39, highestPackage: "₹15", averagePackage: "₹4.0 LPA" },
+    { year: "2020", companies: 286, offers: 37, highestPackage: "₹14", averagePackage: "₹3.42 LPA" },
   ];
 
   const topRecruiters = [
-    "Microsoft", "Amazon", "Google", "TCS", "Accenture", "Infosys", "Wipro", "Cognizant",
+    "Microsoft", "TCS", "Accenture", "Infosys", "Wipro", "Cognizant",
     "Capgemini", "IBM", "Deloitte", "HCL", "Tech Mahindra", "Oracle", "Adobe", "Intel",
-    "Cisco", "Goldman Sachs", "Morgan Stanley", "JP Morgan Chase"
+    "Cisco",
   ];
 
   return (
@@ -49,11 +49,11 @@ const Placements = () => {
                   <div className="text-center">Placement Rate</div>
                 </div>
                 <div className="bg-iare-gray p-4 rounded shadow-sm flex flex-col items-center">
-                  <div className="text-3xl font-bold text-iare-teal mb-2">380+</div>
+                  <div className="text-3xl font-bold text-iare-teal mb-2">50+</div>
                   <div className="text-center">Recruiting Companies</div>
                 </div>
                 <div className="bg-iare-gray p-4 rounded shadow-sm flex flex-col items-center">
-                  <div className="text-3xl font-bold text-iare-teal mb-2">₹54 LPA</div>
+                  <div className="text-3xl font-bold text-iare-teal mb-2">₹35 LPA</div>
                   <div className="text-center">Highest Package</div>
                 </div>
                 <div className="bg-iare-gray p-4 rounded shadow-sm flex flex-col items-center">
@@ -61,8 +61,8 @@ const Placements = () => {
                   <div className="text-center">Average Package</div>
                 </div>
                 <div className="bg-iare-gray p-4 rounded shadow-sm flex flex-col items-center">
-                  <div className="text-3xl font-bold text-iare-teal mb-2">3800+</div>
-                  <div className="text-center">Offers in 2024</div>
+                  <div className="text-3xl font-bold text-iare-teal mb-2">200+</div>
+                  <div className="text-center">Offers</div>
                 </div>
                 <div className="bg-iare-gray p-4 rounded shadow-sm flex flex-col items-center">
                   <div className="text-3xl font-bold text-iare-teal mb-2">50+</div>
@@ -80,7 +80,6 @@ const Placements = () => {
               <thead>
                 <tr className="bg-iare-darkblue text-white">
                   <th className="py-3 px-4 text-left">Year</th>
-                  <th className="py-3 px-4 text-left">Companies Visited</th>
                   <th className="py-3 px-4 text-left">Offers Made</th>
                   <th className="py-3 px-4 text-left">Highest Package</th>
                   <th className="py-3 px-4 text-left">Average Package</th>
@@ -90,7 +89,6 @@ const Placements = () => {
                 {placementStats.map((stat, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="py-3 px-4 border-b">{stat.year}</td>
-                    <td className="py-3 px-4 border-b">{stat.companies}</td>
                     <td className="py-3 px-4 border-b">{stat.offers}</td>
                     <td className="py-3 px-4 border-b">{stat.highestPackage}</td>
                     <td className="py-3 px-4 border-b">{stat.averagePackage}</td>

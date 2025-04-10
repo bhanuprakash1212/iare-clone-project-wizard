@@ -317,7 +317,7 @@ const Departments = () => {
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                   <div className="bg-gray-50 p-3 rounded border text-center">
-                    <div className="text-iare-teal text-2xl font-bold">22</div>
+                    <div className="text-iare-teal text-2xl font-bold">9</div>
                     <div className="text-gray-600 text-sm">Faculty Members</div>
                   </div>
                   <div className="bg-gray-50 p-3 rounded border text-center">

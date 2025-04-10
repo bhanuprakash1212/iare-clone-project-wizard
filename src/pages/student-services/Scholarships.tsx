@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Sidebar from '../../components/Sidebar';
-import { 
+import {
   Table,
   TableBody,
   TableCell,
@@ -12,11 +12,11 @@ import {
   TableHeader,
   TableRow
 } from '../../components/ui/table';
-import { 
-  Tabs, 
-  TabsContent, 
-  TabsList, 
-  TabsTrigger 
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger
 } from '../../components/ui/tabs';
 
 const Scholarships = () => {
@@ -55,7 +55,7 @@ const Scholarships = () => {
                 <TabsTrigger value="government">Government Scholarships</TabsTrigger>
                 <TabsTrigger value="non-government">Non-Government Scholarships</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="overview" className="bg-white p-6 border rounded shadow-sm">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Scholarship Facilities</h2>
                 <p className="mb-4">
@@ -70,21 +70,18 @@ const Scholarships = () => {
                   <p className="mb-2">
                     To apply for scholarships, please visit the Scholarship Section at the Administrative Block or contact:
                   </p>
-                  <p className="mb-1"><strong>Scholarship Section</strong></p>
-                  <p className="mb-1">Email: scholarships@iare.ac.in</p>
-                  <p>Phone: +91-8888123456</p>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="government" className="bg-white p-6 border rounded shadow-sm">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Government Scholarships</h2>
-                
+
                 <p className="mb-4">
                   Students belonging to SC, ST, BC, EBC, Disabled, Minorities can avail scholarships offered by both Central and State Governments.
                 </p>
-                
+
                 <h3 className="text-lg font-semibold text-iare-blue mb-2">Current Schemes</h3>
-                
+
                 <Table className="mb-6">
                   <TableHeader>
                     <TableRow>
@@ -119,7 +116,7 @@ const Scholarships = () => {
                     </TableRow>
                   </TableBody>
                 </Table>
-                
+
                 <div className="bg-iare-gray p-4 rounded-md mb-6">
                   <h4 className="font-semibold mb-2">Required Documents</h4>
                   <ul className="list-disc pl-6">
@@ -132,16 +129,16 @@ const Scholarships = () => {
                   </ul>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="non-government" className="bg-white p-6 border rounded shadow-sm">
                 <h2 className="text-xl font-semibold text-iare-maroon mb-4">Non-Government Scholarships</h2>
-                
+
                 <p className="mb-4">
                   Various non-government organizations, foundations, and institutions offer scholarships to deserving students based on merit, community, economic background, and other criteria.
                 </p>
-                
+
                 <h3 className="text-lg font-semibold text-iare-blue mb-2">Available Non-Government Scholarships</h3>
-                
+
                 <Table className="mb-6">
                   <TableHeader>
                     <TableRow>
@@ -161,7 +158,7 @@ const Scholarships = () => {
                       <TableCell>Family Annual Income should be less than or equal to Rs 2,00,000</TableCell>
                       <TableCell>Scholarship amount is Rs.20,000 per year approximately</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>2</TableCell>
                       <TableCell className="font-medium">
@@ -171,7 +168,7 @@ const Scholarships = () => {
                       <TableCell>Passed class 12 from a government school/junior college</TableCell>
                       <TableCell>Scholarship amount is Rs.24,000 per year approximately</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>3</TableCell>
                       <TableCell className="font-medium">
@@ -181,7 +178,7 @@ const Scholarships = () => {
                       <TableCell>Parent should be a railway employee</TableCell>
                       <TableCell>Scholarship amount is Rs.6,000 per year approximately</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>4</TableCell>
                       <TableCell className="font-medium">
@@ -196,7 +193,7 @@ const Scholarships = () => {
                       </TableCell>
                       <TableCell>Scholarship amount is Rs.3,000 per year approximately</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>5</TableCell>
                       <TableCell className="font-medium">
@@ -206,7 +203,7 @@ const Scholarships = () => {
                       <TableCell>Children of serving TS Police Department</TableCell>
                       <TableCell>Scholarship amount is Rs.10,000 per year approximately</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>6</TableCell>
                       <TableCell className="font-medium">
@@ -221,7 +218,7 @@ const Scholarships = () => {
                       </TableCell>
                       <TableCell>Full Fee reimbursement as Scholarship</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>7</TableCell>
                       <TableCell className="font-medium">
@@ -231,7 +228,7 @@ const Scholarships = () => {
                       <TableCell>Applicant must belong to Reddy community</TableCell>
                       <TableCell>Scholarship amount is Rs.8,000 per year approximately</TableCell>
                     </TableRow>
-                    
+
                     <TableRow>
                       <TableCell>8</TableCell>
                       <TableCell className="font-medium">
@@ -243,19 +240,7 @@ const Scholarships = () => {
                     </TableRow>
                   </TableBody>
                 </Table>
-                
-                <div className="bg-iare-lightblue p-4 rounded-lg border border-iare-teal mt-8">
-                  <h3 className="text-lg font-semibold text-iare-blue mb-2">How to Apply for Non-Government Scholarships</h3>
-                  <p className="mb-2">
-                    For assistance with non-government scholarship applications, please visit the Scholarship Section or contact:
-                  </p>
-                  <p className="mb-1">
-                    <strong>Email:</strong> scholarships@iare.ac.in
-                  </p>
-                  <p>
-                    <strong>Phone:</strong> +91-8888123456
-                  </p>
-                </div>
+
               </TabsContent>
             </Tabs>
           </div>
